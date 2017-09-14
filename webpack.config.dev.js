@@ -18,7 +18,8 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 include: path.join(__dirname, 'src')
-            }
+            },
+            { test: /\.(png|jpg)$/, loader: 'file-loader?name=images/[name].[ext]' }
         ]
     },
     devtool: 'cheap-module-eval-source-map',

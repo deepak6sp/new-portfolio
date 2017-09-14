@@ -6,7 +6,7 @@ import {Provider} from 'react-redux';
 import Router from './routes/router.js';
 import MainReducer from './reducers';
 
-import '../assets/main.scss';
+import '../styles/main.scss';
 
 const store = createStore(MainReducer);
 

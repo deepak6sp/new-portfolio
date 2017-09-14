@@ -7,8 +7,6 @@ const Router = () =>
     <BrowserRouter>
        <div>
            <Route exact path="/" component={ () => <App/> }/>
-           <Route path="/page2" component={() => <div>hello3</div> } />
-           <Route path="/page3" component={() => <div>hello3</div> }/>
        </div>
     </BrowserRouter>;
 
