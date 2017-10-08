@@ -6,15 +6,21 @@ class Navigation extends Component {
 
     constructor(props) {
       super(props);
-      this.toggleNavbar = this.toggleNavbar.bind(this);
       this.state = {
         collapsed: true
       };
     }
 
-    toggleNavbar() {
+    _toggleNavbar() {
       this.setState({
         collapsed: !this.state.collapsed
+      });
+    }
+
+    _closeNav() {
+      document.querySelector('.navbar-collapse').classList.remove('show');
+      this.setState({
+        collapsed: true
       });
     }
 
@@ -23,11 +29,14 @@ class Navigation extends Component {
             <Navbar>
               <NavbarBrand href="/">dp</NavbarBrand>
               <NavLink href="http://www.webhyphen.com/">Blog</NavLink>
-              <NavbarToggler onClick={this.toggleNavbar} className="mr-2">
+              <NavbarToggler onClick={this._toggleNavbar.bind(this)} className="mr-2">
                 <img src={navIcon}/>
               </NavbarToggler>
               <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav navbar>
+                  <div className='nav-link' onClick={this._closeNav.bind(this)} >
+                    x
+                  </div>
                   <NavItem>
                     <NavLink href="/">Home</NavLink>
                   </NavItem>
