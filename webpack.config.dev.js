@@ -13,13 +13,26 @@ module.exports = {
     },
     module: {
         loaders: [
-            {test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
+            {
+              test: /\.scss$/,
+              use: [{
+                   loader: "style-loader"
+              }, {
+                   loader: "css-loader", options: {
+                       sourceMap: true
+                   }
+              }, {
+                   loader: "sass-loader", options: {
+                       sourceMap: true
+                   }
+              }]
+            },
             {test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 include: path.join(__dirname, 'src')
             },
-            { test: /\.(png|jpg)$/, loader: 'file-loader?name=images/[name].[ext]' }
+            { test: /\.(png|jpg|svg)$/, loader: 'file-loader?name=images/[name].[ext]' }
         ]
     },
     devtool: 'cheap-module-eval-source-map',
