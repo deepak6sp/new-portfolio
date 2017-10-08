@@ -4,7 +4,7 @@ $main-font-size : 1.6rem;
 $purple: #6C27A3;
 $pink: #E83152;
 $red: #C21717;
-$brown: #3C454B;
+$brown: #4A4A4A;
 $white: #ffffff;
 $black: #000000;
 $radium: #59D7E8;
@@ -14,6 +14,11 @@ $radium: #59D7E8;
 $body_bg: $purple;
 $main_bg: $pink;
 $navigation_bg: rgba(59,184,201,0.97);
-
 $divider_bg: $brown;
-$main_color: $radium;
+$primary_color: $radium;
+$secondary_color: $brown;
+
+
+// ------ fonts
+$primary_font: 'Montserrat', sans-serif;
+$secondary_font:  'Droid Serif', serif;

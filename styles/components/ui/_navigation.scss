@@ -4,10 +4,11 @@
     border-radius:50%;
     width:10rem;
     height:10rem;
-    color: $main-color;
+    color: $primary_color;
     text-align: center;
     font-size: 5rem;
-    line-height: 9.5rem;
+    line-height: 9rem;
+    font-family: $primary_font;
   }
   .navbar-toggler {
     z-index: 1;
@@ -31,6 +32,7 @@
       display: block;
       font-size: 5rem;
       text-align: center;
+      cursor: pointer;
     }
     &.collapsing {
       -moz-transition : height 3s;

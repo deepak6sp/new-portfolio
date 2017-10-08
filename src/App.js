@@ -1,6 +1,5 @@
 import React from 'react';
 import Navigation from './components/navigation';
-import Header from './components/header';
 import Footer from './components/footer';
 import Home from './containers/home';
 import Divider from './components/divider';
@@ -11,7 +10,7 @@ import Contact from './containers/contact';
 const App = () =>
     <div id='portfolio'>
         <Navigation/>
-        <Header />
+
         <Home/>
         {/*<Divider text='I have over 5 years of experience and still counting…'/>
         <Projects/>

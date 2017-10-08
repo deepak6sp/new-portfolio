@@ -1,14 +1,22 @@
 .home {
-  position: absolute;
-  top: 40%;
-  transform: translateX(-50%);
-  width: 100%;
-  left: 50%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   .profile-name {
-    font-size: 8rem;
+    font-size: 7rem;
+    font-family: $secondary_font;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: $primary_color;
   }
   .profile-desc {
     font-size: 3.6rem;
-    color: $main_color;
+    font-family: $primary_font;
+    color: $white;
+  }
+  .button {
+    margin-top: 2rem;
   }
 }
