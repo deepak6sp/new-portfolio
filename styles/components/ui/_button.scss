@@ -4,14 +4,40 @@
     justify-content: center;
     padding: 1rem 2rem;
     font-size: $main-font-size;
-    font-family: $secondary_font;
+    font-family: $primary_font;
     text-transform: lowercase;
-    border-radius: 1rem;
-    background: $primary_color;
-    color: $secondary_color!important;
+    border-radius: 5rem;
+    border: 2px solid $white;
+    color: $white!important;
+    min-width: 200px;
+    position: relative;
+    transition: all 0.3s;
     &:hover {
       cursor: pointer;
-      border-radius: 0.2rem;
+      background: $primary_color;
+      color: $secondary_color!important;
+      border: 2px solid $primary_color;
+      .go-next {
+        @include font-awesome();
+        &:after {
+          content: "\f178";
+          margin-left: 1.5rem;
+          position: absolute;
+          top: 15px;
+          transition: 0.3s ease;
+          opacity: 1;
+        }
+
+      }
+    }
+    .go-next {
+      @include font-awesome();
+      &:after {
+        content: "\f178";
+        position: absolute;
+        opacity: 0;
+        color: $secondary_color!important;
+      }
     }
 }
 

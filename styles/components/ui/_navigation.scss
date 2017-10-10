@@ -1,6 +1,6 @@
 .navbar {
   .navbar-brand {
-    background: $white;
+    // background: $white;
     border-radius:50%;
     width:10rem;
     height:10rem;
@@ -33,6 +33,20 @@
       font-size: 5rem;
       text-align: center;
       cursor: pointer;
+      font-family: $secondary_font;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.3s;
+      text-transform: lowercase;
+      &:hover {
+        color: $secondary_color;
+        transform: scale(1.1);
+      }
+    }
+    ul {
+      width: 100%;
+      li {
+        width: 100%;
+      }
     }
     &.collapsing {
       -moz-transition : height 3s;

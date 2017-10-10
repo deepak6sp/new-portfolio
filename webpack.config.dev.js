@@ -32,7 +32,15 @@ module.exports = {
                 exclude: /node_modules/,
                 include: path.join(__dirname, 'src')
             },
-            { test: /\.(png|jpg|svg)$/, loader: 'file-loader?name=images/[name].[ext]' }
+            {
+              test: /\.(png|jpg|svg)$/,
+              loader: [
+                'file-loader?name=images/[name].[ext]'
+              ]
+            }, {
+              test: /\.(eot|woff|woff2|ttf)(\?\S*)?$/,
+              loader: 'url-loader?limit=100000&name=[name].[ext]'
+            }
         ]
     },
     devtool: 'cheap-module-eval-source-map',

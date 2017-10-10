@@ -19,9 +19,9 @@ class Home extends Component {
             <div className='row justify-content-center profile-desc'>
               UX Designer & Full Stack Developer
             </div>
-            <a className='button'>
+            <UI.Button className='go-next'>
               View projects
-            </a>
+            </UI.Button>
           </main>
         );
     }

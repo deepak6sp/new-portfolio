@@ -1,10 +1,11 @@
 import React from 'react';
 
 export const StandardButton = props =>
-    <button
-        type="submit"
-        onClick={props.onClick}
-        id={props.id}
-        className="button">
-        {props.children}
-    </button>;
+    <a
+      type={props.type}
+      onClick={props.onClick}
+      id={props.id}
+      className="button">
+      {props.children}
+      <span className={`${props.className}`}></span>
+    </a>;
