@@ -1,12 +1,16 @@
 import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
-import App from '../app.js';
+import Home from '../containers/home';
+import Projects from '../containers/projects';
+import Navigation from '../components/navigation';
 
 
 const Router = () =>
     <BrowserRouter>
-       <div>
-           <Route exact path="/" component={ () => <App/> }/>
+       <div id='portfolio'>
+          <Navigation />
+          <Route exact path="/" component={ () => <Home/> }/>
+          <Route path="/projects" component={ () => <Projects/> }/>
        </div>
     </BrowserRouter>;
 

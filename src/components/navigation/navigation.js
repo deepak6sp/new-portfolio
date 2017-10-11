@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import { Jumbotron, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import navIcon from './images/nav-icon.svg';
+
 
 class Navigation extends Component {
 
@@ -38,16 +40,16 @@ class Navigation extends Component {
                     x
                   </div>
                   <NavItem>
-                    <NavLink href="/">Home</NavLink>
+                    <Link to="/" className="nav-link" onClick={this._closeNav.bind(this)}>Home</Link>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="/projects">Projects</NavLink>
+                    <Link to="/projects" className="nav-link" onClick={this._closeNav.bind(this)}>Projects</Link>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="/about">About</NavLink>
+                    <Link to="/about" className="nav-link" onClick={this._closeNav.bind(this)}>About</Link>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="/contact">Contact</NavLink>
+                    <Link to="/contact" className="nav-link" onClick={this._closeNav.bind(this)}>Contact</Link>
                   </NavItem>
                 </Nav>
               </Collapse>
