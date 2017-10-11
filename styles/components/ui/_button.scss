@@ -26,20 +26,19 @@ button {
       background: $primary_color;
       color: $secondary_color!important;
       border: 2px solid $primary_color;
-      +.go-next {
+      .go-next {
         @include font-awesome();
         &:after {
           content: "\f178";
-          margin-left: 6.5rem;
+          margin-left: 1.5rem;
           position: absolute;
-          top: 1.9rem;
+          top: 1.5rem;
           transition: 0.3s ease;
           opacity: 1;
         }
-
       }
     }
-    +.go-next {
+    .go-next {
       @include font-awesome();
       &:after {
         content: "\f178";

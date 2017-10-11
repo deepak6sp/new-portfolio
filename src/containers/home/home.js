@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+
 
 import Header from '../../components/header';
 import Footer from '../../components/footer';
@@ -21,8 +21,8 @@ class Home extends Component {
             <div className='row justify-content-center profile-desc'>
               UX Designer & Full Stack Developer
             </div>
-            <UI.Button className='go-next'>
-              <Link to="/projects">View projects</Link>
+            <UI.Button className='go-next' linkTo="/projects">
+              View projects
             </UI.Button>
             <Footer />
           </main>
