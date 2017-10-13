@@ -23,7 +23,7 @@ button {
     &:hover {
       cursor: pointer;
       text-decoration: none;
-      background: $primary_color;
+      background: linear-gradient(45deg, $primary_color, lighten($primary_color, 20%));
       color: $secondary_color!important;
       border: 2px solid $primary_color;
       .go-next {

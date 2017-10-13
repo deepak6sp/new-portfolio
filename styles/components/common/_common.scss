@@ -1,3 +1,11 @@
 .home, .projects, .about, .contact {
-  
+  h3 {
+    text-align: center;
+  }
+  .caption {
+    color: $primary_color;
+    font-size: 2rem;
+    font-family: $primary_font;
+    text-align: center;
+  }
 }
