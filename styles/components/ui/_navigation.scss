@@ -1,15 +1,16 @@
 .navbar {
   width: 100%;
   .navbar-brand {
-    // background: $white;
+    background: $white;
     border-radius:50%;
-    width:10rem;
-    height:10rem;
-    color: $primary_color;
-    text-align: center;
-    font-size: 5rem;
-    line-height: 9rem;
+    width:6rem;
+    height:6rem;
+    color: $primary_color_alternate;
     font-family: $primary_font;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 5rem;
+    margin: 2rem;
   }
   .navbar-toggler {
     z-index: 1;
@@ -17,7 +18,7 @@
   .navbar-collapse {
     &.show {
       position: absolute;
-      background: $navigation_bg;
+      background: $primary_color_alternate;
       height: 100vh;
       top: 0px;
       width: 100%;
@@ -28,7 +29,7 @@
       justify-content: center;
     }
     .nav-link {
-      color: $white;
+      color: $primary_color;
       margin: 2vh;
       display: block;
       font-size: 5rem;
@@ -41,7 +42,7 @@
       &:hover {
         color: $secondary_color;
         transform: scale(1.1);
-        background-color: rgba($primary_color, 0.2);
+        background-color: rgba($primary_color, 0.1);
       }
     }
     ul {

@@ -1,4 +1,4 @@
-.home {
+#home {
   min-height: 60vh;
   display: flex;
   flex-direction: column;
@@ -9,12 +9,12 @@
     font-family: $secondary_font;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    color: $primary_color;
+    color: $secondary_color;
   }
   .profile-desc {
     font-size: 3.6rem;
     font-family: $primary_font;
-    color: $white;
+    color: $primary_color_alternate;
   }
   .button {
     margin-top: 3rem;

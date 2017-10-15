@@ -15,14 +15,18 @@
   "dependencies": {
     "bootstrap": "4.0.0-beta",
     "font-awesome-sass": "^4.7.0",
+    "in-viewport": "^3.6.0",
     "react": "^15.5.4",
     "react-addons-css-transition-group": "^15.6.0",
     "react-addons-transition-group": "^15.6.0",
     "react-dom": "^15.5.4",
+    "react-lazyload": "^2.2.7",
     "react-redux": "^5.0.4",
     "react-router-dom": "^4.1.1",
-    "reactstrap": "^4.8.0",
-    "redux": "^3.6.0"
+    "react-springy-parallax": "^1.1.0",
+    "reactstrap": "next",
+    "redux": "^3.6.0",
+    "shufflejs": "^5.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

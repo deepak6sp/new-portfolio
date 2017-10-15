@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-
-
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import UI from '../../components/ui';
@@ -13,7 +11,7 @@ class Home extends Component {
 
     render() {
         return (
-          <main className='home'>
+          <main id='home'>
 
             <div className='row justify-content-center profile-name'>
               Deepak Prakash

@@ -1,11 +1,26 @@
-.home, .projects, .about, .contact {
+#home, #projects, .about, .contact {
   h3 {
     text-align: center;
+    font-family: $secondary_font;
+    color: $primary_color_alternate;
+    text-transform: uppercase;
   }
   .caption {
-    color: $primary_color;
+    color: $secondary_color;
     font-size: 2rem;
     font-family: $primary_font;
     text-align: center;
   }
+}
+
+.fadeInLeft {
+  @include fadeInLeft();
+}
+
+.fadeInRight {
+  @include fadeInRight();
+}
+
+.fadeOutDown {
+  @include fadeOutDown();
 }

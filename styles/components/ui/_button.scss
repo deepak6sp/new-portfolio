@@ -1,41 +1,34 @@
-button {
-  background: transparent;
-  border: none;
+a.button {
+  display: block;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: $main-font-size;
+  font-family: $primary_font;
+  text-transform: lowercase;
+  border-radius: 5rem;
+  border: 2px solid $primary_color_alternate;
+  color: $primary_color_alternate!important;
+  min-width: 200px;
   position: relative;
+  //transition: all 0.3s;
+  text-decoration: none;
   &:focus {
     outline: none!important;
   }
-  a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 2rem;
-    font-size: $main-font-size;
-    font-family: $primary_font;
-    text-transform: lowercase;
-    border-radius: 5rem;
-    border: 2px solid $primary_color;
-    color: $primary_color!important;
-    min-width: 200px;
-    position: relative;
-    transition: all 0.3s;
+  &:hover {
+    cursor: pointer;
     text-decoration: none;
-    &:hover {
-      cursor: pointer;
-      text-decoration: none;
-      background: linear-gradient(45deg, $primary_color, lighten($primary_color, 20%));
-      color: $secondary_color!important;
-      border: 2px solid $primary_color;
-      .go-next {
-        @include font-awesome();
-        &:after {
-          content: "\f178";
-          margin-left: 1.5rem;
-          position: absolute;
-          top: 1.5rem;
-          transition: 0.3s ease;
-          opacity: 1;
-        }
+    background: $secondary_color;
+    color: $primary_color!important;
+    border: 2px solid transparent;
+    .go-next {
+      @include font-awesome();
+      &:after {
+        content: "\f178";
+        margin-left: 1.5rem;
+        position: absolute;
+        top: 1.5rem;
+        opacity: 1;
       }
     }
     .go-next {
@@ -43,8 +36,7 @@ button {
       &:after {
         content: "\f178";
         position: absolute;
-        opacity: 0;
-        color: $secondary_color!important;
+        color: $primary_color!important;
       }
     }
   }

@@ -1,22 +1,17 @@
-$main-font-size : 1.6rem;
+$main_font_size : 1.6rem;
 
 // ------- colors
-$purple: #6C27A3;
-$pink: #E83152;
-$red: #C21717;
+$red: #3D191A;
 $brown: #4A4A4A;
 $white: #ffffff;
 $black: #000000;
-$radium: #59D7E8;
+$maroon: #e0bcbd;
 
 
-
-$body_bg: $purple;
-$main_bg: $pink;
-$navigation_bg: rgba(59,184,201,0.97);
-$divider_bg: $brown;
-$primary_color: $radium;
-$secondary_color: $brown;
+$primary_color: $red;
+$primary_color_alternate: $maroon;
+$secondary_color: $white;
+$secondary_color_alternate: $brown;
 
 
 // ------ fonts
