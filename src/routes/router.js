@@ -1,34 +1,30 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {HashRouter, Route, Switch} from 'react-router-dom';
+
+import Navigation from '../components/navigation';
 import Home from '../containers/home';
 import Projects from '../containers/projects';
+import IndividualProject from '../containers/individualProject';
 import Contact from '../containers/contact';
-import Navigation from '../components/navigation';
 
 
 const Router = () =>
-    <BrowserRouter>
+    <HashRouter>
        <div id='portfolio'>
             <Navigation />
             <Route exact path="/" component={ () => <Home/> }/>
-            <Route path="/projects" component={Project}/>
+            <Route path="/projects" component={ProjectsRouter}/>
        </div>
-    </BrowserRouter>;
+    </HashRouter>;
 
-const Project = ({ match }) => (
+const ProjectsRouter = ({ match }) => (
   <div>
-    ID: {match.url}
-    <Route path={`{match.url}/:projectName`} component={ <div>asdsad</div> }/>
     <Route exact path={match.url} component={ () => <Projects/> }/>
+    <Route path={`${match.url}/:projectName`} component={ IndividualProjectRouter }/>
   </div>
 )
 
-
-const Child = ({ match }) => (
-  <div>
-    <h3>ID: {match.params.id}</h3>
-  </div>
-)
-
+const IndividualProjectRouter = ({ match }) =>
+  <IndividualProject slug={match.params.projectName}/>
 
 export default Router;

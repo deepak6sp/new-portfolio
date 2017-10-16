@@ -46,7 +46,7 @@ class Projects extends Component {
                         </div>
                       </Col>
                       <Col sm='6' className='project-image fadeInRight'>
-                          <img src='images/vicpolice.png' />
+                          <img src='images/vicpolice-desktop.png' />
                       </Col>
                     </Row>
                   </Link>

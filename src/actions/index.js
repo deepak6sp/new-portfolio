@@ -1,8 +1,8 @@
 const Actions = {};
 
 
-import {submitText} from './signForm.js';
-Actions.SubmitText = submitText;
+import {getProjectDetails} from './projectDetails.js';
+Actions.GetProjectDetails = getProjectDetails;
 
 
 export default Actions;

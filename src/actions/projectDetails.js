@@ -7,7 +7,7 @@
  * @return {Objects} where payload is the value of input/textarea field
  */
 
-export const submitText = text => ({
-    type: 'SUBMIT_BUTTON_CLICKED',
-    payload: text
+export const getProjectDetails = slug => ({
+    type: 'GET_PROJECT_DETAILS',
+    payload: slug
 });

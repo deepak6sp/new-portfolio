@@ -1,3 +1,14 @@
 .header {
-  
+  h3.heading {
+    text-align: center;
+    font-family: $secondary_font;
+    color: $primary_color_alternate;
+    text-transform: uppercase;
+  }
+  .caption {
+    color: $secondary_color;
+    font-size: 2rem;
+    font-family: $primary_font;
+    text-align: center;
+  }
 }
