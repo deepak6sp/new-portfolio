@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
+import { Row, Col } from 'reactstrap';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {getProjectDetails} from '../../actions';
+import Parallax from 'react-springy-parallax';
 
+import UI from '../../components/ui';
 import Header from '../../components/header';
 
 class IndividualProject extends Component {
@@ -12,14 +15,38 @@ class IndividualProject extends Component {
   }
   render() {
     return (
-      <section id='individual-projects' className='container'>
+      <section id='individual-projects' className='text-center'>
+
         <Header heading={this.props.slug}/>
 
-        <div className='image-container'>
-          <img className='image-mobile' src='images/vicpolice-mobile.png' />
-          <img className='image-desktop' src='images/vicpolice-desktop.png' />
-          <img className='image-pad' src='images/vicpolice-pad.png' />
-        </div>
+        <section className='image-wrapper'>
+          <div className='image-container'>
+            <img className='image-desktop' src='images/vicpolice-desktop.png' />
+            <img className='image-mobile' src='images/vicpolice-mobile.png' />
+            <img className='image-pad' src='images/vicpolice-pad.png' />
+          </div>
+        </section>
+
+        <Row className='individual-project-description'>
+          <Col>
+            <h4> Technologies used </h4>
+            <ul>
+              <li>HTML</li>
+              <li>Bootstrap 3 & scss</li>
+              <li>Jquery</li>
+              <li>Drupal CMS</li>
+              <li>PHP</li>
+              <li>Gulp</li>
+              <li>Amazon EC2</li>
+            </ul>
+          </Col>
+        </Row>
+
+        <Row className='justify-content-center'>
+          <UI.Button className='go-next' linkTo="/projects">
+            Visit site
+          </UI.Button>
+        </Row>
 
       </section>
     )

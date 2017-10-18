@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Row, Col } from 'reactstrap';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import UI from '../../components/ui';
@@ -13,12 +14,12 @@ class Home extends Component {
         return (
           <main id='home'>
 
-            <div className='row justify-content-center profile-name'>
+            <Row className='justify-content-center profile-name'>
               Deepak Prakash
-            </div>
-            <div className='row justify-content-center profile-desc'>
+            </Row>
+            <Row className='justify-content-center profile-desc'>
               UX Designer & Full Stack Developer
-            </div>
+            </Row>
             <UI.Button className='go-next' linkTo="/projects">
               View projects
             </UI.Button>
