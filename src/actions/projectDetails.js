@@ -7,7 +7,19 @@
  * @return {Objects} where payload is the value of input/textarea field
  */
 
-export const getProjectDetails = slug => ({
+import json from './individualProjects';
+
+// export const getProjectDetails = slug => ({
+//     type: 'GET_PROJECT_DETAILS',
+//     payload: json[slug]
+// });
+
+export const getProjectDetails = slug => {
+  console.log('actions');
+  console.log(slug);
+  return {
     type: 'GET_PROJECT_DETAILS',
-    payload: slug
-});
+    payload: json[slug]
+  }
+
+};

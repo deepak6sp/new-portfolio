@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux';
-import SignFormReducer from './signForm';
+import IndividualProjectsReducer from './individualProjects';
 
 const MainReducer = combineReducers({
-    newtext: SignFormReducer
+    newProject: IndividualProjectsReducer
 });
 
 export default MainReducer;

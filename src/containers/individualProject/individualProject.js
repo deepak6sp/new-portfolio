@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Row, Col } from 'reactstrap';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {getProjectDetails} from '../../actions';
+
 import Parallax from 'react-springy-parallax';
 
 import UI from '../../components/ui';
@@ -11,7 +11,6 @@ import Header from '../../components/header';
 class IndividualProject extends Component {
 
   componentWillMount() {
-    console.log(this.props);
   }
   render() {
     return (
@@ -62,15 +61,5 @@ class IndividualProject extends Component {
 const matchStateToProps = state => ({newProject: state.newProject});
 
 
-/**
- * This will dispatch new value to actions from the
- * component as this.props.submitText
- * @param  {Dispatch} dispatch redux dispatcher
- * @return {Function}          submitText is the function located in Actions
- */
-const matchDispatchToProps = dispatch =>
-    bindActionCreators({getProjectDetails}, dispatch);
-
-
 // Bind actions, states and component to the store
-export default connect(matchStateToProps, matchDispatchToProps)(IndividualProject);
+export default connect(matchStateToProps, null)(IndividualProject);

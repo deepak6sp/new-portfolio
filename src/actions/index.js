@@ -1,7 +1,7 @@
 const Actions = {};
 
 
-import {getProjectDetails} from './projectDetails.js';
+import {getProjectDetails} from './projectDetails';
 Actions.GetProjectDetails = getProjectDetails;
 
 

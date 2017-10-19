@@ -8,8 +8,8 @@
  */
 export default function(state = [], action) {
     switch (action.type) {
-        case 'SUBMIT_BUTTON_CLICKED':
-            return [...state, action.payload];
+        case 'GET_PROJECT_DETAILS':
+            return action.payload;
             break;
         default:
             return state;
