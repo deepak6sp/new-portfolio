@@ -4,7 +4,7 @@ const projects = {
     "technologies":
       ["HTML", "Bootstrap 3 & scss", "Jquery", "Drupal - PHP CMS", "Gulp", "Amazon EC2"],
     "description": "",
-    "weblink": "www.vicpolicenew.com.au",
+    "weblink": "https://www.vicpolicenews.com.au",
 	},
   "mycause": {
 

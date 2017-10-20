@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {createStore} from 'redux';
+import {createStore, applyMiddleware, compose } from 'redux';
 import {Provider} from 'react-redux';
+import ReduxPromise from 'redux-promise';
 import Router from './routes/router.js';
 import MainReducer from './reducers';
 
+
 import '../styles/main.scss';
 
-const store = createStore(MainReducer);
+
+
+const createStoreWithMiddleware = compose(applyMiddleware(ReduxPromise)(createStore));
+const store = createStoreWithMiddleware(MainReducer);
 
 
 ReactDOM.render(

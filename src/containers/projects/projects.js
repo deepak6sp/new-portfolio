@@ -7,7 +7,7 @@ import Parallax from 'react-springy-parallax';
 import LazyLoad from 'react-lazyload';
 
 import Header from '../../components/header';
-import {getProjectDetails} from '../../actions/projectDetails';
+
 
 
 class Projects extends Component {
@@ -21,8 +21,6 @@ class Projects extends Component {
 
       let parent = e.target;
       let href = e.target.getAttribute('href');
-      let dataSlug =  e.target.getAttribute('data-slug');
-      this.props.getProjectDetails(dataSlug);
 
       let child1 = parent.children[0].children[0];
       let child2 = parent.children[0].children[1];
@@ -40,7 +38,7 @@ class Projects extends Component {
                 caption='I worked on'/>
 
                 <LazyLoad offset={-200} height={400}>
-                  <Link className='projects' to='/projects/vicpolice' data-slug='vicpolice' onClick={this._handleClick.bind(this)}>
+                  <Link className='projects' to='/projects/vicpolice' onClick={this._handleClick.bind(this)}>
                     <Row className='d-flex align-items-center project-container'>
                       <Col sm='6' className='project-description fadeInLeft'>
                         <h2 className='project-title'>
@@ -48,11 +46,6 @@ class Projects extends Component {
                         </h2>
                         <div className='project-text'>
                           <p>Read the latest and breaking news from Victoria Police</p>
-                          {/*<h4>Technology used</h4>
-                          <p>SASS - Foundation</p>
-                          <p>React</p>
-                          <p>PHP ( Codeigniter )</p>
-                          <p>Gulp & Webpack</p>*/}
                         </div>
                       </Col>
                       <Col sm='6' className='project-image fadeInRight'>
@@ -71,11 +64,6 @@ class Projects extends Component {
                         </h2>
                         <div className='project-text'>
                           <p>Read the latest and breaking news from Victoria Police</p>
-                          {/*<h4>Technology used</h4>
-                          <p>SASS - Foundation</p>
-                          <p>React</p>
-                          <p>PHP ( Codeigniter )</p>
-                          <p>Gulp & Webpack</p>*/}
                         </div>
                       </Col>
                       <Col sm='6' className='project-image'>
@@ -94,11 +82,6 @@ class Projects extends Component {
                         </h2>
                         <div className='project-text'>
                           <p>Read the latest and breaking news from Victoria Police</p>
-                          {/*<h4>Technology used</h4>
-                          <p>SASS - Foundation</p>
-                          <p>React</p>
-                          <p>PHP ( Codeigniter )</p>
-                          <p>Gulp & Webpack</p>*/}
                         </div>
                       </Col>
                       <Col sm='6' className='project-image'>
@@ -112,14 +95,4 @@ class Projects extends Component {
     }
 }
 
-/**
- * This will dispatch new value to actions from the
- * component as this.props.submitText
- * @param  {Dispatch} dispatch redux dispatcher
- * @return {Function}          submitText is the function located in Actions
- */
-const matchDispatchToProps = dispatch =>
-    bindActionCreators({getProjectDetails}, dispatch);
-
-// Bind actions, states and component to the store
-export default connect(null, matchDispatchToProps)(Projects);
+export default Projects
