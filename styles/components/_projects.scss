@@ -13,14 +13,7 @@
       background: red;
     }
     &.black {
-      .d-flex {
-        background: black;
-        background-image: url('http://lorempixel.com/400/200/sports');
-        background-size: cover;
-        background-attachment: fixed;
-        height: 100vh;
-      }
-
+      background: black;
     }
     &.brown {
       background: brown;

@@ -57,7 +57,7 @@ class Projects extends Component {
                   </Link>
                 {/*  <LazyLoad offset={-200} height={400}>
                   </LazyLoad> */}
-
+                  <div id='move-to'></div>
                   <Link className='projects brown' to='/projects/1'  onClick={this._handleClick.bind(this)}>
                     <Row className='d-flex align-items-center project-container'>
                       <Col sm='6' className='project-description'>

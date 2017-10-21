@@ -30,3 +30,7 @@ h4 {
 .fadeOutDown {
   @include fadeOutDown();
 }
+
+.fadeInDown {
+  @include fadeInDown();
+}

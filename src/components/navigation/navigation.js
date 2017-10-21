@@ -35,7 +35,7 @@ class Navigation extends Component {
                 <img src={navIcon}/>
               </NavbarToggler>
               <Collapse isOpen={!this.state.collapsed} navbar>
-                <Nav navbar>
+                <Nav navbar className='fadeInLeft'>
                   <div className='nav-link' onClick={this._closeNav.bind(this)} >
                     x
                   </div>
