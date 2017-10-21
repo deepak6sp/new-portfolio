@@ -10,11 +10,11 @@ import Contact from '../containers/contact';
 
 const Router = () =>
     <HashRouter>
-       <switch id='portfolio'>
+       <div id='portfolio'>
             <Navigation />
             <Route exact path="/" component={ () => <Home/> }/>
             <Route path="/projects" component={ProjectsRouter}/>
-       </switch>
+       </div>
     </HashRouter>;
 
 const ProjectsRouter = ({ match }) => (

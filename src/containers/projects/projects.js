@@ -5,6 +5,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import Parallax from 'react-springy-parallax';
 import LazyLoad from 'react-lazyload';
+import HorizontalScroll from 'react-scroll-horizontal'
 
 import Header from '../../components/header';
 
@@ -32,13 +33,14 @@ class Projects extends Component {
 
     render() {
         return (
-            <section id='projects' className='container'>
-              <Header
-                heading='Projects'
-                caption='I worked on'/>
+            <section id='projects'>
+              <HorizontalScroll reverseScroll={true}>
 
-                <LazyLoad offset={-200} height={400}>
-                  <Link className='projects' to='/projects/vicpolice' onClick={this._handleClick.bind(this)}>
+              {/*<Header
+                heading='Projects'
+                caption='I worked on'/>*/}
+
+                  <Link className='projects black' to='/projects/vicpolice' onClick={this._handleClick.bind(this)}>
                     <Row className='d-flex align-items-center project-container'>
                       <Col sm='6' className='project-description fadeInLeft'>
                         <h2 className='project-title'>
@@ -53,10 +55,10 @@ class Projects extends Component {
                       </Col>
                     </Row>
                   </Link>
-                </LazyLoad>
+                {/*  <LazyLoad offset={-200} height={400}>
+                  </LazyLoad> */}
 
-                <LazyLoad offset={-200} height={400}>
-                  <Link className='projects' to='/projects/1'  onClick={this._handleClick.bind(this)}>
+                  <Link className='projects brown' to='/projects/1'  onClick={this._handleClick.bind(this)}>
                     <Row className='d-flex align-items-center project-container'>
                       <Col sm='6' className='project-description'>
                         <h2 className='project-title'>
@@ -71,10 +73,8 @@ class Projects extends Component {
                       </Col>
                     </Row>
                   </Link>
-                </LazyLoad>
 
-                <LazyLoad offset={-200} height={400}>
-                  <Link className='projects' to='/projects/1'>
+                  <Link className='projects red' to='/projects/1'>
                     <Row className='d-flex align-items-center project-container'>
                       <Col sm='6' className='project-description'>
                         <h2 className='project-title'>
@@ -89,7 +89,7 @@ class Projects extends Component {
                       </Col>
                     </Row>
                   </Link>
-                </LazyLoad>
+                </HorizontalScroll>
             </section>
         );
     }

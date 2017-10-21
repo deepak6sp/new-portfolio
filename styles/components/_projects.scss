@@ -1,9 +1,30 @@
 #projects {
-  min-height: 50rem;
+  width: 100vw;
+  height: 100vh;
+  .scroll-horizontal {
+    position: absolute!important;
+
+  }
   a.projects {
-    margin: 10rem 0rem;
+    display: flex;
+    width: 100vw;
     text-decoration: none;
-    display: block;
+    &.red {
+      background: red;
+    }
+    &.black {
+      .d-flex {
+        background: black;
+        background-image: url('http://lorempixel.com/400/200/sports');
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100vh;
+      }
+
+    }
+    &.brown {
+      background: brown;
+    }
     .project-container {
       pointer-events: none;
       .project-description {

@@ -1,5 +1,8 @@
 .navbar {
   width: 100%;
+  position: fixed!important;
+  top: 0;
+  z-index: 1;
   .navbar-brand {
     background: $white;
     border-radius:50%;
