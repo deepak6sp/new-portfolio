@@ -29,7 +29,7 @@ class Navigation extends Component {
     render() {
         return (
             <Navbar>
-              <NavbarBrand href="/">dp</NavbarBrand>
+              <NavbarBrand href="#/">dp</NavbarBrand>
               {/*<NavLink href="http://www.webhyphen.com/">Blog</NavLink>*/}
               <NavbarToggler onClick={this._toggleNavbar.bind(this)} className="mr-2">
                 <img src={navIcon}/>

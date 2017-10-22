@@ -52,20 +52,20 @@ class IndividualProject extends Component {
           </div>
         </section>
 
-        <Row className='individual-project-description'>
+        <section className='individual-project-description'>
           <Col>
             <h4> Technologies used </h4>
             <ul>
               {this._displayTechnologies()}
             </ul>
           </Col>
-        </Row>
+        </section>
 
-        <Row className='justify-content-center'>
+        <section className='justify-content-center d-flex'>
           <a className='button' target='_blank' href={`${this.state.nw.weblink}`}>
             Visit site
           </a>
-        </Row>
+        </section>
 
       </section>
     )

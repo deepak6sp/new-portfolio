@@ -3,6 +3,9 @@ import { Row, Col } from 'reactstrap';
 import {Link} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+
+import {getProjectDetails} from '../../actions/projectDetails';
+
 import Parallax from 'react-springy-parallax';
 import LazyLoad from 'react-lazyload';
 import HorizontalScroll from 'react-scroll-horizontal'
@@ -17,6 +20,10 @@ class Projects extends Component {
       super(props);
     }
 
+    componentDidMount() {
+      this.props.getProjectDetails('vicpolice');
+    }
+
     _handleClick(e) {
       e.preventDefault();
 
@@ -27,6 +34,7 @@ class Projects extends Component {
       let child2 = parent.children[0].children[1];
       child1.classList.add('fadeOutDown');
       child2.classList.add('fadeOutDown');
+
 
       return setTimeout( function(){window.location.href = href } , 1000 );
     }
@@ -95,4 +103,14 @@ class Projects extends Component {
     }
 }
 
-export default Projects
+/**
+ * This will dispatch new value to actions from the
+ * component as this.props.submitText
+ * @param  {Dispatch} dispatch redux dispatcher
+ * @return {Function}          submitText is the function located in Actions
+ */
+const matchDispatchToProps = dispatch =>
+    bindActionCreators({getProjectDetails}, dispatch);
+
+// Bind actions, states and component to the store
+export default connect(null, matchDispatchToProps)(Projects)

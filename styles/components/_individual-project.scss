@@ -1,4 +1,6 @@
 #individual-projects {
+  margin-top: 20rem;
+  @include fadeInDown();
   .image-wrapper {
     .image-container {
       max-width: 60rem;
