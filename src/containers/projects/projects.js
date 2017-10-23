@@ -36,7 +36,7 @@ class Projects extends Component {
       child2.classList.add('fadeOutDown');
 
 
-      return setTimeout( function(){window.location.href = href } , 1000 );
+      return setTimeout( function(){window.location.href = href } , 500 );
     }
 
     render() {

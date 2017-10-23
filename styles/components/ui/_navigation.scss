@@ -1,4 +1,6 @@
 .navbar {
+  //background: $primary_color_alternate;
+
   width: 100%;
   position: fixed!important;
   top: 0;
@@ -8,7 +10,7 @@
     border-radius:50%;
     width:6rem;
     height:6rem;
-    color: $primary_color_alternate;
+    color: $primary_color;
     font-family: $primary_font;
     text-align: center;
     font-size: 3rem;
@@ -17,9 +19,25 @@
   }
   .navbar-toggler {
     z-index: 1;
+    padding: 0rem;
+    &:hover {
+      cursor: pointer;
+      transform: rotate(180deg);
+      transition: all 0.5s ease;
+    }
+    &:focus {
+      img {
+        transform: scale(0.7);
+        transition: all 0.5s ease;
+      }
+    }
+    &:focus {
+      outline: none;
+    }
   }
   .navbar-collapse {
     &.show {
+      @include fadeInRightBig();
       position: absolute;
       background: $primary_color_alternate;
       height: 100vh;
@@ -43,7 +61,7 @@
       transition-duration: 0.3s;
       text-transform: lowercase;
       &:hover {
-        color: $secondary_color;
+        color: $secondary_color_alternate;
         transform: scale(1.1);
         background-color: rgba($primary_color, 0.1);
       }
