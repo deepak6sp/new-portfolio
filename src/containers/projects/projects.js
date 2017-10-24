@@ -48,7 +48,7 @@ class Projects extends Component {
                 heading='Projects'
                 caption='I worked on'/>*/}
 
-                  <Link className='projects black' to='/projects/vicpolice' onClick={this._handleClick.bind(this)}>
+                  <Link className='projects orange-lightest' to='/projects/vicpolice' onClick={this._handleClick.bind(this)}>
                     <Row className='d-flex align-items-center project-container'>
                       <Col sm='6' className='project-description fadeInLeft'>
                         <h2 className='project-title'>
@@ -63,12 +63,10 @@ class Projects extends Component {
                       </Col>
                     </Row>
                   </Link>
-                {/*  <LazyLoad offset={-200} height={400}>
-                  </LazyLoad> */}
-                  <div id='move-to'></div>
-                  <Link className='projects brown' to='/projects/1'  onClick={this._handleClick.bind(this)}>
+
+                  <Link className='projects orange-light' to='/projects/vicpolice' onClick={this._handleClick.bind(this)}>
                     <Row className='d-flex align-items-center project-container'>
-                      <Col sm='6' className='project-description'>
+                      <Col sm='6' className='project-description fadeInLeft'>
                         <h2 className='project-title'>
                           <span>Vic Police</span>
                         </h2>
@@ -76,15 +74,15 @@ class Projects extends Component {
                           <p>Read the latest and breaking news from Victoria Police</p>
                         </div>
                       </Col>
-                      <Col sm='6' className='project-image'>
-                          <img src='images/vicpolice.png' />
+                      <Col sm='6' className='project-image fadeInRight'>
+                          <img src='images/vicpolice-desktop.png' />
                       </Col>
                     </Row>
                   </Link>
 
-                  <Link className='projects red' to='/projects/1'>
+                  <Link className='projects orange-mid' to='/projects/vicpolice' onClick={this._handleClick.bind(this)}>
                     <Row className='d-flex align-items-center project-container'>
-                      <Col sm='6' className='project-description'>
+                      <Col sm='6' className='project-description fadeInLeft'>
                         <h2 className='project-title'>
                           <span>Vic Police</span>
                         </h2>
@@ -92,11 +90,44 @@ class Projects extends Component {
                           <p>Read the latest and breaking news from Victoria Police</p>
                         </div>
                       </Col>
-                      <Col sm='6' className='project-image'>
-                          <img src='images/vicpolice.png' />
+                      <Col sm='6' className='project-image fadeInRight'>
+                          <img src='images/vicpolice-desktop.png' />
                       </Col>
                     </Row>
                   </Link>
+
+                  <Link className='projects orange-dark' to='/projects/vicpolice' onClick={this._handleClick.bind(this)}>
+                    <Row className='d-flex align-items-center project-container'>
+                      <Col sm='6' className='project-description fadeInLeft'>
+                        <h2 className='project-title'>
+                          <span>Vic Police</span>
+                        </h2>
+                        <div className='project-text'>
+                          <p>Read the latest and breaking news from Victoria Police</p>
+                        </div>
+                      </Col>
+                      <Col sm='6' className='project-image fadeInRight'>
+                          <img src='images/vicpolice-desktop.png' />
+                      </Col>
+                    </Row>
+                  </Link>
+
+                  <Link className='projects orange-darkest' to='/projects/vicpolice' onClick={this._handleClick.bind(this)}>
+                    <Row className='d-flex align-items-center project-container'>
+                      <Col sm='6' className='project-description fadeInLeft'>
+                        <h2 className='project-title'>
+                          <span>Vic Police</span>
+                        </h2>
+                        <div className='project-text'>
+                          <p>Read the latest and breaking news from Victoria Police</p>
+                        </div>
+                      </Col>
+                      <Col sm='6' className='project-image fadeInRight'>
+                          <img src='images/vicpolice-desktop.png' />
+                      </Col>
+                    </Row>
+                  </Link>
+
                 </HorizontalScroll>
             </section>
         );

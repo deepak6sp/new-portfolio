@@ -1,35 +1,44 @@
 #projects {
   width: 100vw;
-  height: 100vh;
+  margin-top: 11rem;
   .scroll-horizontal {
     position: absolute!important;
-
+    >div  {
+      height: 70%!important;
+    }
   }
   a.projects {
     display: flex;
     width: 100vw;
     text-decoration: none;
-    &.red {
-      background: red;
+    &.orange-lightest {
+      background: $white;
     }
-    &.black {
+    &.orange-light {
+      background: $black;
+    }
+    &.orange-mid {
+      background: brown;
+    }
+    &.orange-dark {
       background: black;
     }
-    &.brown {
+    &.orange-darkest {
       background: brown;
     }
     .project-container {
       pointer-events: none;
       .project-description {
         text-align: center;
+        padding: 3rem;
         .project-title {
-          color: $primary_color_alternate;
+          color: $black;
           font-family: $secondary_font;
           font-size: 4rem;
           text-transform: uppercase;
         }
         .project-text {
-          color: $white;
+          color: $black-mid;
           font-family: $primary_font;
           font-size: 2.5rem;
         }
