@@ -1,7 +1,13 @@
 #individual-projects {
-  margin-top: 20rem;
-  @include fadeInDown();
-  .image-wrapper {
+  margin-top: 11rem;
+
+  .header-wrapper {
+    @include fadeInDown();
+    background: $white;
+    padding-bottom: 5rem;
+    position: fixed;
+    width: 100%;
+    height: 90%;
     .image-container {
       max-width: 60rem;
       margin: 0 auto;
@@ -28,9 +34,21 @@
       }
     }
   }
+  a.button {
+    margin: 0 auto;
+  }
+
 
 
   .individual-project-description {
-    margin-top: 5rem;
+    position: absolute;
+    margin-top: 100vh;
+    padding: 5rem;
+    width: 100%;
+    background: $main_bg;
+    h4{
+        margin: 2rem;
+    }
+
   }
 }

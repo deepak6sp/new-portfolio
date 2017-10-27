@@ -4,25 +4,30 @@ import {Link} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import {getProjectDetails} from '../../actions/projectDetails';
+import {getProjects} from '../../actions/projects';
 
-import Parallax from 'react-springy-parallax';
 import LazyLoad from 'react-lazyload';
 import HorizontalScroll from 'react-scroll-horizontal'
 
 import Header from '../../components/header';
 
-
-
 class Projects extends Component {
 
     constructor(props) {
       super(props);
+      this.state = {
+        projects_list: ''
+      }
     }
 
-    componentDidMount() {
-      this.props.getProjectDetails('vicpolice');
+    componentWillMount() {
+      this.props.actions.getProjects();
     }
+
+    componentWillReceiveProps(nextProps) {
+      this.setState({ projects_list: nextProps.allProjects });
+    }
+
 
     _handleClick(e) {
       e.preventDefault();
@@ -36,103 +41,54 @@ class Projects extends Component {
       child2.classList.add('fadeOutDown');
 
 
-      return setTimeout( function(){window.location.href = href } , 500 );
+      return setTimeout( function(){window.location.hash = href } , 500 );
     }
+
+    _displayProjectsList() {
+        let list = this.props.allProjects;
+        if(!list) {
+          list = this.state.projects_list;
+        }
+        return Object.entries(list).map(([key, value]) => {
+
+          return (
+              <Link key={key} className='projects orange-lightest' to={`/projects/${key}`} onClick={this._handleClick.bind(this)}>
+                <Row className='d-flex align-items-center project-container'>
+                  <Col sm='6' className='project-description fadeInLeft'>
+                    <h2 className='project-title'>
+                      <span>{key}</span>
+                    </h2>
+                    <div className='project-text'>
+                      <p>{value.description}</p>
+                    </div>
+                  </Col>
+                  <Col sm='6' className='project-image fadeInRight'>
+                      <img src={`images/${key}-desktop.png`} />
+                  </Col>
+                </Row>
+              </Link>
+          );
+        });
+    };
 
     render() {
         return (
             <section id='projects'>
               <HorizontalScroll reverseScroll={true}>
-
-              {/*<Header
-                heading='Projects'
-                caption='I worked on'/>*/}
-
-                  <Link className='projects orange-lightest' to='/projects/vicpolice' onClick={this._handleClick.bind(this)}>
-                    <Row className='d-flex align-items-center project-container'>
-                      <Col sm='6' className='project-description fadeInLeft'>
-                        <h2 className='project-title'>
-                          <span>Vic Police</span>
-                        </h2>
-                        <div className='project-text'>
-                          <p>Read the latest and breaking news from Victoria Police</p>
-                        </div>
-                      </Col>
-                      <Col sm='6' className='project-image fadeInRight'>
-                          <img src='images/vicpolice-desktop.png' />
-                      </Col>
-                    </Row>
-                  </Link>
-
-                  <Link className='projects orange-light' to='/projects/vicpolice' onClick={this._handleClick.bind(this)}>
-                    <Row className='d-flex align-items-center project-container'>
-                      <Col sm='6' className='project-description fadeInLeft'>
-                        <h2 className='project-title'>
-                          <span>Vic Police</span>
-                        </h2>
-                        <div className='project-text'>
-                          <p>Read the latest and breaking news from Victoria Police</p>
-                        </div>
-                      </Col>
-                      <Col sm='6' className='project-image fadeInRight'>
-                          <img src='images/vicpolice-desktop.png' />
-                      </Col>
-                    </Row>
-                  </Link>
-
-                  <Link className='projects orange-mid' to='/projects/vicpolice' onClick={this._handleClick.bind(this)}>
-                    <Row className='d-flex align-items-center project-container'>
-                      <Col sm='6' className='project-description fadeInLeft'>
-                        <h2 className='project-title'>
-                          <span>Vic Police</span>
-                        </h2>
-                        <div className='project-text'>
-                          <p>Read the latest and breaking news from Victoria Police</p>
-                        </div>
-                      </Col>
-                      <Col sm='6' className='project-image fadeInRight'>
-                          <img src='images/vicpolice-desktop.png' />
-                      </Col>
-                    </Row>
-                  </Link>
-
-                  <Link className='projects orange-dark' to='/projects/vicpolice' onClick={this._handleClick.bind(this)}>
-                    <Row className='d-flex align-items-center project-container'>
-                      <Col sm='6' className='project-description fadeInLeft'>
-                        <h2 className='project-title'>
-                          <span>Vic Police</span>
-                        </h2>
-                        <div className='project-text'>
-                          <p>Read the latest and breaking news from Victoria Police</p>
-                        </div>
-                      </Col>
-                      <Col sm='6' className='project-image fadeInRight'>
-                          <img src='images/vicpolice-desktop.png' />
-                      </Col>
-                    </Row>
-                  </Link>
-
-                  <Link className='projects orange-darkest' to='/projects/vicpolice' onClick={this._handleClick.bind(this)}>
-                    <Row className='d-flex align-items-center project-container'>
-                      <Col sm='6' className='project-description fadeInLeft'>
-                        <h2 className='project-title'>
-                          <span>Vic Police</span>
-                        </h2>
-                        <div className='project-text'>
-                          <p>Read the latest and breaking news from Victoria Police</p>
-                        </div>
-                      </Col>
-                      <Col sm='6' className='project-image fadeInRight'>
-                          <img src='images/vicpolice-desktop.png' />
-                      </Col>
-                    </Row>
-                  </Link>
-
-                </HorizontalScroll>
+                {this._displayProjectsList()}
+              </HorizontalScroll>
             </section>
         );
     }
 }
+
+/**
+ * This will retrieve the state which will be available as props
+ * as this.props.newText in the component
+ * @param  {array} state array retrieved from reducer
+ * @return {Object}      Object retrived from new state
+ */
+const matchStateToProps = state => ({allProjects: state.projectDetails});
 
 /**
  * This will dispatch new value to actions from the
@@ -140,8 +96,12 @@ class Projects extends Component {
  * @param  {Dispatch} dispatch redux dispatcher
  * @return {Function}          submitText is the function located in Actions
  */
-const matchDispatchToProps = dispatch =>
-    bindActionCreators({getProjectDetails}, dispatch);
+const matchDispatchToProps = dispatch => {
+  return {
+    actions: bindActionCreators({getProjects}, dispatch)
+  };
+}
+
 
 // Bind actions, states and component to the store
-export default connect(null, matchDispatchToProps)(Projects)
+export default connect(matchStateToProps, matchDispatchToProps)(Projects)

@@ -3,8 +3,6 @@ import { Row, Col } from 'reactstrap';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import Parallax from 'react-springy-parallax';
-
 import UI from '../../components/ui';
 import Header from '../../components/header';
 import {getProjectDetails} from '../../actions/projectDetails';
@@ -14,61 +12,55 @@ class IndividualProject extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      nw : ''
+      pd : ''
     }
   }
 
   componentWillMount() {
-    this.props.getProjectDetails(this.props.slug);
+    this.props.actions.getProjectDetails(this.props.slug);
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({ nw: nextProps.newProject });
     console.log(nextProps);
+    this.setState({ pd: nextProps.projectDetails });
   }
 
   _displayTechnologies() {
-    console.log(this.state.nw.technologies);
-    if(this.state.nw.technologies) {
-      return this.state.nw.technologies.map( (element, index) => {
+    if(this.state.pd.technologies != undefined) {
+      return this.state.pd.technologies.map( (element, index) => {
         return <li key={index}>{element}</li>
       });
     }
-
-
   }
 
   render() {
-    return (
-      <section id='individual-projects' className='text-center'>
 
-        <Header heading={this.state.nw.name}/>
-
-        <section className='image-wrapper'>
-          <div className='image-container'>
-            <img className='image-desktop' src={`images/${this.props.slug}-desktop.png`} />
-            <img className='image-mobile' src={`images/${this.props.slug}-mobile.png`} />
-            <img className='image-pad' src={`images/${this.props.slug}-pad.png`} />
-          </div>
-        </section>
-
-        <section className='individual-project-description'>
-          <Col>
-            <h4> Technologies used </h4>
-            <ul>
-              {this._displayTechnologies()}
-            </ul>
-          </Col>
-        </section>
-
-        <section className='justify-content-center d-flex'>
-          <a className='button' target='_blank' href={`${this.state.nw.weblink}`}>
-            Visit site
-          </a>
-        </section>
-
-      </section>
-    )
+        return (
+          <section id='individual-projects'
+            className='text-center'>
+            <section className='header-wrapper'>
+               <Header heading={this.state.pd.name}/>
+               <div className='image-container'>
+                 <img className='image-desktop' src={`images/${this.props.slug}-desktop.png`} />
+                 <img className='image-mobile' src={`images/${this.props.slug}-mobile.png`} />
+                 <img className='image-pad' src={`images/${this.props.slug}-pad.png`} />
+               </div>
+            </section>
+            <section className='individual-project-description'>
+              <Col>
+                <h4> Technologies used </h4>
+                <ul>
+                  {this._displayTechnologies()}
+                </ul>
+              </Col>
+              <Col>
+                <a className='button' target='_blank' href={`${this.state.pd.weblink}`}>
+                Browse site
+                </a>
+              </Col>
+            </section>
+          </section>
+        )
   }
 }
 
@@ -78,7 +70,7 @@ class IndividualProject extends Component {
  * @param  {array} state array retrieved from reducer
  * @return {Object}      Object retrived from new state
  */
-const matchStateToProps = state => ({newProject: state.newProject});
+const matchStateToProps = state => ({ projectDetails : state.projectDetails });
 
 /**
  * This will dispatch new value to actions from the
@@ -86,8 +78,11 @@ const matchStateToProps = state => ({newProject: state.newProject});
  * @param  {Dispatch} dispatch redux dispatcher
  * @return {Function}          submitText is the function located in Actions
  */
-const matchDispatchToProps = dispatch =>
-    bindActionCreators({getProjectDetails}, dispatch);
+const matchDispatchToProps = dispatch => {
+  return {
+    actions : bindActionCreators({getProjectDetails}, dispatch)
+  }
+}
 
 
 // Bind actions, states and component to the store

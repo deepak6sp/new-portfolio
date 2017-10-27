@@ -8,6 +8,9 @@
  */
 export default function(state = [], action) {
     switch (action.type) {
+        case 'GET_PROJECTS':
+          return action.payload;
+          break;
         case 'GET_PROJECT_DETAILS':
             return action.payload;
             break;

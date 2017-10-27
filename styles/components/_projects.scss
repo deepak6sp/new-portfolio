@@ -2,30 +2,40 @@
   width: 100vw;
   margin-top: 11rem;
   .scroll-horizontal {
+    top:0px;
     position: absolute!important;
     >div  {
-      height: 70%!important;
+        height: 100% !important;
     }
   }
   a.projects {
     display: flex;
     width: 100vw;
     text-decoration: none;
-    &.orange-lightest {
+    &:nth-child(even) {
+      background: lighten($green, 10%);
+      .project-title, .project-text {
+        color: $white!important;
+      }
+    }
+    &:nth-child(odd) {
       background: $white;
     }
-    &.orange-light {
-      background: $black;
-    }
-    &.orange-mid {
-      background: brown;
-    }
-    &.orange-dark {
-      background: black;
-    }
-    &.orange-darkest {
-      background: brown;
-    }
+    // &.orange-lightest {
+    //   background: $white;
+    // }
+    // &.orange-light {
+    //   background: $black;
+    // }
+    // &.orange-mid {
+    //   background: brown;
+    // }
+    // &.orange-dark {
+    //   background: black;
+    // }
+    // &.orange-darkest {
+    //   background: brown;
+    // }
     .project-container {
       pointer-events: none;
       .project-description {
@@ -47,6 +57,7 @@
         padding: 0px;
         text-align: center;
         img {
+          max-height: 50vh;
           width: 75%;
           transform: rotateY(-30deg) rotateX(5deg);
         }
