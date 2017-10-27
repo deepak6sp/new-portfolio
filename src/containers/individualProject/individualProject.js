@@ -39,7 +39,7 @@ class IndividualProject extends Component {
           <section id='individual-projects'
             className='text-center'>
             <section className='header-wrapper'>
-               <Header heading={this.state.pd.name}/>
+
                <div className='image-container'>
                  <img className='image-desktop' src={`images/${this.props.slug}-desktop.png`} />
                  <img className='image-mobile' src={`images/${this.props.slug}-mobile.png`} />
@@ -47,6 +47,29 @@ class IndividualProject extends Component {
                </div>
             </section>
             <section className='individual-project-description'>
+              <Header heading={this.state.pd.name}/>
+              <Col>
+                <h4> Technologies used </h4>
+                <ul>
+                  {this._displayTechnologies()}
+                </ul>
+              </Col>
+              <Col>
+                <a className='button' target='_blank' href={`${this.state.pd.weblink}`}>
+                Browse site
+                </a>
+              </Col>
+              <Col>
+                <h4> Technologies used </h4>
+                <ul>
+                  {this._displayTechnologies()}
+                </ul>
+              </Col>
+              <Col>
+                <a className='button' target='_blank' href={`${this.state.pd.weblink}`}>
+                Browse site
+                </a>
+              </Col>
               <Col>
                 <h4> Technologies used </h4>
                 <ul>

@@ -1,13 +1,20 @@
 #individual-projects {
   margin-top: 11rem;
+  transform-style: preserve-3d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 
   .header-wrapper {
     @include fadeInDown();
     background: $white;
-    padding-bottom: 5rem;
-    position: fixed;
+    padding: 5rem;
     width: 100%;
-    height: 90%;
     .image-container {
       max-width: 60rem;
       margin: 0 auto;
@@ -38,14 +45,16 @@
     margin: 0 auto;
   }
 
-
-
   .individual-project-description {
+    transform: translateZ(-1px) scale(2);
     position: absolute;
     margin-top: 100vh;
-    padding: 5rem;
     width: 100%;
     background: $main_bg;
+    .heading {
+      margin-top: 2rem;
+      color: $white;
+    }
     h4{
         margin: 2rem;
     }
