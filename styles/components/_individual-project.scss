@@ -1,16 +1,20 @@
 #individual-projects {
-  margin-top: 11rem;
-  transform-style: preserve-3d;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  perspective: 1px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-
+  .individual-projects {
+    transform-style: preserve-3d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .navbar {
+    background: $main_bg;
+  }
   .header-wrapper {
+    margin-top: 11rem;
     @include fadeInDown();
     background: $white;
     padding: 5rem;
@@ -52,7 +56,6 @@
     width: 100%;
     background: $main_bg;
     .heading {
-      margin-top: 2rem;
       color: $white;
     }
     h4{

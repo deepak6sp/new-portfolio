@@ -3,6 +3,7 @@ import { Row, Col } from 'reactstrap';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
+import Navigation from '../../components/navigation';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import UI from '../../components/ui';
@@ -21,7 +22,7 @@ class Home extends Component {
     render() {
         return (
           <main id='home'>
-
+            <Navigation />
             <Row className='justify-content-center profile-name'>
               Deepak Prakash
             </Row>

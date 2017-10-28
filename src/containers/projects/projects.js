@@ -9,6 +9,7 @@ import {getProjects} from '../../actions/projects';
 import LazyLoad from 'react-lazyload';
 import HorizontalScroll from 'react-scroll-horizontal'
 
+import Navigation from '../../components/navigation';
 import Header from '../../components/header';
 
 class Projects extends Component {
@@ -52,21 +53,22 @@ class Projects extends Component {
         return Object.entries(list).map(([key, value]) => {
 
           return (
-              <Link key={key} className='projects orange-lightest' to={`/projects/${key}`} onClick={this._handleClick.bind(this)}>
-                <Row className='d-flex align-items-center project-container'>
-                  <Col sm='6' className='project-description fadeInLeft'>
-                    <h2 className='project-title'>
-                      <span>{key}</span>
-                    </h2>
-                    <div className='project-text'>
-                      <p>{value.description}</p>
-                    </div>
-                  </Col>
-                  <Col sm='6' className='project-image fadeInRight'>
-                      <img src={`images/${key}-desktop.png`} />
-                  </Col>
-                </Row>
-              </Link>
+
+                <Link key={key} className='projects orange-lightest' to={`/projects/${key}`} onClick={this._handleClick.bind(this)}>
+                  <Row className='d-flex align-items-center project-container'>
+                    <Col sm='6' className='project-description fadeInLeft'>
+                      <h2 className='project-title'>
+                        <span>{key}</span>
+                      </h2>
+                      <div className='project-text'>
+                        <p>{value.description}</p>
+                      </div>
+                    </Col>
+                    <Col sm='6' className='project-image fadeInRight'>
+                        <img src={`images/${key}-desktop.png`} />
+                    </Col>
+                  </Row>
+                </Link>
           );
         });
     };
@@ -74,6 +76,7 @@ class Projects extends Component {
     render() {
         return (
             <section id='projects'>
+              <Navigation />
               <HorizontalScroll reverseScroll={true}>
                 {this._displayProjectsList()}
               </HorizontalScroll>

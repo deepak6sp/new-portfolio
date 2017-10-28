@@ -31,7 +31,7 @@ class Navigation extends Component {
             <Navbar>
               <NavbarBrand href="#/">dp</NavbarBrand>
               {/*<NavLink href="http://www.webhyphen.com/">Blog</NavLink>*/}
-              <NavbarToggler onClick={this._toggleNavbar.bind(this)} className="mr-2">
+              <NavbarToggler onFocus={this._toggleNavbar.bind(this)} className="mr-2">
                 <img src={navIcon}/>
               </NavbarToggler>
               <Collapse isOpen={!this.state.collapsed} navbar>

@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 
 import UI from '../../components/ui';
 import Header from '../../components/header';
+import Navigation from '../../components/navigation';
 import {getProjectDetails} from '../../actions/projectDetails';
 
 class IndividualProject extends Component {
@@ -36,51 +37,53 @@ class IndividualProject extends Component {
   render() {
 
         return (
-          <section id='individual-projects'
-            className='text-center'>
-            <section className='header-wrapper'>
+          <section id='individual-projects' className='text-center'>
+            <Navigation />
+            <section className='individual-projects'>
+              <section className='header-wrapper'>
 
-               <div className='image-container'>
-                 <img className='image-desktop' src={`images/${this.props.slug}-desktop.png`} />
-                 <img className='image-mobile' src={`images/${this.props.slug}-mobile.png`} />
-                 <img className='image-pad' src={`images/${this.props.slug}-pad.png`} />
-               </div>
-            </section>
-            <section className='individual-project-description'>
-              <Header heading={this.state.pd.name}/>
-              <Col>
-                <h4> Technologies used </h4>
-                <ul>
-                  {this._displayTechnologies()}
-                </ul>
-              </Col>
-              <Col>
-                <a className='button' target='_blank' href={`${this.state.pd.weblink}`}>
-                Browse site
-                </a>
-              </Col>
-              <Col>
-                <h4> Technologies used </h4>
-                <ul>
-                  {this._displayTechnologies()}
-                </ul>
-              </Col>
-              <Col>
-                <a className='button' target='_blank' href={`${this.state.pd.weblink}`}>
-                Browse site
-                </a>
-              </Col>
-              <Col>
-                <h4> Technologies used </h4>
-                <ul>
-                  {this._displayTechnologies()}
-                </ul>
-              </Col>
-              <Col>
-                <a className='button' target='_blank' href={`${this.state.pd.weblink}`}>
-                Browse site
-                </a>
-              </Col>
+                 <div className='image-container'>
+                   <img className='image-desktop' src={`images/${this.props.slug}-desktop.png`} />
+                   <img className='image-mobile' src={`images/${this.props.slug}-mobile.png`} />
+                   <img className='image-pad' src={`images/${this.props.slug}-pad.png`} />
+                 </div>
+              </section>
+              <section className='individual-project-description'>
+                <Header heading={this.state.pd.name}/>
+                <Col>
+                  <h4> Technologies used </h4>
+                  <ul>
+                    {this._displayTechnologies()}
+                  </ul>
+                </Col>
+                <Col>
+                  <a className='button' target='_blank' href={`${this.state.pd.weblink}`}>
+                  Browse site
+                  </a>
+                </Col>
+                <Col>
+                  <h4> Technologies used </h4>
+                  <ul>
+                    {this._displayTechnologies()}
+                  </ul>
+                </Col>
+                <Col>
+                  <a className='button' target='_blank' href={`${this.state.pd.weblink}`}>
+                  Browse site
+                  </a>
+                </Col>
+                <Col>
+                  <h4> Technologies used </h4>
+                  <ul>
+                    {this._displayTechnologies()}
+                  </ul>
+                </Col>
+                <Col>
+                  <a className='button' target='_blank' href={`${this.state.pd.weblink}`}>
+                  Browse site
+                  </a>
+                </Col>
+              </section>
             </section>
           </section>
         )

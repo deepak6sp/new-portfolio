@@ -4,8 +4,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @include fadeInDown();
+
   .profile-name {
+    @include fadeInDown();
     font-size: 7rem;
     font-family: $secondary_font;
     text-transform: uppercase;
@@ -13,6 +14,7 @@
     color: $secondary_color;
   }
   .profile-desc {
+    @include fadeInUp();
     font-size: 3.6rem;
     font-family: $primary_font;
     color: $primary_color_alternate;

@@ -6,7 +6,8 @@ export const StandardButton = props =>
       type={props.type}
       id={props.id}
       className="button"
-      to={props.linkTo}>
+      to={props.linkTo}
+      target={props.target}>
         {props.children}
         <span className={`${props.className}`}></span>
       </Link>;

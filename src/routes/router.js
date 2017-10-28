@@ -1,19 +1,22 @@
 import React from 'react';
 import {HashRouter, Route, Switch} from 'react-router-dom';
 
-import Navigation from '../components/navigation';
+
 import Home from '../containers/home';
 import Projects from '../containers/projects';
 import IndividualProject from '../containers/individualProject';
+import About from '../containers/about';
 import Contact from '../containers/contact';
 
 
 const Router = () =>
     <HashRouter>
        <div id='portfolio'>
-            <Navigation />
+
             <Route exact path="/" component={ () => <Home/> }/>
             <Route path="/projects" component={ProjectsRouter}/>
+            <Route path="/about" component={About}/>
+            <Route path="/contact" component={Contact}/>
        </div>
     </HashRouter>;
 

@@ -1,1 +1,30 @@
-
+#about {
+  margin-top: 11rem;
+  background: $white;
+  color: $secondary_color_alternate;
+  .navbar {
+    background: $main_bg;
+  }
+  h3 {
+    font-size: 3rem;
+    font-family: $secondary_font;
+    text-transform: uppercase;
+    margin-top: 5rem;
+    color: $primary_color;
+  }
+  h4 {
+    color: $secondary_color_alternate;
+  }
+  p {
+    font-family: $primary_font;
+    font-size: 1.6rem;
+  }
+  a.button {
+    border: 2px solid $orange;
+    color: $orange !important;
+    &:hover {
+      background: $orange;
+      color: $white !important;
+    }
+  }
+}

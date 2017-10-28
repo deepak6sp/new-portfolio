@@ -1,9 +1,7 @@
 .navbar {
-  //background: $primary_color_alternate;
-
-  width: 100%;
   position: fixed!important;
-  top: 0;
+  top:0;
+  width: 100%;
   z-index: 1;
   .navbar-brand {
     background: $white;
