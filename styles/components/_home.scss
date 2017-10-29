@@ -58,7 +58,13 @@
         color: $secondary_color;
       }
       a.button {
-        border: 2px solid transparent;
+        border: 2px solid $secondary_color;
+        background-color: transparent;
+        color: $secondary_color!important;
+        &:hover {
+          background-color: $secondary_color;
+          color: $primary_color!important;
+        }
       }
     }
     &.inverse-2 {

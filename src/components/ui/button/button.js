@@ -22,6 +22,7 @@ export const StandardButton = props => {
         target = '_blank'
         href={props.linkTo}>
         {props.children}
+        <span className={`${props.className}`}></span>
       </a>
 
     }
