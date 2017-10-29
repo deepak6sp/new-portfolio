@@ -12,16 +12,15 @@
     margin-top: 5rem;
     color: $primary_color;
   }
-  h4 {
-    color: $secondary_color_alternate;
-  }
+
   p {
-    font-family: $primary_font;
+    font-family: $secondary_font;
     font-size: 1.6rem;
   }
   a.button {
     border: 2px solid $orange;
     color: $orange !important;
+    margin-bottom: 2rem;
     &:hover {
       background: $orange;
       color: $white !important;

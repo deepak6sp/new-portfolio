@@ -61,7 +61,7 @@ class Projects extends Component {
                         <span>{key}</span>
                       </h2>
                       <div className='project-text'>
-                        <p>{value.description}</p>
+                        <h5>{value.description}</h5>
                       </div>
                     </Col>
                     <Col sm='6' className='project-image fadeInRight'>

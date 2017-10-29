@@ -6,8 +6,9 @@ a.button {
   font-family: $primary_font;
   text-transform: lowercase;
   border-radius: 5rem;
-  border: 2px solid $primary_color_alternate;
-  color: $primary_color_alternate!important;
+  border: 2px solid $primary_color;
+  color: $primary_color!important;
+  background: $secondary_color;
   width: 200px;
   position: relative;
   //transition: all 0.3s;
@@ -18,8 +19,8 @@ a.button {
   &:hover {
     cursor: pointer;
     text-decoration: none;
-    background: $secondary_color;
-    color: $primary_color!important;
+    background: $primary_color;
+    color: $secondary_color!important;
     border: 2px solid transparent;
     .go-next {
       @include font-awesome();
@@ -36,7 +37,7 @@ a.button {
       &:after {
         content: "\f178";
         position: absolute;
-        color: $primary_color!important;
+        color: $secondary_color!important;
       }
     }
   }

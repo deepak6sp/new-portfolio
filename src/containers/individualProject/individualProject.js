@@ -51,7 +51,7 @@ class IndividualProject extends Component {
               <section className='individual-project-description'>
                 <Header heading={this.state.pd.name}/>
                 <Col>
-                  <h4> Technologies used </h4>
+                  <h5> Technologies used </h5>
                   <ul>
                     {this._displayTechnologies()}
                   </ul>
@@ -61,28 +61,7 @@ class IndividualProject extends Component {
                   Browse site
                   </a>
                 </Col>
-                <Col>
-                  <h4> Technologies used </h4>
-                  <ul>
-                    {this._displayTechnologies()}
-                  </ul>
-                </Col>
-                <Col>
-                  <a className='button' target='_blank' href={`${this.state.pd.weblink}`}>
-                  Browse site
-                  </a>
-                </Col>
-                <Col>
-                  <h4> Technologies used </h4>
-                  <ul>
-                    {this._displayTechnologies()}
-                  </ul>
-                </Col>
-                <Col>
-                  <a className='button' target='_blank' href={`${this.state.pd.weblink}`}>
-                  Browse site
-                  </a>
-                </Col>
+
               </section>
             </section>
           </section>

@@ -12,15 +12,10 @@
     display: flex;
     width: 100vw;
     text-decoration: none;
-    &:nth-child(even) {
-      background: lighten($green, 10%);
-      .project-title, .project-text {
-        color: $white!important;
-      }
+    .project-title, .project-text {
+      color: $white!important;
     }
-    &:nth-child(odd) {
-      background: $white;
-    }
+    
     // &.orange-lightest {
     //   background: $white;
     // }

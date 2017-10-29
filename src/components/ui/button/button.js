@@ -1,8 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-export const StandardButton = props =>
-    <Link
+export const StandardButton = props => {
+  return (
+    <div>
+    {
+      !props.externalLink && <Link
       type={props.type}
       id={props.id}
       className="button"
@@ -10,4 +13,20 @@ export const StandardButton = props =>
       target={props.target}>
         {props.children}
         <span className={`${props.className}`}></span>
-      </Link>;
+      </Link>
+    }
+    {
+      props.externalLink &&
+      <a
+        className='button'
+        target = '_blank'
+        href={props.linkTo}>
+        {props.children}
+      </a>
+
+    }
+    </div>
+  );
+}
+
+//
