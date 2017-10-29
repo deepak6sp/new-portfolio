@@ -12,7 +12,6 @@ import Contact from '../containers/contact';
 const Router = () =>
     <HashRouter>
        <div id='portfolio'>
-
             <Route exact path="/" component={ () => <Home/> }/>
             <Route path="/projects" component={ProjectsRouter}/>
             <Route path="/about" component={About}/>

@@ -13,6 +13,20 @@ class Navigation extends Component {
       };
     }
 
+    componentDidMount() {
+      var bodyRect = document.body.getBoundingClientRect();
+      window.addEventListener('scroll', function(e) {
+        let elemRect = document.querySelector('.profile').getBoundingClientRect();
+        let offset = elemRect.top - bodyRect.top;
+        console.log(offset);
+        if (offset < 0) {
+          document.querySelector('.navbar').classList.add('reduce-height');
+        } else {
+          document.querySelector('.navbar').classList.remove('reduce-height');
+        }
+      });
+    }
+
     _toggleNavbar() {
       this.setState({
         collapsed: !this.state.collapsed
@@ -29,7 +43,9 @@ class Navigation extends Component {
     render() {
         return (
             <Navbar>
-              <NavbarBrand href="#/">dp</NavbarBrand>
+              <NavbarBrand href="#/">
+                <img src='images/avatar.png'/>
+              </NavbarBrand>
               {/*<NavLink href="http://www.webhyphen.com/">Blog</NavLink>*/}
               <NavbarToggler onFocus={this._toggleNavbar.bind(this)} className="mr-2">
                 <img src={navIcon}/>

@@ -4,17 +4,17 @@
   width: 100%;
   z-index: 1;
   background: $main_bg;
+  height: 13rem;
+  transition : height 0.2s ease-in;
+  &.reduce-height {
+    height: 10rem;
+    transition : height 0.2s ease-in;
+  }
   .navbar-brand {
-    background: $white;
-    border-radius:50%;
-    width:6rem;
-    height:6rem;
-    color: $primary_color;
-    font-family: $primary_font;
-    text-align: center;
-    font-size: 3rem;
-    line-height: 5rem;
     margin: 2rem;
+    img {
+        width: 8rem;
+    }
   }
   .navbar-toggler {
     z-index: 1;
@@ -38,7 +38,7 @@
     &.show {
       @include fadeInRightBig();
       position: absolute;
-      background: $primary_color_alternate;
+      background: $secondary_color;
       height: 100vh;
       top: 0px;
       width: 100%;
@@ -58,7 +58,7 @@
       font-family: $secondary_font;
       transition-timing-function: ease-in-out;
       transition-duration: 0.3s;
-      text-transform: lowercase;
+      text-transform: capitalize;
       &:hover {
         color: $secondary_color_alternate;
         transform: scale(1.1);

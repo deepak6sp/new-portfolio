@@ -6,7 +6,7 @@
   // justify-content: center;
   .profile {
     height: 40rem;
-    margin-top: 11rem;
+    margin-top: 13rem;
     background-image: url('../images/melbourne.jpg');
     background-position: center;
     background-attachment: fixed;
@@ -47,6 +47,12 @@
     color: $secondary_color_alternate;
     h4 {
       margin-bottom: 2rem;
+      &:after {
+        content: '';
+        display: block;
+        width: 5rem;
+        border: 0.1rem solid $primary_color;
+      }
     }
     a.button {
       margin-top: 2rem;
@@ -56,6 +62,12 @@
       background: $main_bg;
       h4 {
         color: $secondary_color;
+        &:after {
+          content: '';
+          display: block;
+          width: 5rem;
+          border: 0.1rem solid $secondary_color;
+        }
       }
       a.button {
         border: 2px solid $secondary_color;
@@ -68,7 +80,7 @@
       }
     }
     &.inverse-2 {
-      background: $secondary_color_alternate;
+      background: $primary_color_alternate;
       a.button {
         border: 2px solid transparent;
       }
@@ -78,7 +90,7 @@
     margin-top: 3rem;
   }
   .contact-details {
-    background: $secondary_color_alternate;
+    background: $primary_color_alternate;
     p {
       color: $secondary_color;
     }

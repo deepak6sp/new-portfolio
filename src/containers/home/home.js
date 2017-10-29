@@ -64,8 +64,8 @@ class Home extends Component {
                 className = 'default'
                 heading = 'About'
                 text = 'I am a Full Stack Web Developer having 5 years of experience. Recently, I have
-                        been focusing on UX and front end development. I develop with skills of
-                        minimal usability designs and using core XHTML/HTML,CSS and Javascript.'
+                        been focusing on UX and front end development. I have designed this website using
+                        sketch app and developed using Bootrap 4, Reactjs and Node (Expressjs) frameworks.'
                 buttonText = 'know more'
                 linkTo = '/about'/>
             </Row>
