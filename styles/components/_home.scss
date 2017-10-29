@@ -4,22 +4,44 @@
   // flex-direction: column;
   // align-items: center;
   // justify-content: center;
+  .profile {
+    height: 40rem;
+    margin-top: 11rem;
+    background-image: url('../images/melbourne.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    color: $secondary_color!important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $secondary_color_alternate;
+      opacity: 0.8;
+    }
+    .profile-name {
 
-  .profile-name {
-    @include fadeInDown();
-    font-size: 5rem;
-    font-family: $secondary_font;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    color: $primary_color;
-    margin-top: 15rem;
+      @include fadeInDown();
+      font-size: 5rem;
+      font-family: $secondary_font;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      color: inherit;
+    }
+    .profile-desc, .profile-location  {
+      h6,p {
+        @include fadeInUp();
+        color: lighten($secondary_color_alternate, 80%);
+      }
+    }
+    .profile-location {
+    }
   }
-  .profile-desc {
-    @include fadeInUp();
-    font-size: 2rem;
-    font-family: $primary_font;
-    color: $secondary_color_alternate;
-  }
+
   .homePageBlocks {
     padding: 6rem 0rem;
     color: $secondary_color_alternate;
@@ -50,8 +72,9 @@
     margin-top: 3rem;
   }
   .contact-details {
+    background: $secondary_color_alternate;
     p {
-      color: $secondary_color_alternate;
+      color: $secondary_color;
     }
   }
 }
