@@ -22,7 +22,7 @@ export const StandardButton = props => {
         target = '_blank'
         href={props.linkTo}>
         {props.children}
-        <span className={`${props.className}`}></span>
+        <span className='fa-external-link'></span>
       </a>
 
     }

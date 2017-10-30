@@ -20,7 +20,7 @@ class Navigation extends Component {
         let elemRect = document.querySelector('.profile').getBoundingClientRect();
         let offset = elemRect.top - bodyRect.top;
         console.log(offset);
-        if (offset < 0) {
+        if (offset < -100) {
           document.querySelector('.navbar').classList.add('reduce-height');
         } else {
           document.querySelector('.navbar').classList.remove('reduce-height');

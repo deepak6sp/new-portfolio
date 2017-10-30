@@ -11,7 +11,7 @@ a.button {
   background: $secondary_color;
   width: 200px;
   position: relative;
-  //transition: all 0.3s;
+  transition: all 0.2s ease-in;
   text-decoration: none;
   &:focus {
     outline: none!important;
@@ -22,23 +22,27 @@ a.button {
     background: $primary_color;
     color: $secondary_color!important;
     border: 2px solid transparent;
-    .go-next {
-      @include font-awesome();
-      &:after {
-        content: "\f178";
-        margin-left: 1.5rem;
-        position: absolute;
-        top: 1.5rem;
-        opacity: 1;
-      }
+    .go-next, .fa-external-link {
+      transition: all 0.3s ease-in;
+      right: 2rem;
+      opacity: 1;
     }
-    .go-next {
-      @include font-awesome();
-      &:after {
-        content: "\f178";
-        position: absolute;
-        color: $secondary_color!important;
-      }
+
+  }
+  .go-next, .fa-external-link {
+    position: absolute;
+    right: 6rem;
+    top: 1.5rem;
+    opacity: 0;
+    color: $secondary_color;
+    @include font-awesome();
+    &:before {
+      content: "\f178";
+    }
+  }
+  .fa-external-link {
+    &:before {
+      content: "\f08e";
     }
   }
 }

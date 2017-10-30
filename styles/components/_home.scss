@@ -1,7 +1,6 @@
 #home {
   .profile {
     height: 50rem;
-    margin-top: 13rem;
     background-image: url('../images/melbourne.jpg');
     background-position: center;
     background-attachment: fixed;
@@ -13,6 +12,7 @@
     justify-content: center;
     .overlay {
       position: absolute;
+      top:0;
       width: 100%;
       height: 100%;
       background-color: $secondary_color_alternate;
@@ -39,6 +39,27 @@
         font-style: italic;
       }
     }
+    .social-icons {
+      a {
+        color: $grey-mid;
+        z-index: 1;
+        margin: 1rem;
+        width: 3rem;
+        height: 3rem;
+        line-height: 2.7rem;
+        text-align: center;
+        display: block;
+        border-radius: 50%;
+        border: 0.1rem solid transparent;
+        transition: all 0.2s ease-in;
+        &:hover {
+          color: $white;
+          cursor: pointer;
+          transform: scale(0.9);
+          border: 0.1rem solid $white;
+        }
+      }
+    }
   }
 
   .homePageBlocks {
@@ -51,14 +72,24 @@
         display: block;
         width: 5rem;
         border: 0.1rem solid $primary_color;
+        margin-top: 1rem;
       }
     }
     a.button {
       margin-top: 2rem;
     }
+    .fa {
+      position: relative;
+      left: 50%;
+      color: $primary_color;
+      margin-bottom: 5rem;
+    }
     &.inverse, &.inverse-2  {
       color: $secondary_color;
       background: $main_bg;
+      .fa {
+        color: $secondary_color;
+      }
       h4 {
         color: $secondary_color;
         &:after {
@@ -76,6 +107,9 @@
           background-color: $secondary_color;
           color: $primary_color!important;
         }
+        .fa-external-link {
+          color: $primary_color;
+        }
       }
     }
     &.inverse-2 {
@@ -84,14 +118,22 @@
         border: 2px solid transparent;
       }
     }
+    &.get-in-touch {
+      padding-bottom: 1rem;
+    }
+
+
   }
   .button {
     margin-top: 3rem;
   }
   .contact-details {
     background: $primary_color_alternate;
-    p {
-      color: $secondary_color;
+    padding-bottom: 3rem;
+    span {
+      padding-right: 1rem;
+      color: $grey-mid;
+      margin-bottom: 3rem;
     }
   }
 }

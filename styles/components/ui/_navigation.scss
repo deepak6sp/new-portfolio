@@ -1,10 +1,10 @@
 .navbar {
-  background: $main_bg;
+  background: transparent;
   height: 13rem;
-  transition : height 0.2s ease-in;
   &.reduce-height {
+    @include slideInDown();
+    background: $main_bg;
     height: 10rem;
-    transition : all 0.2s ease-in;
     .navbar-brand {
       padding: 5px;
       padding-left: 2rem;
@@ -14,7 +14,14 @@
     padding: 2rem;
     img {
         width: 8rem;
+        transition : all 0.2s ease-in-out;
+        &:hover {
+          border: 0.1rem solid $white;
+          padding: 0.3rem;
+          border-radius: 50%;
+        }
     }
+
   }
   .navbar-toggler {
     z-index: 1;
