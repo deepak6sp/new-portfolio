@@ -20,6 +20,7 @@
     "react-addons-css-transition-group": "^15.6.0",
     "react-addons-transition-group": "^15.6.0",
     "react-dom": "^15.5.4",
+    "react-fontawesome": "^1.6.1",
     "react-lazyload": "^2.2.7",
     "react-parallax-component": "^1.0.6",
     "react-parallax-effect": "^1.0.6",

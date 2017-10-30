@@ -1,17 +1,17 @@
 .navbar {
-  position: fixed!important;
-  top:0;
-  width: 100%;
-  z-index: 1;
   background: $main_bg;
   height: 13rem;
   transition : height 0.2s ease-in;
   &.reduce-height {
     height: 10rem;
-    transition : height 0.2s ease-in;
+    transition : all 0.2s ease-in;
+    .navbar-brand {
+      padding: 5px;
+      padding-left: 2rem;
+    }
   }
   .navbar-brand {
-    margin: 2rem;
+    padding: 2rem;
     img {
         width: 8rem;
     }
@@ -19,18 +19,23 @@
   .navbar-toggler {
     z-index: 1;
     padding: 0rem;
+    transition: all 0.2s ease-in;
+    .align-right-icon {
+      color: $white;
+      &:before {
+        content: "\F038";
+      }
+    }
     &:hover {
       cursor: pointer;
-      transform: rotate(180deg);
-      transition: all 0.5s ease;
-    }
-    &:focus {
-      img {
-        transform: scale(0.7);
-        transition: all 0.5s ease;
+      .align-right-icon {
+        &:before {
+          content: "\f039";
+        }
       }
     }
     &:focus {
+      transform: scale(0.9);
       outline: none;
     }
   }
@@ -77,6 +82,5 @@
       -o-transition : height 3s;
       transition : height 2s ease-in;
     }
-
   }
 }

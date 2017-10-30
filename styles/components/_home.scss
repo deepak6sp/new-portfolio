@@ -1,11 +1,6 @@
 #home {
-  //height: 100vh;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
   .profile {
-    height: 40rem;
+    height: 50rem;
     margin-top: 13rem;
     background-image: url('../images/melbourne.jpg');
     background-position: center;
@@ -24,7 +19,6 @@
       opacity: 0.8;
     }
     .profile-name {
-
       @include fadeInDown();
       font-size: 5rem;
       font-family: $secondary_font;
@@ -33,12 +27,17 @@
       color: inherit;
     }
     .profile-desc, .profile-location  {
+      h6 {
+        font-size: 3rem;
+      }
       h6,p {
         @include fadeInUp();
-        color: lighten($secondary_color_alternate, 80%);
       }
     }
     .profile-location {
+      p {
+        font-style: italic;
+      }
     }
   }
 

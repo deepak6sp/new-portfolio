@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import { Jumbotron, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import FontAwesome from 'react-fontawesome';
 import navIcon from './images/nav-icon.svg';
 
 
@@ -42,13 +43,13 @@ class Navigation extends Component {
 
     render() {
         return (
-            <Navbar>
+            <Navbar className='fixed-top'>
               <NavbarBrand href="#/">
                 <img src='images/avatar.png'/>
               </NavbarBrand>
               {/*<NavLink href="http://www.webhyphen.com/">Blog</NavLink>*/}
-              <NavbarToggler onFocus={this._toggleNavbar.bind(this)} className="mr-2">
-                <img src={navIcon}/>
+              <NavbarToggler onClick={this._toggleNavbar.bind(this)} className="mr-4">
+                <FontAwesome name='none' size='3x' className='align-right-icon'/>
               </NavbarToggler>
               <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav navbar className='fadeInLeft'>

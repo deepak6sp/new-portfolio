@@ -4200,6 +4200,12 @@ react-element-to-jsx-string@^5.0.0:
     stringify-object "2.4.0"
     traverse "^0.6.6"
 
+react-fontawesome@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/react-fontawesome/-/react-fontawesome-1.6.1.tgz#eddce17e7dc731aa09fd4a186688a61793a16c5c"
+  dependencies:
+    prop-types "^15.5.6"
+
 react-hot-loader@3.0.0-beta.1:
   version "3.0.0-beta.1"
   resolved "https://registry.npmjs.org/react-hot-loader/-/react-hot-loader-3.0.0-beta.1.tgz#0361a36198ebe9a5d7da1b9bd44e7f9d0f0aa53c"
