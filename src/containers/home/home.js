@@ -81,7 +81,7 @@ class Home extends Component {
 
               <Row>
                 <HomePageBlocks
-                  className = 'inverse get-in-touch'
+                  className = 'inverse-2 get-in-touch'
                   icon='address-book-o'
                   heading = 'Get in touch'
                   text = 'If you like my work and have some cool project to talk about, you could reach
