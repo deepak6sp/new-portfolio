@@ -15,7 +15,7 @@
     .project-title, .project-text {
       color: $white!important;
     }
-    
+
     // &.orange-lightest {
     //   background: $white;
     // }
@@ -43,7 +43,7 @@
           text-transform: uppercase;
         }
         .project-text {
-          color: $black-mid;
+          color: $black-light;
           font-family: $primary_font;
           font-size: 2.5rem;
         }
@@ -60,4 +60,21 @@
     }
 
   }
+}
+
+.scrollarea-content {
+  overflow-x: scroll;
+  transition: all 1s ease-in;
+}
+
+.prev {
+  position: fixed;
+  bottom:0;
+  color:black;
+}
+.next {
+  position: fixed;
+  bottom:0;
+  color:black;
+  right: 0;
 }

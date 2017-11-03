@@ -1,8 +1,10 @@
+@import 'vendors/bootstrap/bootstrap.scss';
+@import 'vendors/font-awesome/font-awesome.scss';
+
 @import 'reset.scss';
 @import 'globals/globals.scss';
 @import 'components/components.scss';
-@import 'vendors/bootstrap/bootstrap.scss';
-@import 'vendors/font-awesome/font-awesome.scss';
+
 
 html {
     font-size: 62.5%;
