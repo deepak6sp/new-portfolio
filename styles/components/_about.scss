@@ -7,10 +7,18 @@
   }
   h3 {
     margin-top: 8rem;
+    margin-bottom: 3rem;
     font-size: 3rem;
     font-family: $secondary_font;
     text-transform: uppercase;
     color: $primary_color;
+    &:after {
+      content: '';
+      display: block;
+      width: 5rem;
+      border: 0.1rem solid #FD561F;
+      margin-top: 1rem;
+    }
   }
   h6{
     color: $secondary_color_alternate;
@@ -26,7 +34,6 @@
       margin-top: 2rem;
     }
     .about-things-block {
-      margin:2rem 0rem;
       height: 100%;
       text-align: center;
       box-shadow: 0px 0px 5px $grey;

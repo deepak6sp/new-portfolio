@@ -21,7 +21,6 @@ class About extends Component {
                 <Row>
                     <Col sm={12}>
                         <h3> About me</h3>
-                        <hr/>
                         <p> I am self learner, passionate Full Stack Web Developer having 5 years of experience. Recently, I have been focusing on UX and front end development.
                             I develop with skills of minimal usability designs and using core XHTML/HTML, CSS and Javascript. My coding follows reusable
                             component based structure for easy maintenance, scaling and debugging. I also, have experince using PHP and Node frameworks.
@@ -38,8 +37,7 @@ class About extends Component {
             <section className="container about-things">
                 <Row>
                     <Col sm={12}>
-                        <h3> About things I do </h3>
-                        <hr/>
+                        <h3> Things I do </h3>
                         <p></p>
                     </Col>
                 </Row>
@@ -77,8 +75,25 @@ class About extends Component {
             <section className="container about-my-blog">
                 <Row>
                     <Col sm={12}>
-                        <h3> About my blog</h3>
-                        <hr/>
+                        <h3> My blog</h3>
+                    </Col>
+                    <Col sm={12}>
+                        <p> I have been writing articles at webhyphen.
+                        I am doing this blog to share my knowledge and expericence
+                        focusing on modern design trends and latest web development technologies.</p>
+                    </Col>
+                    <Col sm={12}>
+                      <UI.Button className='go-next' linkTo="http://www.webhyphen.com" externalLink={true}>
+                          Visit Blog
+                      </UI.Button>
+                    </Col>
+                </Row>
+            </section>
+
+            <section className="container testimonals">
+                <Row>
+                    <Col sm={12}>
+                        <h3> What people are saying</h3>
                     </Col>
                     <Col sm={12}>
                         <p> I have been writing articles at webhyphen.
