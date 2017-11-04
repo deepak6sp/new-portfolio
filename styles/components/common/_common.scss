@@ -6,6 +6,10 @@
   overflow: hidden;
 }
 
+hr {
+  border: 1px solid $grey-light;
+}
+
 h3 {
   color: $secondary_color;
   font-size: 5rem;

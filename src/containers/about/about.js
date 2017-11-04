@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Row, Col } from 'reactstrap';
+import FontAwesome from 'react-fontawesome';
 
 import Navigation from '../../components/navigation';
 import UI from '../../components/ui';
@@ -26,10 +27,15 @@ class About extends Component {
                             component based structure for easy maintenance, scaling and debugging. I also, have experince using PHP and Node frameworks.
                         </p>
                     </Col>
+                    <Col sm={12}>
+                      <UI.Button className='go-next' linkTo="/images/Deepak_Resume.pdf" externalLink={true}>
+                          <FontAwesome name="download" size='lg'/> Resume
+                      </UI.Button>
+                    </Col>
                 </Row>
             </section>
 
-            <section className="container about-me">
+            <section className="container about-things">
                 <Row>
                     <Col sm={12}>
                         <h3> About things I do </h3>
@@ -38,36 +44,27 @@ class About extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col sm={12} md={4}>
-                        {/*<FontAwesome className='super-crazy-colors' name="mobile" size='3x'/>*/}
+                    <Col sm={12} md={4} className='text-center'>
+                        <FontAwesome name="empire" size='3x'/>
                         <h6> Design and Wireframes </h6>
                         <p> I use photoshop for designs and convert them to complete web solution. Recently, I have
                            been using my favourite <strong>Sketch App</strong> for mockups and wireframes, and loving it.</p>
                     </Col>
-                    <Col sm={12} md={4}>
-                        {/*<FontAwesome className='super-crazy-colors' name="code" size='2x'/>*/}
+                    <Col sm={12} md={4} className='text-center'>
+                        <FontAwesome name="code" size='3x'/>
                         <h6> Development </h6>
                         <p> I develop custom made user friendly web pages and applications using the latest open source technologies. I use build tools such as
                         npm, bower, webpack, gulp, sass to speed up developement process.</p>
                     </Col>
-                    <Col sm={12} md={4}>
-                        {/*<FontAwesome className='super-crazy-colors' name="cogs" size='2x'/>*/}
+                    <Col sm={12} md={4} className='text-center'>
+                        <FontAwesome name="desktop" size='3x'/>
+                        <FontAwesome name="mobile" size='3x'/>
                         <h6> Testing </h6>
                         <p> I consider testing to be as important as design and development, so I believe in Agile test driven development. Also, I will make sure the
                             whole application works accross multi browsers and devices.</p>
                     </Col>
                 </Row>
 
-                <Row>
-                    <Col sm={12}>
-                        <p> My projects involve use of technologies such as:</p>
-                        <section className="skillsModulesVisible">
-                            {/*<ListSkills/>*/}
-                        </section>
-                        <p>I am self learner, love web technologies, have passion for what I do, and hope to do this forever.</p>
-                        {/*<UI.Button>Download Resume</UI.Button>*/}
-                    </Col>
-                </Row>
             </section>
 
             <section className="container about-my-blog">
@@ -89,9 +86,7 @@ class About extends Component {
                 </Row>
             </section>
 
-            <section className='container'>
-              <Contact/>
-            </section>
+            <Contact/>
 
             <Footer />
 
