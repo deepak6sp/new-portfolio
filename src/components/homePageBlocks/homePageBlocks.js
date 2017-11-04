@@ -11,7 +11,7 @@ const HomePageBlocks = (props) => (
               {/*}*/}
               <article className='container'>
                 <h4> {props.heading}</h4>
-                <p> {props.text} </p>
+                <p>{props.children}</p>
                 { !props.hideButton &&
                   <UI.Button className='go-next' linkTo={props.linkTo} externalLink={props.externalLink}>
                     {props.buttonText}

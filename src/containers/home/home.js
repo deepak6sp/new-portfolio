@@ -47,32 +47,33 @@ class Home extends Component {
                   className = 'default'
                   icon = 'codepen'
                   heading = 'Projects'
-                  text = 'I am been fotunate enough to work at both service industries and agencies. While
-                          working on various projects, I have picked up UX, Front end, Back end and Devops
-                          skills. '
                   buttonText = 'showcase'
-                  linkTo = '/projects'/>
-
+                  linkTo = '/projects'>
+                    I am been fotunate enough to work at both service industries and agencies. While
+                    working on various projects, I have picked up UX, Front end, Back end and Devops
+                    skills.
+                </HomePageBlocks>
                 <HomePageBlocks
                   className = 'inverse'
                   icon = 'pencil'
                   heading = 'Blog'
-                  text = 'I have been writing articles at webhyphen. I am doing this blog to share my
-                          knowledge and expericence focusing on modern design trends and latest web
-                          development technologies.'
                   buttonText = 'visit blog'
                   externalLink = {true}
-                  linkTo = 'http://www.webhyphen.com'/>
-
+                  linkTo = 'http://www.webhyphen.com'>
+                    I have been writing articles at webhyphen. I am doing this blog to share my
+                    knowledge and expericence focusing on modern design trends and latest web
+                    development technologies.
+                </HomePageBlocks>
                 <HomePageBlocks
                   className = 'default'
                   icon='user-circle-o'
                   heading = 'About'
-                  text = 'I am a Full Stack Web Developer having 5 years of experience. Recently, I have
-                          been focusing on UX prototyping and front end development. I have designed this website using
-                          sketch app and developed using Bootrap 4, Reactjs and Node (Expressjs) frameworks.'
                   buttonText = 'know me'
-                  linkTo = '/about'/>
+                  linkTo = '/about'>
+                    I am a Full Stack Web Developer having 5 years of experience. Recently, I have
+                    been focusing on UX prototyping and front end development. I have designed this website using
+                    sketch app and developed using Bootrap 4, Reactjs and Node (Expressjs).
+                  </HomePageBlocks>
 
                   <Contact />
 
