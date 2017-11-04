@@ -69,7 +69,7 @@ class Home extends Component {
                   icon='user-circle-o'
                   heading = 'About'
                   text = 'I am a Full Stack Web Developer having 5 years of experience. Recently, I have
-                          been focusing on UX and front end development. I have designed this website using
+                          been focusing on UX prototyping and front end development. I have designed this website using
                           sketch app and developed using Bootrap 4, Reactjs and Node (Expressjs) frameworks.'
                   buttonText = 'know me'
                   linkTo = '/about'/>

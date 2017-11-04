@@ -44,24 +44,31 @@ class About extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col sm={12} md={4} className='text-center'>
+                    <Col sm={12} md={4}>
+                      <article className='about-things-block'>
                         <FontAwesome name="empire" size='3x'/>
-                        <h6> Design and Wireframes </h6>
-                        <p> I use photoshop for designs and convert them to complete web solution. Recently, I have
-                           been using my favourite <strong>Sketch App</strong> for mockups and wireframes, and loving it.</p>
+                        <h6> Prototyping </h6>
+                        <p> I use my favourite <strong>Sketch App</strong> for prototyping and wireframes,
+                            and convert them to complete web solutions.</p>
+                      </article>
                     </Col>
-                    <Col sm={12} md={4} className='text-center'>
+                    <Col sm={12} md={4}>
+                      <article className='about-things-block'>
                         <FontAwesome name="code" size='3x'/>
                         <h6> Development </h6>
-                        <p> I develop custom made user friendly web pages and applications using the latest open source technologies. I use build tools such as
+                        <p> I develop custom made user friendly web pages and applications using latest open source technologies. I use build tools such as
                         npm, bower, webpack, gulp, sass to speed up developement process.</p>
+                      </article>
                     </Col>
-                    <Col sm={12} md={4} className='text-center'>
+                    <Col sm={12} md={4}>
+                      <article className='about-things-block'>
+                        <FontAwesome name="tablet" size='3x'/>
                         <FontAwesome name="desktop" size='3x'/>
                         <FontAwesome name="mobile" size='3x'/>
                         <h6> Testing </h6>
-                        <p> I consider testing to be as important as design and development, so I believe in Agile test driven development. Also, I will make sure the
+                        <p> I consider testing to be as important as design and development, so I believe in test driven development. Also, I will make sure the
                             whole application works accross multi browsers and devices.</p>
+                      </article>
                     </Col>
                 </Row>
 
