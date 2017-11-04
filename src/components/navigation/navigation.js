@@ -15,11 +15,11 @@ class Navigation extends Component {
     }
 
     componentDidMount() {
+      window.scrollTo(0, 0);
       var bodyRect = document.body.getBoundingClientRect();
       window.addEventListener('scroll', function(e) {
         let elemRect = document.querySelector('main').getBoundingClientRect();
         let offset = elemRect.top - bodyRect.top;
-        console.log(offset);
         if (offset < -100) {
           document.querySelector('.navbar').classList.add('reduce-height');
         } else {
@@ -29,7 +29,7 @@ class Navigation extends Component {
     }
 
     componentDidUnMount() {
-        window.removeEventListener('scroll');
+      console.log('navbar un mounted');
     }
 
     _toggleNavbar() {

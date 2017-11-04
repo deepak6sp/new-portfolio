@@ -13,6 +13,7 @@ import Footer from '../../components/footer';
 import UI from '../../components/ui';
 import HomePageBlocks from  '../../components/homePageBlocks'
 import {getProjects} from '../../actions/projects';
+import Contact from '../../components/contact';
 
 class Home extends Component {
 
@@ -42,7 +43,6 @@ class Home extends Component {
               <SocialLinks/>
             </section>
             <section className='home-page-body container'>
-              <Row>
                 <HomePageBlocks
                   className = 'default'
                   icon = 'codepen'
@@ -52,9 +52,7 @@ class Home extends Component {
                           skills. '
                   buttonText = 'showcase'
                   linkTo = '/projects'/>
-              </Row>
 
-              <Row>
                 <HomePageBlocks
                   className = 'inverse'
                   icon = 'pencil'
@@ -65,9 +63,7 @@ class Home extends Component {
                   buttonText = 'visit blog'
                   externalLink = {true}
                   linkTo = 'http://www.webhyphen.com'/>
-              </Row>
 
-              <Row>
                 <HomePageBlocks
                   className = 'default'
                   icon='user-circle-o'
@@ -77,29 +73,9 @@ class Home extends Component {
                           sketch app and developed using Bootrap 4, Reactjs and Node (Expressjs) frameworks.'
                   buttonText = 'know more'
                   linkTo = '/about'/>
-              </Row>
 
-              <Row>
-                <HomePageBlocks
-                  className = 'inverse-2 get-in-touch'
-                  icon='address-book-o'
-                  heading = 'Get in touch'
-                  text = 'If you like my work and have some cool project to talk about, you could reach
-  me at,'
-                  hideButton = {true}
-                  />
-              </Row>
+                  <Contact />
 
-              <Row className='contact-details'>
-                    <Col sm={12} className='text-left sm-12'>
-                        <FontAwesome name='envelope-open-o' size='1x'/>
-                        <strong>deepak6sp@gmail.com</strong>
-                    </Col>
-                    <Col sm={12} className='text-left'>
-                        <FontAwesome name='phone' size='1x'/>
-                        <strong>0422596332</strong>
-                    </Col>
-              </Row>
             </section>
 
             <Footer />

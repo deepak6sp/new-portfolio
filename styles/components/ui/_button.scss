@@ -1,48 +1,54 @@
-a.button {
-  display: block;
-  text-align: center;
-  padding: 1rem 2rem;
-  font-size: $main-font-size;
-  font-family: $primary_font;
-  text-transform: lowercase;
-  border-radius: 5rem;
-  border: 2px solid $primary_color;
-  color: $primary_color!important;
-  background: $secondary_color;
-  width: 200px;
-  position: relative;
-  transition: all 0.2s ease-in;
-  text-decoration: none;
-  &:focus {
-    outline: none!important;
-  }
-  &:hover {
-    cursor: pointer;
+button {
+  background: transparent;
+  border: transparent;
+  margin: 2rem 0rem;
+  padding-left: 0rem;
+  a.button {
+    display: block;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: $main-font-size;
+    font-family: $primary_font;
+    text-transform: lowercase;
+    border-radius: 5rem;
+    border: 2px solid $primary_color;
+    color: $primary_color!important;
+    background: $secondary_color;
+    width: 200px;
+    position: relative;
+    transition: all 0.2s ease-in;
     text-decoration: none;
-    background: $primary_color;
-    color: $secondary_color!important;
-    border: 2px solid transparent;
-    .go-next, .fa-external-link {
-      transition: all 0.3s ease-in;
-      right: 2rem;
-      opacity: 1;
+    &:focus {
+      outline: none!important;
     }
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+      background: $primary_color;
+      color: $secondary_color!important;
+      border: 2px solid transparent;
+      .go-next, .fa-external-link {
+        transition: all 0.3s ease-in;
+        right: 2rem;
+        opacity: 1;
+      }
 
-  }
-  .go-next, .fa-external-link {
-    position: absolute;
-    right: 6rem;
-    top: 1.5rem;
-    opacity: 0;
-    color: $secondary_color;
-    @include font-awesome();
-    &:before {
-      content: "\f178";
     }
-  }
-  .fa-external-link {
-    &:before {
-      content: "\f08e";
+    .go-next, .fa-external-link {
+      position: absolute;
+      right: 6rem;
+      top: 1.2rem;
+      opacity: 0;
+      color: $secondary_color;
+      @include font-awesome();
+      &:before {
+        content: "\f178";
+      }
+    }
+    .fa-external-link {
+      &:before {
+        content: "\f08e";
+      }
     }
   }
 }

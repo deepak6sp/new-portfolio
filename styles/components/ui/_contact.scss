@@ -1,0 +1,12 @@
+.contact-details {
+  background: $primary_color_alternate;
+  padding-bottom: 3rem;
+  .email, .phone {
+    padding: 0rem 6rem;
+  }
+  span {
+    padding-right: 1rem;
+    color: $grey-mid;
+    margin-bottom: 3rem;
+  }
+}

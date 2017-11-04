@@ -1,8 +1,9 @@
 #home {
-  background-color: $grey;
+  background-color: $secondary_color;
   background-attachment: fixed;
   .profile {
     height: 50rem;
+    line-height: 5rem;
     background-image: url('../images/melbourne.jpg');
     background-position: center;
     background-attachment: fixed;
@@ -26,7 +27,7 @@
       font-family: $secondary_font;
       text-transform: uppercase;
       letter-spacing: 0.2rem;
-      color: inherit;
+      color: $primary_color;
       @include media-breakpoint-down(sm) {
         font-size: 3rem;
         line-height: 4rem;
@@ -63,13 +64,14 @@
         display: block;
         border-radius: 50%;
         border: 0.1rem solid transparent;
-        transition: all 0.2s ease-in;
+        transition: all 0.1s ease-in;
         font-size: 2rem;
         &:hover {
           color: $white;
           cursor: pointer;
           transform: scale(0.9);
           border: 0.1rem solid $white;
+          box-shadow: 0px 0px 10px $white;
         }
       }
     }
@@ -86,78 +88,7 @@
     overflow: hidden;
   }
 
-  .home-page-blocks {
-    padding: 6rem;
-    color: $secondary_color_alternate;
-    h4 {
-      margin-bottom: 2rem;
-      &:after {
-        content: '';
-        display: block;
-        width: 5rem;
-        border: 0.1rem solid $primary_color;
-        margin-top: 1rem;
-      }
-    }
-    a.button {
-      margin-top: 2rem;
-    }
-    .fa {
-      position: relative;
-      left: 50%;
-      color: $primary_color;
-      margin-bottom: 5rem;
-    }
-    &.inverse, &.inverse-2  {
-      color: $secondary_color;
-      background: $main_bg;
-      .fa {
-        color: $secondary_color;
-      }
-      h4 {
-        color: $secondary_color;
-        &:after {
-          content: '';
-          display: block;
-          width: 5rem;
-          border: 0.1rem solid $secondary_color;
-        }
-      }
-      a.button {
-        border: 2px solid $secondary_color;
-        background-color: transparent;
-        color: $secondary_color!important;
-        &:hover {
-          background-color: $secondary_color;
-          color: $primary_color!important;
-        }
-        .fa-external-link {
-          color: $primary_color;
-        }
-      }
-    }
-    &.inverse-2 {
-      background: $primary_color_alternate;
-      a.button {
-        border: 2px solid transparent;
-      }
-    }
-    &.get-in-touch {
-      padding-bottom: 1rem;
-    }
 
 
-  }
-  .button {
-    margin-top: 3rem;
-  }
-  .contact-details {
-    background: $primary_color_alternate;
-    padding:3rem 0rem 3rem 6rem;
-    span {
-      padding-right: 1rem;
-      color: $grey-mid;
-      margin-bottom: 3rem;
-    }
-  }
+
 }

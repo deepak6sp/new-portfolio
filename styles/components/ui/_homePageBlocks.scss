@@ -1,0 +1,55 @@
+.home-page-blocks {
+  padding: 6rem;
+  color: $secondary_color_alternate;
+  h4 {
+    margin-bottom: 2rem;
+    &:after {
+      content: '';
+      display: block;
+      width: 5rem;
+      border: 0.1rem solid $primary_color;
+      margin-top: 1rem;
+    }
+  }
+  .fa {
+    position: relative;
+    left: 50%;
+    color: $primary_color;
+    margin-bottom: 5rem;
+  }
+  &.inverse, &.inverse-2  {
+    color: $secondary_color;
+    background: $main_bg;
+    .fa {
+      color: $secondary_color;
+    }
+    h4 {
+      color: $secondary_color;
+      &:after {
+        content: '';
+        display: block;
+        width: 5rem;
+        border: 0.1rem solid $secondary_color;
+      }
+    }
+    a.button {
+      border: 2px solid $secondary_color;
+      background-color: transparent;
+      color: $secondary_color!important;
+      &:hover {
+        background-color: $secondary_color;
+        color: $primary_color!important;
+      }
+      .fa-external-link {
+        color: $primary_color;
+      }
+    }
+  }
+  &.inverse-2 {
+    background: $primary_color_alternate;
+    padding-bottom: 2.5rem;
+    a.button {
+      border: 2px solid transparent;
+    }
+  }
+}

@@ -3,4 +3,7 @@ footer {
   font-family: inherit;
   height: 10rem;
   padding: 0rem 3rem;
+  p {
+    color: $secondary_color;
+  }
 }

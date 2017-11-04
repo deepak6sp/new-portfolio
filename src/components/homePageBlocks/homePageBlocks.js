@@ -5,6 +5,7 @@ import FontAwesome from 'react-fontawesome';
 import UI from '../ui';
 
 const HomePageBlocks = (props) => (
+          <Row>
             <Col className={`home-page-blocks ${props.className}`}>
               <FontAwesome name={props.icon} size='2x'/>
               {/*}*/}
@@ -18,6 +19,7 @@ const HomePageBlocks = (props) => (
                 }
               </article>
             </Col>
+          </Row>
         );
 
 export default HomePageBlocks
