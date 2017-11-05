@@ -9,11 +9,12 @@ import FontAwesome from 'react-fontawesome';
 import Navigation from '../../components/navigation';
 import SocialLinks from '../../components/socialLinks';
 import Header from '../../components/header';
+import Contact from '../../components/contact';
 import Footer from '../../components/footer';
 import UI from '../../components/ui';
 import HomePageBlocks from  '../../components/homePageBlocks'
 import {getProjects} from '../../actions/projects';
-import Contact from '../../components/contact';
+
 
 class Home extends Component {
 
