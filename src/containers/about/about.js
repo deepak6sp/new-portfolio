@@ -68,6 +68,11 @@ class About extends Component {
                             whole application works accross multi browsers and devices.</p>
                       </article>
                     </Col>
+                    <Col sm={12}>
+                      <UI.Button className='go-next' linkTo="/projects">
+                          Showcase
+                      </UI.Button>
+                    </Col>
                 </Row>
 
             </section>
@@ -100,11 +105,7 @@ class About extends Component {
                         I am doing this blog to share my knowledge and expericence
                         focusing on modern design trends and latest web development technologies.</p>
                     </Col>
-                    <Col sm={12}>
-                      <UI.Button className='go-next' linkTo="http://www.webhyphen.com" externalLink={true}>
-                          Visit Blog
-                      </UI.Button>
-                    </Col>
+
                 </Row>
             </section>
 
