@@ -3,128 +3,199 @@
     background: $main_bg;
     opacity: 0.9;
   }
-
-  .project-images {
-    position: relative;
-    margin-top: 20vh;
-    height: 70vh;
-    .scroll-horizontal {
-      position: relative;
-      >div {
-        position: relative!important;
-      }
-    }
+  .project-container {
+    margin-top: 20rem;
     .image-container {
-      background-image: url('../images/showcase-screen.png');
       position: relative;
-      width: 33.33vw;
-      height:  30rem;
-      margin: 5rem;
-      overflow: hidden;
-      transition: all 0.3s ease-in;
-      border-radius: 0.3rem;
-      cursor: pointer;
-      &:hover {
-        margin-top: 4.5rem;
-        box-shadow: 0px 0px 10px $black;
-        img {
-          transform: scale(1.4);
-          transition: all 2s ease-in;
-        }
-        .project-title {
-          opacity: 1;
-          color: $primary_color;
-          transition: color 0.5s ease-in;
-        }
-        .overlay {
-          opacity: 0.8;
-          transition: opacity 1s ease-in;
-        }
-      }
+      margin: 20rem auto;
+
       img {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        transition: all 1s ease-out;
+        width: 85rem;
       }
-      .overlay {
-        background: $black-dark;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        opacity: 0.6;
+      &:nth-child(odd) {
+        .image-tag-container {
+            position: absolute;
+            right: 1.5rem;
+        }
+      }
+      &:nth-child(even) {
+        right: 1.5rem;
+        text-align: right;
+        .image-tag-container {
+            position: absolute;
+            left: 0rem;
+        }
+      }
+      .image-tag-container {
+        .overlay {
+          position: absolute;
+          background: $black-dark;
+          opacity: 0.8;
+          width: 100%;
+          height: 100%;
+        }
         &:hover {
-          +.project-title {
-            z-index: 2;
+          .overlay {
+            opacity: 1;
+            transition: all 0.5s ease-in;
           }
         }
-      }
-      .project-title {
-        opacity: 0.8;
-        color: $secondary_color;
-        font-family: $primary_font;
-        font-size: 3rem;
-        text-transform: uppercase;
-        z-index: 2;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        border-radius: 0.2rem;
+        bottom: 0.5rem;
+        width: 50rem;
+        height: 20rem;
         text-align: center;
-      }
-    }
-    .scroll-down {
-      text-align: center;
-      width: 100%;
-      color: $black;
-      position: absolute;
-      bottom: 0;
-      .fa {
-        @include fadeInDown($count: infinite);
-        &:hover {
-          animation: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        h4 {
+          padding: 2rem;
+          z-index: 1;
+        }
+        h6 {
+          color: $white;
+          padding-bottom: 2rem;
+          z-index: 1;
         }
       }
     }
   }
-
-
-  a.projects {
-    text-decoration: none;
-    .project-title, .project-text {
-      color: $white!important;
-    }
-    .project-container {
-      pointer-events: none;
-      .project-description {
-        text-align: center;
-        padding: 3rem;
-        .project-title {
-          color: $black;
-          font-family: $secondary_font;
-          font-size: 4rem;
-          text-transform: uppercase;
-        }
-        .project-text {
-          color: $black-light;
-          font-family: $primary_font;
-          font-size: 2.5rem;
-        }
-      }
-      .project-image {
-        padding: 0px;
-        text-align: center;
-        img {
-          max-height: 50vh;
-          width: 75%;
-          transform: rotateY(-30deg) rotateX(5deg);
-        }
-      }
-    }
+  .contact-details {
+    clear: both;
   }
 }
+
+
+
+// #projects {
+//   .navbar {
+//     background: $main_bg;
+//     opacity: 0.9;
+//   }
+//
+//   .project-images {
+//     position: relative;
+//     margin-top: 20vh;
+//     height: 70vh;
+//     .scroll-horizontal {
+//       position: relative;
+//       >div {
+//         position: relative!important;
+//       }
+//     }
+//     .image-container {
+//       background-image: url('../images/showcase-screen.png');
+//       position: relative;
+//       width: 33.33vw;
+//       height:  30rem;
+//       margin: 5rem;
+//       overflow: hidden;
+//       transition: all 0.3s ease-in;
+//       border-radius: 0.3rem;
+//       cursor: pointer;
+//       &:hover {
+//         margin-top: 4.5rem;
+//         box-shadow: 0px 0px 10px $black;
+//         img {
+//           transform: scale(1.4);
+//           transition: all 2s ease-in;
+//         }
+//         .project-title {
+//           opacity: 1;
+//           color: $primary_color;
+//           transition: color 0.5s ease-in;
+//         }
+//         .overlay {
+//           opacity: 0.8;
+//           transition: opacity 1s ease-in;
+//         }
+//       }
+//       img {
+//         position: absolute;
+//         top: 0;
+//         width: 100%;
+//         height: 100%;
+//         transition: all 1s ease-out;
+//       }
+//       .overlay {
+//         background: $black-dark;
+//         width: 100%;
+//         height: 100%;
+//         position: absolute;
+//         z-index: 1;
+//         top: 0;
+//         opacity: 0.6;
+//         &:hover {
+//           +.project-title {
+//             z-index: 2;
+//           }
+//         }
+//       }
+//       .project-title {
+//         opacity: 0.8;
+//         color: $secondary_color;
+//         font-family: $primary_font;
+//         font-size: 3rem;
+//         text-transform: uppercase;
+//         z-index: 2;
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         text-align: center;
+//       }
+//     }
+//     .scroll-down {
+//       text-align: center;
+//       width: 100%;
+//       color: $black;
+//       position: absolute;
+//       bottom: 0;
+//       .fa {
+//         @include fadeInDown($count: infinite);
+//         &:hover {
+//           animation: none;
+//         }
+//       }
+//     }
+//   }
+//
+//
+//   a.projects {
+//     text-decoration: none;
+//     .project-title, .project-text {
+//       color: $white!important;
+//     }
+//     .project-container {
+//       pointer-events: none;
+//       .project-description {
+//         text-align: center;
+//         padding: 3rem;
+//         .project-title {
+//           color: $black;
+//           font-family: $secondary_font;
+//           font-size: 4rem;
+//           text-transform: uppercase;
+//         }
+//         .project-text {
+//           color: $black-light;
+//           font-family: $primary_font;
+//           font-size: 2.5rem;
+//         }
+//       }
+//       .project-image {
+//         padding: 0px;
+//         text-align: center;
+//         img {
+//           max-height: 50vh;
+//           width: 75%;
+//           transform: rotateY(-30deg) rotateX(5deg);
+//         }
+//       }
+//     }
+//   }
+// }

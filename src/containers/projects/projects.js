@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import FontAwesome from 'react-fontawesome';
+import UI from '../../components/ui';
 
 import {getProjects} from '../../actions/projects';
 
@@ -74,14 +75,39 @@ class Projects extends Component {
         return (
             <section id='projects'>
               <Navigation />
-              <div className='project-images'>
+              <div className='project-container container'>
+                <div className='image-container'>
+
+                  <img src={`images/vicpolice-desktop.png`} />
+                  <div className='image-tag-container'>
+                    <div className='overlay'></div>
+                    <h4>Vic Police</h4>
+                    <h6>HTML, Sass, jQuery, PHP - Drupal CMS</h6>
+                    <UI.Button className='go-next' linkTo="/images/Deepak_Resume.pdf" externalLink={true}>
+                        <FontAwesome name="download" size='lg'/> Visit site
+                    </UI.Button>
+                  </div>
+                </div>
+
+                <div className='image-container'>
+                  <img src={`images/vicpolice-desktop.png`} />
+                  <div className='image-tag-container'>
+                    <div className='overlay'></div>
+                    <h4>Vic Police</h4>
+                    <h6>HTML, Sass, jQuery, PHP - Drupal CMS</h6>
+                  </div>
+                </div>
+
+              </div>
+
+              {/*}<div className='project-images'>
                 <HorizontalScroll reverseScroll={true}>
                   {this._displayProjectsList()}
                 </HorizontalScroll>
                 <section className='scroll-down' onClick={this._scrollDown.bind(this)}>
                   <FontAwesome name='angle-double-down' size='3x'/>
                 </section>
-              </div>
+              </div>*/}
 
               <Contact />
               <Footer />
