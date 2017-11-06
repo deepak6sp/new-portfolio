@@ -39,11 +39,24 @@ class IndividualProject extends Component {
         return (
           <section id='individual-projects' className='text-center'>
             <Navigation />
-            <section className='individual-projects'>
+            <section className='individual-projects container'>
+              <Row>
+                <Col sm={6}>
+                    <img className='image-desktop' src={`images/${this.props.slug}-desktop.png`} />
+                </Col>
+                <Col sm={6}>
+                    <h5> Technologies used </h5>
+                    <ul>
+                      {this._displayTechnologies()}
+                    </ul>
+                </Col>
+              </Row>
+            </section>
+            {/*}<section className='individual-projects'>
               <section className='header-wrapper'>
 
                  <div className='image-container'>
-                   <img className='image-desktop' src={`images/${this.props.slug}-desktop.png`} />
+
                    <img className='image-mobile' src={`images/${this.props.slug}-mobile.png`} />
                    <img className='image-pad' src={`images/${this.props.slug}-pad.png`} />
                  </div>
@@ -63,7 +76,7 @@ class IndividualProject extends Component {
                 </Col>
 
               </section>
-            </section>
+            </section>*/}
           </section>
         )
   }

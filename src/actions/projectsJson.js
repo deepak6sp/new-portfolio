@@ -2,7 +2,7 @@ const projects = {
   "vicpolice": {
 		"name": "Victoria Police",
     "technologies":
-      ["HTML", "Bootstrap 3 & scss", "Jquery", "Drupal - PHP CMS", "Gulp", "Amazon EC2"],
+      ["HTML", "Bootstrap 3 & scss", "Jquery", "PHP - Drupal 7 CMS", "Gulp", "Amazon EC2"],
     "description": "Read the latest and breaking news from Victoria Police",
     "weblink": "https://www.vicpolicenews.com.au",
 	},
