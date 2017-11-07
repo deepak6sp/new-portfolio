@@ -6,66 +6,128 @@
   .project-container {
     margin-top: 20rem;
     .image-container {
-      position: relative;
-      margin: 20rem auto;
-
-      img {
-        width: 85rem;
-      }
-      &:nth-child(odd) {
-        .image-tag-container {
-            position: absolute;
-            right: 1.5rem;
-        }
-      }
-      &:nth-child(even) {
-        right: 1.5rem;
-        text-align: right;
-        .image-tag-container {
-            position: absolute;
-            left: 0rem;
-        }
-      }
-      .image-tag-container {
-        .overlay {
-          position: absolute;
-          background: $black-dark;
-          opacity: 0.8;
-          width: 100%;
-          height: 100%;
-        }
-        &:hover {
-          .overlay {
-            opacity: 1;
-            transition: all 0.5s ease-in;
+       position: relative;
+       margin-bottom: 5rem;
+       height: 21rem;
+       overflow: hidden;
+       border-radius: 0.2rem;
+       img {
+         width: 100%;
+       }
+       &:hover {
+          .image-tag-container {
+            opacity: 0.5;
           }
-        }
-        border-radius: 0.2rem;
-        bottom: 0.5rem;
-        width: 50rem;
-        height: 20rem;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        h4 {
-          padding: 2rem;
-          z-index: 1;
-        }
-        h6 {
-          color: $white;
-          padding-bottom: 2rem;
-          z-index: 1;
-        }
-      }
+          .overlay {
+            opacity: 0.8;
+          }
+          .button-container {
+            opacity: 1;
+            position: absolute;
+            top: 50%;
+            text-align: center;
+            width: 100%;
+            transform: translateY(-50%);
+            transition: all 0.2s ease-in;
+          }
+       }
+       .image-tag-container {
+          position: absolute;
+          bottom: 0rem;
+          text-align: center;
+          width: 92%;
+          h4 {
+            padding-bottom: 2rem;
+            color: $white;
+          }
+       }
+       .overlay {
+          position: absolute;
+          background: linear-gradient(top, $white 0% ,  $black-dark 50%, $black-dark 100% );
+          opacity: 0.7;
+          width: 92%;
+          height: 100%;
+          top:0;
+          left: 0;
+          margin-right: 15px;
+          margin-left: 15px;
+       }
+       .button-container {
+         opacity: 0;
+         position: absolute;
+         bottom: 0rem;
+         text-align: center;
+         width: 100%;
+       }
     }
   }
-  .contact-details {
-    clear: both;
-  }
 }
+// #projects {
+//   .navbar {
+//     background: $main_bg;
+//     opacity: 0.9;
+//   }
+//   .project-container {
+//     margin-top: 20rem;
+//     .image-container {
+//       position: relative;
+//       margin: 20rem auto;
+//
+//       img {
+//         width: 85rem;
+//       }
+//       &:nth-child(odd) {
+//         .image-tag-container {
+//             position: absolute;
+//             right: 1.5rem;
+//         }
+//       }
+//       &:nth-child(even) {
+//         right: 1.5rem;
+//         text-align: right;
+//         .image-tag-container {
+//             position: absolute;
+//             left: 0rem;
+//         }
+//       }
+//       .image-tag-container {
+//         z-index: 1;
+//         .overlay {
+//           position: absolute;
+//           background: $black-dark;
+//           opacity: 0.8;
+//           width: 100%;
+//           height: 100%;
+//           z-index: -1;
+//         }
+//         &:hover {
+//           .overlay {
+//             opacity: 1;
+//             transition: all 0.5s ease-in;
+//           }
+//         }
+//         border-radius: 0.2rem;
+//         bottom: 0.5rem;
+//         width: 50rem;
+//         height: 30rem;
+//         text-align: center;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         h4 {
+//           padding: 2rem;
+//         }
+//         h6 {
+//           color: $white;
+//         }
+//       }
+//     }
+//   }
+//   .contact-details {
+//     clear: both;
+//   }
+// }
 
 
 

@@ -53,14 +53,18 @@ class Projects extends Component {
           list = this.state.projects_list;
         }
         return Object.entries(list).map(([key, value]) =>
-
-              <div className='image-container' key={key}>
-                <div className='overlay'></div>
-                <div className='project-title' data-href={key} onClick={this._handleClick.bind(this)}>
-                  {value.name}
-                </div>
+              <Col xs={12} md={6} lg={4}  className='image-container' key={key} onClick={this._handleClick.bind(this)}>
                 <img src={`images/${key}-desktop.png`} />
-              </div>
+                <div className='overlay'></div>
+                <div className='image-tag-container' >
+                  <h4>{value.name}</h4>
+                </div>
+                <div className='button-container'>
+                    <UI.Button className='go-next' linkTo={value.weblink}>
+                         view more..
+                    </UI.Button>
+                </div>
+              </Col>
         );
     };
 
@@ -76,28 +80,9 @@ class Projects extends Component {
             <section id='projects'>
               <Navigation />
               <div className='project-container container'>
-                <div className='image-container'>
-
-                  <img src={`images/vicpolice-desktop.png`} />
-                  <div className='image-tag-container'>
-                    <div className='overlay'></div>
-                    <h4>Vic Police</h4>
-                    <h6>HTML, Sass, jQuery, PHP - Drupal CMS</h6>
-                    <UI.Button className='go-next' linkTo="/images/Deepak_Resume.pdf" externalLink={true}>
-                        <FontAwesome name="download" size='lg'/> Visit site
-                    </UI.Button>
-                  </div>
-                </div>
-
-                <div className='image-container'>
-                  <img src={`images/vicpolice-desktop.png`} />
-                  <div className='image-tag-container'>
-                    <div className='overlay'></div>
-                    <h4>Vic Police</h4>
-                    <h6>HTML, Sass, jQuery, PHP - Drupal CMS</h6>
-                  </div>
-                </div>
-
+                <Row>
+                  {this._displayProjectsList()}
+                </Row>
               </div>
 
               {/*}<div className='project-images'>
