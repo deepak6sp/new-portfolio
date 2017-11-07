@@ -63,7 +63,7 @@ class Projects extends Component {
                         linkTo={`/projects/${key}`}
                         dataHref = {key}
                         onClick={this._handleClick.bind(this)}>
-                           view more..
+                           view more
                       </UI.Button>
                   </div>
                 </div>

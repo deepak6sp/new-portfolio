@@ -19,13 +19,14 @@
              .overlay {
                opacity: 0.8;
                background: $black-dark;
+               transition: opacity 0.3s ease-in;
              }
              .button-container {
                opacity: 1;
                top: 50%;
                transform: translateY(-40%);
-               transition: all 0.2s ease-in;
                z-index: 1;
+               transition: all 0.3s ease-in;
              }
           }
        }
@@ -52,6 +53,7 @@
           height: 100%;
           top:0;
           left: 0;
+
        }
        .button-container {
          opacity: 0;

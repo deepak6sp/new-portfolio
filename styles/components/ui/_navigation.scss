@@ -19,11 +19,12 @@
     padding: 2rem;
     img {
         width: 8rem;
-        transition : all 0.2s ease-in-out;
         &:hover {
           border: 0.1rem solid $white;
-          padding: 0.3rem;
+          padding: 0.4rem;
           border-radius: 50%;
+          box-shadow: 0px 0px 10px $white;
+          transition : padding 0.1s ease-in;
         }
     }
 
