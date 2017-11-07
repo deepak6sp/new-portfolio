@@ -13,6 +13,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include media-breakpoint-up(xs) {
+      line-height:8rem;
+    }
     .overlay {
       position: absolute;
       top:0;
@@ -28,15 +31,21 @@
       text-transform: uppercase;
       letter-spacing: 0.2rem;
       color: $primary_color;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(xs) {
         font-size: 3rem;
         line-height: 4rem;
+        span {
+          display: none;
+        }
+      }
+      span {
+        margin-right: 2rem;
       }
     }
     .profile-desc, .profile-location  {
       h6 {
         font-size: 3rem;
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(xs) {
           font-size: 2rem;
           margin: 2rem;
           line-height: 3rem;

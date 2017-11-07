@@ -26,6 +26,8 @@ class About extends Component {
                             component based structure for easy maintenance, scaling and debugging. I also, have experince using PHP and Node frameworks.
                         </p>
                     </Col>
+                </Row>
+                <Row>
                     <Col sm={12}>
                       <UI.Button className='go-next' linkTo="/images/Deepak_Resume.pdf" externalLink={true}>
                           <FontAwesome name="download" size='lg'/> Resume
@@ -36,13 +38,12 @@ class About extends Component {
 
             <section className="container about-things">
                 <Row>
-                    <Col sm={12}>
-                        <h3> Things I do </h3>
-                        <p></p>
-                    </Col>
+                  <Col xs={12}>
+                    <h3> Things I do </h3>
+                  </Col>
                 </Row>
                 <Row>
-                    <Col sm={12} md={4}>
+                    <Col xs={12} md={4} className='mb-5'>
                       <article className='about-things-block'>
                         <FontAwesome name="empire" size='3x'/>
                         <h6> Prototyping </h6>
@@ -50,7 +51,7 @@ class About extends Component {
                             and convert them to complete web solutions.</p>
                       </article>
                     </Col>
-                    <Col sm={12} md={4}>
+                    <Col xs={12} md={4} className='mb-5'>
                       <article className='about-things-block'>
                         <FontAwesome name="code" size='3x'/>
                         <h6> Development </h6>
@@ -58,7 +59,7 @@ class About extends Component {
                         npm, bower, webpack, gulp, sass to speed up developement process.</p>
                       </article>
                     </Col>
-                    <Col sm={12} md={4}>
+                    <Col xs={12} md={4} className='mb-5'>
                       <article className='about-things-block'>
                         <FontAwesome name="tablet" size='3x'/>
                         <FontAwesome name="desktop" size='3x'/>
@@ -68,25 +69,26 @@ class About extends Component {
                             whole application works accross multi browsers and devices.</p>
                       </article>
                     </Col>
+                </Row>
+                <Row>
                     <Col sm={12}>
                       <UI.Button className='go-next' linkTo="/projects">
                           Showcase
                       </UI.Button>
                     </Col>
                 </Row>
-
             </section>
 
             <section className="container about-my-blog">
                 <Row>
                     <Col sm={12}>
                         <h3> My blog</h3>
-                    </Col>
-                    <Col sm={12}>
                         <p> I have been writing articles at webhyphen.
                         I am doing this blog to share my knowledge and expericence
                         focusing on modern design trends and latest web development technologies.</p>
                     </Col>
+                </Row>
+                <Row>
                     <Col sm={12}>
                       <UI.Button className='go-next' linkTo="http://www.webhyphen.com" externalLink={true}>
                           Visit Blog
@@ -99,13 +101,10 @@ class About extends Component {
                 <Row>
                     <Col sm={12}>
                         <h3> What people are saying</h3>
-                    </Col>
-                    <Col sm={12}>
                         <p> I have been writing articles at webhyphen.
                         I am doing this blog to share my knowledge and expericence
                         focusing on modern design trends and latest web development technologies.</p>
                     </Col>
-
                 </Row>
             </section>
 

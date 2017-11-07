@@ -15,13 +15,15 @@ const Contact = () => (
               If you like my work and have some cool project to talk about, you could reach me at,
           </HomePageBlocks>
           <Row>
-            <Col sm={12} className='email'>
+            <Col className='email'>
               <article className='container'>
                 <FontAwesome name='envelope-open-o' size='lg'/>
                 <strong>deepak6sp@gmail.com</strong>
               </article>
             </Col>
-            <Col sm={12}  className='phone'>
+          </Row>
+          <Row>
+            <Col className='phone'>
               <article className='container'>
                 <FontAwesome name='phone' size='lg'/>
                 <strong>0422596332</strong>

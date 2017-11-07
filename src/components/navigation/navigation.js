@@ -52,7 +52,7 @@ class Navigation extends Component {
                 <img src='images/avatar.png'/>
               </NavbarBrand>
               {/*<NavLink href="http://www.webhyphen.com/">Blog</NavLink>*/}
-              <NavbarToggler onClick={this._toggleNavbar.bind(this)} className="mr-4">
+              <NavbarToggler onClick={this._toggleNavbar.bind(this)} className="mr-5">
                 <FontAwesome name='none' size='3x' className='align-right-icon'/>
               </NavbarToggler>
               <Collapse isOpen={!this.state.collapsed} navbar>

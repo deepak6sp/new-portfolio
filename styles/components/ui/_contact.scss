@@ -2,9 +2,12 @@
   background: $primary_color_alternate;
   padding-bottom: 3rem;
   color: $secondary_color;
-  .email, .phone {
-    padding: 0rem 6rem;
+  @include media-breakpoint-up(sm) {
+    .email, .phone {
+      padding: 0rem 6rem;
+    }
   }
+
   span {
     padding-right: 1rem;
     color: $grey-mid;
