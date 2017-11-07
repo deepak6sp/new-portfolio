@@ -10,7 +10,9 @@ export const StandardButton = props => {
       id={props.id}
       className="button"
       to={props.linkTo}
-      target={props.target}>
+      target={props.target}
+      onClick = {props.onClick}
+      data-href = {props.dataHref}>
         {props.children}
         <span className={`${props.className}`}></span>
       </Link>

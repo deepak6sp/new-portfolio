@@ -53,16 +53,22 @@ class Projects extends Component {
           list = this.state.projects_list;
         }
         return Object.entries(list).map(([key, value]) =>
-              <Col xs={12} md={6} lg={4}  className='image-container' key={key} onClick={this._handleClick.bind(this)}>
-                <img src={`images/${key}-desktop.png`} />
-                <div className='overlay'></div>
-                <div className='image-tag-container' >
-                  <h4>{value.name}</h4>
+              <Col xs={12} md={6} lg={4}  className='image-container' key={key}>
+                <div className='overlay-image'>
+                  <img src={`images/${key}-desktop.png`} />
+                  <div className='overlay'></div>
+                  <div className='button-container'>
+                      <UI.Button
+                        className='go-next'
+                        linkTo={`/projects/${key}`}
+                        dataHref = {key}
+                        onClick={this._handleClick.bind(this)}>
+                           view more..
+                      </UI.Button>
+                  </div>
                 </div>
-                <div className='button-container'>
-                    <UI.Button className='go-next' linkTo={value.weblink}>
-                         view more..
-                    </UI.Button>
+                <div className='image-tag-container' >
+                  <h6>{value.name}</h6>
                 </div>
               </Col>
         );
