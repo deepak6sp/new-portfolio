@@ -7,6 +7,8 @@ import UI from '../../components/ui';
 import Header from '../../components/header';
 import Navigation from '../../components/navigation';
 import {getProjectDetails} from '../../actions/projectDetails';
+import Contact from '../../components/contact';
+import Footer from '../../components/footer';
 
 class IndividualProject extends Component {
 
@@ -37,21 +39,37 @@ class IndividualProject extends Component {
   render() {
 
         return (
-          <section id='individual-projects' className='text-center'>
+          <section id='individual-projects'>
             <Navigation />
             <section className='individual-projects container'>
-              <Row>
-                <Col sm={6}>
-                    <img className='image-desktop' src={`images/${this.props.slug}-desktop.png`} />
-                </Col>
-                <Col sm={6}>
+              <h4 className='text-center'>{this.state.pd.name}</h4>
+              <Row className='individual-projects-about container'>
+                <Col xs={12} md={6} className='about-container'>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, </p>
                     <h5> Technologies used </h5>
                     <ul>
                       {this._displayTechnologies()}
                     </ul>
+                    <Row>
+                      <Col>
+                        <UI.Button className='go-next' linkTo={`${this.state.pd.weblink}`} externalLink={true}>
+                          {this.props.slug}
+                        </UI.Button>
+                      </Col>
+                    </Row>
+                </Col>
+                <Col xs={12} md={6} className='image-container'>
+                  <img className='image-pad' src={`images/${this.props.slug}-pad.png`} />
+                  <img className='image-mobile' src={`images/${this.props.slug}-mobile.png`} />
+                </Col>
+              </Row>
+              <Row className='individual-projects-technologies container'>
+                <Col xs={12} className='image-container'>
+                    <img className='image-desktop' src={`images/${this.props.slug}-desktop.png`} />
                 </Col>
               </Row>
             </section>
+
             {/*}<section className='individual-projects'>
               <section className='header-wrapper'>
 
@@ -77,6 +95,9 @@ class IndividualProject extends Component {
 
               </section>
             </section>*/}
+
+            <Contact />
+            <Footer />
           </section>
         )
   }

@@ -2,22 +2,61 @@
   .navbar {
       background: $main_bg;
   }
-  .individual-projects {
-    text-align: left;
-    margin-top: 20rem;
-    .image-desktop {
-      width: 100%;
-      transform: rotateY(-30deg) rotateX(-5deg);
-    }
-    ul {
-      margin-top: 2rem;
-      li {
-        color: $black-light;
-        line-height: 2rem;
-      }
-    }
 
+  .individual-projects {
+    margin-top: 20rem;
+    h4{
+      margin-bottom: 8rem;
+      font-size: 5rem;
+    }
+    img {
+      max-width: 100%;
+      box-shadow: 0px 0px 10px $grey;
+    }
+    .individual-projects-about {
+      text-align: left;
+      margin-top: 5rem;
+      .image-container {
+        padding-top: 0.5rem;
+        img {
+          transform: rotateY(-30deg) rotateX(5deg);
+          transform-origin: left bottom;
+          &.image-pad {
+            width: 70%;
+            margin-left: 10rem;
+          }
+          &.image-mobile {
+            position: absolute;
+            width: 15rem;
+            left: 3rem;
+            bottom: 3rem;
+          }
+        }
+      }
+      .about-container {
+        p {
+          margin-bottom: 2rem;
+          color: $black;
+        }
+        h5 {
+          color: $primary_color;
+        }
+        ul {
+          margin-top: 2rem;
+          li {
+            color: $black;
+            line-height: 2rem;
+          }
+        }
+      }
+
+    }
+    .individual-projects-technologies {
+      margin: 10rem 0rem;
+      text-align: right;
+    }
   }
+
 }
 
 
