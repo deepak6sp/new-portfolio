@@ -42,7 +42,7 @@ class IndividualProject extends Component {
           <section id='individual-projects'>
             <Navigation />
             <section className='individual-projects container'>
-              <h4 className='text-center'>{this.state.pd.name}</h4>
+              <h4>{this.state.pd.name}</h4>
               <Row className='individual-projects-about container'>
                 <Col xs={12} md={6} className='about-container'>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, </p>
@@ -50,51 +50,52 @@ class IndividualProject extends Component {
                     <ul>
                       {this._displayTechnologies()}
                     </ul>
-                    <Row>
-                      <Col>
-                        <UI.Button className='go-next' linkTo={`${this.state.pd.weblink}`} externalLink={true}>
-                          {this.props.slug}
-                        </UI.Button>
-                      </Col>
-                    </Row>
+                    {this.state.pd.weblink &&
+                      <Row>
+                        <Col>
+                          <UI.Button className='go-next' linkTo={`${this.state.pd.weblink}`} externalLink={true}>
+                            {this.props.slug}
+                          </UI.Button>
+                        </Col>
+                      </Row>
+                    }
                 </Col>
+                { this.state.pd.weblink &&
                 <Col xs={12} md={6} className='image-container'>
                   <img className='image-pad' src={`images/${this.props.slug}-pad.png`} />
                   <img className='image-mobile' src={`images/${this.props.slug}-mobile.png`} />
                 </Col>
+                }
+                { !this.state.pd.weblink &&
+                <Col xs={12} md={6} className='image-container'>
+                  <img className='image-pad' src={`images/${this.props.slug}-desktop.png`} />
+                  <img className='image-mobile' src={`images/${this.props.slug}-screenshot-2.png`} />
+                </Col>
+                }
               </Row>
-              <Row className='individual-projects-technologies container'>
+
+              { this.state.pd.weblink &&
+              <Row className='container individual-projects-screenshots '>
                 <Col xs={12} className='image-container'>
                     <img className='image-desktop' src={`images/${this.props.slug}-desktop.png`} />
                 </Col>
               </Row>
+              }
+
+              { !this.state.pd.weblink &&
+              <Row className='individual-projects-screenshots container'>
+                <Col xs={12} md={6} className='image-container'>
+                    <img className='image-desktop' src={`images/${this.props.slug}-screenshot-3.png`} />
+                </Col>
+                <Col xs={12} md={6} className='image-container'>
+                    <img className='image-desktop' src={`images/${this.props.slug}-screenshot-4.png`} />
+                </Col>
+                <Col xs={12} className='image-container'>
+                    <img className='image-desktop' src={`images/${this.props.slug}-screenshot-5.png`} />
+                </Col>
+              </Row>
+              }
             </section>
-
-            {/*}<section className='individual-projects'>
-              <section className='header-wrapper'>
-
-                 <div className='image-container'>
-
-                   <img className='image-mobile' src={`images/${this.props.slug}-mobile.png`} />
-                   <img className='image-pad' src={`images/${this.props.slug}-pad.png`} />
-                 </div>
-              </section>
-              <section className='individual-project-description'>
-                <Header heading={this.state.pd.name}/>
-                <Col>
-                  <h5> Technologies used </h5>
-                  <ul>
-                    {this._displayTechnologies()}
-                  </ul>
-                </Col>
-                <Col>
-                  <a className='button' target='_blank' href={`${this.state.pd.weblink}`}>
-                  Browse site
-                  </a>
-                </Col>
-
-              </section>
-            </section>*/}
 
             <Contact />
             <Footer />
