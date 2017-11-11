@@ -45,56 +45,31 @@ class IndividualProject extends Component {
               <h4>{this.state.pd.name}</h4>
               <Row className='individual-projects-about container'>
                 <Col xs={12} md={6} className='about-container'>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, </p>
+                    <p>{this.state.pd.description}</p>
                     <h5> Technologies used </h5>
                     <ul>
                       {this._displayTechnologies()}
                     </ul>
-                    {this.state.pd.weblink &&
-                      <Row>
-                        <Col>
-                          <UI.Button className='go-next' linkTo={`${this.state.pd.weblink}`} externalLink={true}>
-                            {this.props.slug}
-                          </UI.Button>
-                        </Col>
-                      </Row>
-                    }
+                    <Row>
+                      <Col>
+                        <UI.Button className='go-next' linkTo={`${this.state.showWeblink}`} externalLink={true}>
+                          {this.props.slug}
+                        </UI.Button>
+                      </Col>
+                    </Row>
                 </Col>
-                { this.state.pd.weblink &&
                 <Col xs={12} md={6} className='image-container'>
                   <img className='image-pad' src={`images/${this.props.slug}-pad.png`} />
                   <img className='image-mobile' src={`images/${this.props.slug}-mobile.png`} />
                 </Col>
-                }
-                { !this.state.pd.weblink &&
-                <Col xs={12} md={6} className='image-container'>
-                  <img className='image-pad' src={`images/${this.props.slug}-desktop.png`} />
-                  <img className='image-mobile' src={`images/${this.props.slug}-screenshot-2.png`} />
-                </Col>
-                }
               </Row>
 
-              { this.state.pd.weblink &&
               <Row className='container individual-projects-screenshots '>
                 <Col xs={12} className='image-container'>
                     <img className='image-desktop' src={`images/${this.props.slug}-desktop.png`} />
                 </Col>
               </Row>
-              }
 
-              { !this.state.pd.weblink &&
-              <Row className='individual-projects-screenshots container'>
-                <Col xs={12} md={6} className='image-container'>
-                    <img className='image-desktop' src={`images/${this.props.slug}-screenshot-3.png`} />
-                </Col>
-                <Col xs={12} md={6} className='image-container'>
-                    <img className='image-desktop' src={`images/${this.props.slug}-screenshot-4.png`} />
-                </Col>
-                <Col xs={12} className='image-container'>
-                    <img className='image-desktop' src={`images/${this.props.slug}-screenshot-5.png`} />
-                </Col>
-              </Row>
-              }
             </section>
 
             <Contact />

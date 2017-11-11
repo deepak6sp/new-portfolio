@@ -53,7 +53,7 @@ class Projects extends Component {
           list = this.state.projects_list;
         }
         return Object.entries(list).map(([key, value]) =>
-              <Col xs={12} md={6} className='image-container' key={key}>
+              <Col xs={12} md={4} className='image-container' key={key}>
                 <div className='overlay-image'>
                   <img src={`images/${key}-desktop.png`} />
                   <div className='overlay'></div>

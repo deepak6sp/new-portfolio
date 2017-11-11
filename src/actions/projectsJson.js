@@ -13,7 +13,12 @@ const projects = {
     "description": "Australia's #1 online fundraising & crowdfunding site to fundraise or donate to causes that matter to you",
     "weblink": "https://www.mycause.com.au/",
   },
-  "mycause-admin": {
+  "mycauseadmin": {
+    "name": "Mycause Admin",
+    "technologies":
+      ["Bootstrap 3 & SCSS", "React/Flux/Redux", "Codeigniter", "Webpack", "Gulp"],
+    "description": "Australia's #1 online fundraising & crowdfunding site to fundraise or donate to causes that matter to you",
+    "weblink": false
 
   },
   "receptionapp": {
@@ -21,8 +26,7 @@ const projects = {
     "technologies":
       ["SCSS", "React/Redux", "Webpack"],
     "description": "Australia's #1 online fundraising & crowdfunding site to fundraise or donate to causes that matter to you",
-    "weblink": false,
-    "screenshots": 4 
+    "weblink": false
   }
 }
 
