@@ -2,7 +2,7 @@
   background-color: $grey-light;
   background-attachment: fixed;
   .profile {
-    height: 50rem;
+    height: 65rem;
     line-height: 5rem;
     background-image: url('../images/melbourne.jpg');
     background-position: center;
@@ -43,6 +43,7 @@
       }
     }
     .profile-desc, .profile-location  {
+  
       h6 {
         font-size: 3rem;
         @include media-breakpoint-down(xs) {

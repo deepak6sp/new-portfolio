@@ -52,7 +52,12 @@
     background: $primary_color_alternate;
     padding-bottom: 2.5rem;
     a.button {
-      border: 2px solid transparent;
+      border: 2px solid $secondary_color;
+      &:hover {
+        .go-next {
+          color: $primary_color;
+        }
+      }
     }
   }
 }

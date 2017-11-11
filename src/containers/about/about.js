@@ -5,7 +5,6 @@ import FontAwesome from 'react-fontawesome';
 import Navigation from '../../components/navigation';
 import UI from '../../components/ui';
 import Contact from '../../components/contact';
-import Footer from '../../components/footer';
 
 class About extends Component {
 
@@ -109,8 +108,6 @@ class About extends Component {
             </section>
 
             <Contact/>
-
-            <Footer />
 
           </main>
 

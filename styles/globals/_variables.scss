@@ -1,5 +1,5 @@
 $main_font_size : 1.6rem;
-$main_bg : linear-gradient(90deg, #ED5459 0%, #FD561F 100%);
+
 
 // ------- colors
 $red: #FD561F;
@@ -17,12 +17,15 @@ $grey-mid: #c9c9c9;
 $grey-light: #F9F9F9;
 $orange-mid: #7F5F73;
 $blue: #89BCDC;
+$pink: #ED5459;
 
 
 $primary_color: $orange;
 $primary_color_alternate: $grey;
 $secondary_color: $white;
 $secondary_color_alternate: $black;
+
+$main_bg : linear-gradient(90deg, $pink 0%, $orange 100%);
 
 
 // ------ fonts

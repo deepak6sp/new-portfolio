@@ -13,8 +13,8 @@ import HorizontalScroll from 'react-scroll-horizontal'
 
 import Navigation from '../../components/navigation';
 import Header from '../../components/header';
-import Contact from '../../components/contact';
-import Footer from '../../components/footer';
+import HomePageBlocks from  '../../components/homePageBlocks';
+
 
 class Projects extends Component {
 
@@ -85,23 +85,22 @@ class Projects extends Component {
         return (
             <section id='projects'>
               <Navigation />
-              <div className='project-container container'>
+              <section className='project-container container'>
                 <Row>
                   {this._displayProjectsList()}
                 </Row>
-              </div>
+              </section>
 
-              {/*}<div className='project-images'>
-                <HorizontalScroll reverseScroll={true}>
-                  {this._displayProjectsList()}
-                </HorizontalScroll>
-                <section className='scroll-down' onClick={this._scrollDown.bind(this)}>
-                  <FontAwesome name='angle-double-down' size='3x'/>
-                </section>
-              </div>*/}
-
-              <Contact />
-              <Footer />
+              <HomePageBlocks
+                className = 'inverse-2'
+                icon='user-circle-o'
+                heading = 'About'
+                buttonText = 'know me'
+                linkTo = '/about'>
+                  I am a Full Stack Web Developer having 5 years of experience. Recently, I have
+                  been focusing on UX prototyping and front end development. I have designed this website using
+                  sketch app and developed using Bootstrap 4, Reactjs and Node (Expressjs).
+              </HomePageBlocks>
             </section>
         );
     }

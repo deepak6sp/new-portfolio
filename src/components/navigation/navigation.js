@@ -73,9 +73,6 @@ class Navigation extends Component {
                   <NavItem>
                     <Link to="/about" className="nav-link" onClick={this._closeNav.bind(this)}>About</Link>
                   </NavItem>
-                  <NavItem>
-                    <Link to="/contact" className="nav-link" onClick={this._closeNav.bind(this)}>Contact</Link>
-                  </NavItem>
                 </Nav>
               </Collapse>
             </Navbar>

@@ -10,9 +10,8 @@ import Navigation from '../../components/navigation';
 import SocialLinks from '../../components/socialLinks';
 import Header from '../../components/header';
 import Contact from '../../components/contact';
-import Footer from '../../components/footer';
 import UI from '../../components/ui';
-import HomePageBlocks from  '../../components/homePageBlocks'
+import HomePageBlocks from  '../../components/homePageBlocks';
 import {getProjects} from '../../actions/projects';
 
 
@@ -36,10 +35,7 @@ class Home extends Component {
                 <span>HI, I'M </span> Deepak Prakash
               </Row>
               <Row className='justify-content-center profile-desc'>
-                <h6> UX Designer & Full Stack Developer </h6>
-              </Row>
-              <Row className='justify-content-center profile-location'>
-                <p> Based in Melbourne </p>
+                <h6> UX <span>&</span> Full Stack Developer </h6>
               </Row>
               <SocialLinks/>
             </section>
@@ -73,14 +69,13 @@ class Home extends Component {
                   linkTo = '/about'>
                     I am a Full Stack Web Developer having 5 years of experience. Recently, I have
                     been focusing on UX prototyping and front end development. I have designed this website using
-                    sketch app and developed using Bootrap 4, Reactjs and Node (Expressjs).
+                    sketch app and developed using Bootstrap 4, Reactjs and Node (Expressjs).
                   </HomePageBlocks>
 
                   <Contact />
 
             </section>
 
-            <Footer />
           </main>
         );
     }

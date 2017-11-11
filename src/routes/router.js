@@ -7,6 +7,7 @@ import Projects from '../containers/projects';
 import IndividualProject from '../containers/individualProject';
 import About from '../containers/about';
 import Contact from '../containers/contact';
+import Footer from '../components/footer';
 
 
 const Router = () =>
@@ -16,6 +17,7 @@ const Router = () =>
             <Route path="/projects" component={ProjectsRouter}/>
             <Route path="/about" component={About}/>
             <Route path="/contact" component={Contact}/>
+            <Footer />
        </div>
     </HashRouter>;
 

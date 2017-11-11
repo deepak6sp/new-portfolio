@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 export const StandardButton = props => {
   return (
-    <button>
+    <span className='button-container'>
     {
       !props.externalLink && <Link
       type={props.type}
@@ -28,7 +28,7 @@ export const StandardButton = props => {
       </a>
 
     }
-    </button>
+    </span>
   );
 }
 

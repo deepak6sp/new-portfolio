@@ -7,8 +7,7 @@ import UI from '../../components/ui';
 import Header from '../../components/header';
 import Navigation from '../../components/navigation';
 import {getProjectDetails} from '../../actions/projectDetails';
-import Contact from '../../components/contact';
-import Footer from '../../components/footer';
+import HomePageBlocks from  '../../components/homePageBlocks';
 
 class IndividualProject extends Component {
 
@@ -52,7 +51,7 @@ class IndividualProject extends Component {
                     { this.state.pd.weblink &&
                      <Row>
                       <Col>
-                        <UI.Button className='go-next' linkTo={`${this.state.showWeblink}`} externalLink={true}>
+                        <UI.Button className='go-next' linkTo={`${this.state.pd.weblink}`} externalLink={true}>
                           {this.props.slug}
                         </UI.Button>
                       </Col>
@@ -72,9 +71,16 @@ class IndividualProject extends Component {
               </Row>
 
             </section>
-
-            <Contact />
-            <Footer />
+            <HomePageBlocks
+              className = 'inverse-2'
+              icon='user-circle-o'
+              heading = 'About'
+              buttonText = 'know me'
+              linkTo = '/about'>
+                I am a Full Stack Web Developer having 5 years of experience. Recently, I have
+                been focusing on UX prototyping and front end development. I have designed this website using
+                sketch app and developed using Bootstrap 4, Reactjs and Node (Expressjs).
+            </HomePageBlocks>
           </section>
         )
   }
