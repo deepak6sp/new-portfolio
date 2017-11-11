@@ -25,7 +25,7 @@ const projects = {
     "name": "Reception App",
     "technologies":
       ["SCSS", "React/Redux", "Webpack"],
-    "description": "Australia's #1 online fundraising & crowdfunding site to fundraise or donate to causes that matter to you",
+    "description": "A google chrome app developed at AOPEN to exhibit chromebox and chromebase capabilities.",
     "weblink": false
   }
 }

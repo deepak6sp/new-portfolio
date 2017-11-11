@@ -51,10 +51,14 @@ class Navigation extends Component {
               <NavbarBrand href="#/">
                 <img src='images/avatar.png'/>
               </NavbarBrand>
+              <a target="_blank" href="http://www.webhyphen.com" className="nav-link blog-link">
+                <FontAwesome name='external-link'/> Blog
+              </a>
               {/*<NavLink href="http://www.webhyphen.com/">Blog</NavLink>*/}
               <NavbarToggler onClick={this._toggleNavbar.bind(this)} className="mr-5">
                 <FontAwesome name='none' size='3x' className='align-right-icon'/>
               </NavbarToggler>
+
               <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav navbar className='fadeInLeft'>
                   <div className='nav-link' onClick={this._closeNav.bind(this)} >

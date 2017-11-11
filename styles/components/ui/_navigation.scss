@@ -27,7 +27,9 @@
           transition : padding 0.1s ease-in;
         }
     }
-
+  }
+  .blog-link {
+    color: $secondary_color;
   }
   .navbar-toggler {
     z-index: 1;

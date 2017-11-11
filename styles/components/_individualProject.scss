@@ -37,7 +37,6 @@
             margin: 5rem 0rem;
           }
           &.image-pad {
-            width: 70%;
             margin-left: 10rem;
           }
           &.image-mobile {
@@ -79,15 +78,9 @@
       text-align: right;
       .image-container {
         img {
-          transform: rotateY(-30deg) rotateX(-5deg);
-        }
-        &:last-child {
+          width: 100%;
           @include media-breakpoint-up(sm) {
             margin: 10rem 0rem;
-          }
-
-          img {
-              transform: rotateY(0deg) rotateX(0deg);
           }
         }
       }

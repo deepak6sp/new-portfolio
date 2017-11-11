@@ -24,8 +24,8 @@ class IndividualProject extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
     this.setState({ pd: nextProps.projectDetails });
+
   }
 
   _displayTechnologies() {
@@ -37,7 +37,6 @@ class IndividualProject extends Component {
   }
 
   render() {
-
         return (
           <section id='individual-projects'>
             <Navigation />
@@ -50,13 +49,15 @@ class IndividualProject extends Component {
                     <ul>
                       {this._displayTechnologies()}
                     </ul>
-                    <Row>
+                    { this.state.pd.weblink &&
+                     <Row>
                       <Col>
                         <UI.Button className='go-next' linkTo={`${this.state.showWeblink}`} externalLink={true}>
                           {this.props.slug}
                         </UI.Button>
                       </Col>
                     </Row>
+                    }
                 </Col>
                 <Col xs={12} md={6} className='image-container'>
                   <img className='image-pad' src={`images/${this.props.slug}-pad.png`} />
