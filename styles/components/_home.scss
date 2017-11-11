@@ -19,6 +19,7 @@
     .overlay {
       position: absolute;
       top:0;
+      right: 0;
       width: 100%;
       height: 100%;
       background-color: $black-dark;
@@ -43,7 +44,7 @@
       }
     }
     .profile-desc, .profile-location  {
-  
+
       h6 {
         font-size: 3rem;
         @include media-breakpoint-down(xs) {

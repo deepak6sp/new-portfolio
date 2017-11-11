@@ -57,15 +57,13 @@ class Projects extends Component {
                 <div className='overlay-image'>
                   <img src={`images/${key}-desktop.png`} />
                   <div className='overlay'></div>
-                  <div className='button-container'>
-                      <UI.Button
-                        className='go-next'
-                        linkTo={`/projects/${key}`}
-                        dataHref = {key}
-                        onClick={this._handleClick.bind(this)}>
-                           view more
-                      </UI.Button>
-                  </div>
+                  <UI.Button
+                    className='go-next'
+                    linkTo={`/projects/${key}`}
+                    dataHref = {key}
+                    onClick={this._handleClick.bind(this)}>
+                       view more
+                  </UI.Button>
                 </div>
                 <div className='image-tag-container' >
                   <h6>{value.name}</h6>
