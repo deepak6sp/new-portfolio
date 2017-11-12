@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: [
@@ -43,6 +44,10 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.optimize.OccurrenceOrderPlugin()
+      new webpack.optimize.OccurrenceOrderPlugin(),
+      new CopyWebpackPlugin([
+        { from: 'index.html', to: 'index.html' }
+      ])
+
     ]
 };

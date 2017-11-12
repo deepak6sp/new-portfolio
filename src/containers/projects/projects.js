@@ -43,7 +43,7 @@ class Projects extends Component {
       parent.classList.add('fadeOutDown');
 
       return setTimeout( () => {
-        window.location.hash = `projects/${href}`
+        window.location = `projects/${href}`
       } , 500 );
     }
 
@@ -60,8 +60,7 @@ class Projects extends Component {
                   <UI.Button
                     className='go-next'
                     linkTo={`/projects/${key}`}
-                    dataHref = {key}
-                    onClick={this._handleClick.bind(this)}>
+                    dataHref = {key}>
                        view more
                   </UI.Button>
                 </div>

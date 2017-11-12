@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --progress --colors --config webpack.config.prod.js",
     "start": "webpack-dev-server --hot --inline --config webpack.config.dev.js  --content-base ./ ",
-    "server": "node server.js",
+    "server": "nodemon server.js",
     "test": "mocha --require test_helper.js --compilers js:babel-register --recursive ./src/**/*-spec.js",
     "test:watch": "npm test -- --watch",
     "test-coverage": "istanbul cover _mocha -- --require test_helper.js --compilers js:babel-register --recursive ./src/**/*-spec.js",
@@ -44,6 +44,7 @@
     "babel-preset-react": "^6.24.1",
     "chai": "^3.5.0",
     "chai-enzyme": "^0.6.1",
+    "copy-webpack-plugin": "^4.2.0",
     "css-loader": "^0.28.1",
     "enzyme": "^2.8.2",
     "eslint": "^3.19.0",

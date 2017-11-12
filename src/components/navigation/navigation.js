@@ -48,7 +48,7 @@ class Navigation extends Component {
     render() {
         return (
             <Navbar className='fixed-top'>
-              <NavbarBrand href="#/">
+              <NavbarBrand href="/">
                 <img src='images/avatar.png'/>
               </NavbarBrand>
               <a target="_blank" href="http://www.webhyphen.com" className="nav-link blog-link">

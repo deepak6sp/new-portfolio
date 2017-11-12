@@ -26,7 +26,8 @@ ReactDOM.render(
 
 /**
  * This is required for webpack hot reloading
- */
+
 if (module.hot) {
     module.hot.accept();
 }
+ */
