@@ -95,9 +95,9 @@ class Projects extends Component {
                 heading = 'About'
                 buttonText = 'know me'
                 linkTo = '/about'>
-                  I am a Full Stack Web Developer having 5 years of experience. Recently, I have
+                  <p>I am a Full Stack Web Developer having 5 years of experience. Recently, I have
                   been focusing on UX prototyping and front end development. I have designed this website using
-                  sketch app and developed using Bootstrap 4, Reactjs and Node (Expressjs).
+                  sketch app and developed using Bootstrap 4, Reactjs and Node (Expressjs).</p>
               </HomePageBlocks>
             </section>
         );

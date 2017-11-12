@@ -96,17 +96,6 @@ class About extends Component {
                 </Row>
             </section>
 
-            <section className="container testimonals">
-                <Row>
-                    <Col sm={12}>
-                        <h3> What people are saying</h3>
-                        <p> I have been writing articles at webhyphen.
-                        I am doing this blog to share my knowledge and expericence
-                        focusing on modern design trends and latest web development technologies.</p>
-                    </Col>
-                </Row>
-            </section>
-
             <Contact/>
 
           </main>

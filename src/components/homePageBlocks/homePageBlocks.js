@@ -1,8 +1,15 @@
 import React, {Component} from 'react';
 import { Row, Col } from 'reactstrap';
 import FontAwesome from 'react-fontawesome';
+import { lazyload } from 'react-lazyload';
 
 import UI from '../ui';
+
+lazyload({
+  height: 200,
+  once: true,
+  offset: 100
+})
 
 const HomePageBlocks = (props) => (
           <Row>
@@ -11,7 +18,7 @@ const HomePageBlocks = (props) => (
               {/*}*/}
               <article className='container'>
                 <h4> {props.heading}</h4>
-                <p>{props.children}</p>
+                {props.children}
                 { !props.hideButton &&
                   <UI.Button className='go-next' linkTo={props.linkTo} externalLink={props.externalLink}>
                     {props.buttonText}

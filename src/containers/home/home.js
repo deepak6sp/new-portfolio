@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
 
 
+
 import Navigation from '../../components/navigation';
 import SocialLinks from '../../components/socialLinks';
 import Header from '../../components/header';
@@ -46,9 +47,9 @@ class Home extends Component {
                   heading = 'Projects'
                   buttonText = 'showcase'
                   linkTo = '/projects'>
-                    I am been fotunate enough to work at both service industries and agencies. While
+                    <p>I am been fotunate enough to work at both service industries and agencies. While
                     working on various projects, I have picked up UX, Front end, Back end and Devops
-                    skills.
+                    skills.</p>
                 </HomePageBlocks>
                 <HomePageBlocks
                   className = 'inverse'
@@ -57,9 +58,9 @@ class Home extends Component {
                   buttonText = 'visit blog'
                   externalLink = {true}
                   linkTo = 'http://www.webhyphen.com'>
-                    I have been writing articles at webhyphen. I am doing this blog to share my
+                    <p>I have been writing articles @webhyphen. I am doing this blog to share my
                     knowledge and expericence focusing on modern design trends and latest web
-                    development technologies.
+                    development technologies.</p>
                 </HomePageBlocks>
                 <HomePageBlocks
                   className = 'default'
@@ -67,9 +68,10 @@ class Home extends Component {
                   heading = 'About'
                   buttonText = 'know me'
                   linkTo = '/about'>
-                    I am a Full Stack Web Developer having 5 years of experience. Recently, I have
-                    been focusing on UX prototyping and front end development. I have designed this website using
-                    sketch app and developed using Bootstrap 4, Reactjs and Node (Expressjs).
+                    <p>I am a Full Stack Web Developer having 5 years of experience. Recently, I have
+                    been focusing on UX prototyping and front end development.</p>
+                    <p>I have designed this website using <strong>sketch app</strong> and developed using Bootstrap 4,
+                    Reactjs and Node (Expressjs).</p>
                   </HomePageBlocks>
 
                   <Contact />

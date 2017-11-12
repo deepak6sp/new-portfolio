@@ -7,10 +7,11 @@
       padding: 0rem 6rem;
     }
   }
-
-  span {
-    padding-right: 1rem;
-    color: $grey-mid;
-    margin-bottom: 3rem;
+  .email, .phone {
+    span {
+      padding-right: 1rem;
+      color: $grey-mid;
+      margin-bottom: 3rem;
+    }
   }
 }
