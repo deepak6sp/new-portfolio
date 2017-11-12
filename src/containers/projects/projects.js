@@ -55,7 +55,9 @@ class Projects extends Component {
         return Object.entries(list).map(([key, value]) =>
               <Col xs={12} md={4} className='image-container' key={key}>
                 <div className='overlay-image'>
-                  <img src={`images/${key}-desktop.png`} />
+                  <div
+                    className='project-image'
+                    style={{backgroundImage: `url(../images/${key}-desktop.png)`}}></div>
                   <div className='overlay'></div>
                   <UI.Button
                     className='go-next'

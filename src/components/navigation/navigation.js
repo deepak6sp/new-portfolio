@@ -49,7 +49,7 @@ class Navigation extends Component {
         return (
             <Navbar className='fixed-top'>
               <NavbarBrand href="/">
-                <img src='../images/avatar.png'/>
+                <div className='avatar'></div>
               </NavbarBrand>
               <a target="_blank" href="http://www.webhyphen.com" className="nav-link blog-link">
                 <FontAwesome name='external-link'/> Blog

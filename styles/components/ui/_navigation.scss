@@ -17,8 +17,11 @@
   }
   .navbar-brand {
     padding: 2rem;
-    img {
+    .avatar {
         width: 8rem;
+        height: 8rem;
+        background-image: url('../images/avatar.png');
+        background-size: cover;
         &:hover {
           border: 0.1rem solid $white;
           padding: 0.4rem;
