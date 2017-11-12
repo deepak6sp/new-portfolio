@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 
 import Home from '../containers/home';
@@ -11,24 +11,15 @@ import Footer from '../components/footer';
 
 
 const Router = () =>
-    <HashRouter>
+    <BrowserRouter>
        <div id='portfolio'>
             <Route exact path="/" component={ () => <Home/> }/>
-            <Route path="/projects" component={ProjectsRouter}/>
+            <Route exact path="/projects" component={ () => <Projects/> }/>
+            <Route path="/projects/:projectName" component={ ({match}) => <IndividualProject slug={match.params.projectName}/> }/>
             <Route path="/about" component={About}/>
             <Route path="/contact" component={Contact}/>
             <Footer />
        </div>
-    </HashRouter>;
-
-const ProjectsRouter = ({ match }) => (
-  <switch>
-    <Route exact path={match.url} component={ () => <Projects/> }/>
-    <Route path={`${match.url}/:projectName`} component={ IndividualProjectRouter }/>
-  </switch>
-)
-
-const IndividualProjectRouter = ({ match }) =>
-  <IndividualProject slug={match.params.projectName}/>
+    </BrowserRouter>;
 
 export default Router;

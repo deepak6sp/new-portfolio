@@ -9,19 +9,11 @@ const compiler = webpack(config);
 app.use(require('webpack-dev-middleware')(compiler));
 app.use(require('webpack-hot-middleware')(compiler));
 
-// app.get(['/', '/projects', '/projects/:projectName'], (req, res) => {
-//     res.sendFile(path.join(__dirname, 'index.html'));
-// });
-//
-// app.get('/projects/:projectName', (req, res, next) => {
-//   next();
-// });
-
-app.get(['/', '/projects'], function (req, res) {
+app.get(['/', '/projects', '/about'], function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/projects/:projectName', (req, res, next) => {
+app.get('/projects/*', (req, res, next) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 

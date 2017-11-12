@@ -59,14 +59,14 @@ class IndividualProject extends Component {
                     }
                 </Col>
                 <Col xs={12} md={6} className='image-container'>
-                  <img className='image-pad' src={`images/${this.props.slug}-pad.png`} />
-                  <img className='image-mobile' src={`images/${this.props.slug}-mobile.png`} />
+                  <img className='image-pad' src={`../images/${this.props.slug}-pad.png`} />
+                  <img className='image-mobile' src={`../images/${this.props.slug}-mobile.png`} />
                 </Col>
               </Row>
 
               <Row className='container individual-projects-screenshots '>
                 <Col xs={12} className='image-container'>
-                    <img className='image-desktop' src={`images/${this.props.slug}-desktop.png`} />
+                    <img className='image-desktop' src={`../images/${this.props.slug}-desktop.png`} />
                 </Col>
               </Row>
 
