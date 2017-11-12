@@ -32,6 +32,7 @@
       }
       .image-container {
         padding-top: 0.5rem;
+        max-height: 300px;
         div {
           transform: rotateY(-30deg) rotateX(5deg);
           transform-origin: left bottom;
