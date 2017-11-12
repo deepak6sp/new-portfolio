@@ -3,7 +3,6 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: [
-        'webpack-hot-middleware/client',
         './src/index.js'
     ],
     output: {
@@ -43,8 +42,7 @@ module.exports = {
             }
         ]
     },
-    devtool: 'cheap-module-eval-source-map',
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.optimize.OccurrenceOrderPlugin()
     ]
 };
