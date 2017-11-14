@@ -59,8 +59,11 @@ class IndividualProject extends Component {
                     }
                 </Col>
                 <Col xs={12} md={6} className='image-container'>
-                  <div className='image-pad' style={{backgroundImage: `url(../images/${this.props.slug}-pad.png)`}} ></div>
-                  <div className='image-mobile' style={{backgroundImage: `url(../images/${this.props.slug}-mobile.png)`}} ></div>
+                  {/*}<div className='image-pad' style={{backgroundImage: `url(../images/${this.props.slug}-pad.png)`}} ></div>
+                  <div className='image-mobile' style={{backgroundImage: `url(../images/${this.props.slug}-mobile.png)`}} ></div>*/}
+
+                  <img className='image-pad' src={`../images/${this.props.slug}-pad.png`} />
+                  <img className='image-mobile' src={`../images/${this.props.slug}-mobile.png`} />
                 </Col>
               </Row>
 
