@@ -4,9 +4,9 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --progress --colors --config webpack.config.prod.js",
+    "build": "webpack -p --progress --colors --config webpack.config.prod.js",
     "start": "webpack-dev-server --hot --inline --config webpack.config.dev.js  --content-base ./ ",
-    "server": "nodemon server.js",
+    "server": "nodemon server.js dev",
     "test": "mocha --require test_helper.js --compilers js:babel-register --recursive ./src/**/*-spec.js",
     "test:watch": "npm test -- --watch",
     "test-coverage": "istanbul cover _mocha -- --require test_helper.js --compilers js:babel-register --recursive ./src/**/*-spec.js",

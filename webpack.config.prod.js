@@ -47,7 +47,8 @@ module.exports = {
       new webpack.optimize.OccurrenceOrderPlugin(),
       new CopyWebpackPlugin([
         { from: 'index.html', to: 'index.html' },
-        { from: 'images', to: 'images'}
+        { from: 'images', to: 'images'},
+        { from: 'server.js', to: 'server.js'}
       ])
 
     ]
