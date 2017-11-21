@@ -4,6 +4,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
+import ShowOnScreen from 'react-on-screen';
 
 
 
@@ -40,7 +41,9 @@ class Home extends Component {
               </Row>
               <SocialLinks/>
             </section>
+
             <section className='home-page-body container'>
+                <ShowOnScreen offset={50}>
                 <HomePageBlocks
                   className = 'default'
                   icon = 'codepen'
@@ -51,6 +54,9 @@ class Home extends Component {
                     working on various projects, I have picked up UX, Front end, Back end and Devops
                     skills.</p>
                 </HomePageBlocks>
+                </ShowOnScreen>
+
+                <ShowOnScreen offset={50}>
                 <HomePageBlocks
                   className = 'inverse'
                   icon = 'pencil'
@@ -62,6 +68,9 @@ class Home extends Component {
                     knowledge and expericence focusing on modern design trends and latest web
                     development technologies.</p>
                 </HomePageBlocks>
+                </ShowOnScreen>
+
+                <ShowOnScreen offset={50}>
                 <HomePageBlocks
                   className = 'default'
                   icon='user-circle-o'
@@ -73,6 +82,7 @@ class Home extends Component {
                     <p>I have designed this website using <strong>sketch app</strong> and developed using Bootstrap 4,
                     Reactjs and Node (Expressjs).</p>
                   </HomePageBlocks>
+                  </ShowOnScreen>
 
                   <Contact />
 

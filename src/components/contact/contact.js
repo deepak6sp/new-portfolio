@@ -3,11 +3,13 @@ import { Row, Col } from 'reactstrap';
 import HomePageBlocks from '../homePageBlocks';
 import FontAwesome from 'react-fontawesome';
 import SocialLinks from '../../components/socialLinks';
+import ShowOnScreen from 'react-on-screen';
 
 
 const Contact = () => (
     <Row className='contact-details'>
       <Col>
+        <ShowOnScreen offset={50}>
           <HomePageBlocks
             className = 'inverse-2 get-in-touch'
             icon='address-book-o'
@@ -44,6 +46,7 @@ const Contact = () => (
               <SocialLinks />
             </Col>
           </Row>
+        </ShowOnScreen>
       </Col>
     </Row>
 );

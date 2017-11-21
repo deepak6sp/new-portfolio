@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import FontAwesome from 'react-fontawesome';
+import ShowOnScreen from 'react-on-screen';
 import UI from '../../components/ui';
 
 import {getProjects} from '../../actions/projects';
@@ -89,7 +90,7 @@ class Projects extends Component {
                   {this._displayProjectsList()}
                 </Row>
               </section>
-
+              <ShowOnScreen offset={50}>
               <HomePageBlocks
                 className = 'inverse-2'
                 icon='user-circle-o'
@@ -100,6 +101,7 @@ class Projects extends Component {
                   been focusing on UX prototyping and front end development. I have designed this website using
                   sketch app and developed using Bootstrap 4, Reactjs and Node (Expressjs).</p>
               </HomePageBlocks>
+              </ShowOnScreen>
             </section>
         );
     }

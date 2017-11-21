@@ -22,6 +22,7 @@
     "react-dom": "^15.5.4",
     "react-fontawesome": "^1.6.1",
     "react-lazyload": "^2.2.7",
+    "react-on-screen": "^2.0.1",
     "react-parallax-component": "^1.0.6",
     "react-parallax-effect": "^1.0.6",
     "react-redux": "^5.0.4",
