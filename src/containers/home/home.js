@@ -43,7 +43,7 @@ class Home extends Component {
             </section>
 
             <section className='home-page-body container'>
-                <ShowOnScreen offset={50}>
+                <ShowOnScreen offset={300}>
                 <HomePageBlocks
                   className = 'default'
                   icon = 'codepen'
@@ -56,7 +56,7 @@ class Home extends Component {
                 </HomePageBlocks>
                 </ShowOnScreen>
 
-                <ShowOnScreen offset={50}>
+                <ShowOnScreen offset={300}>
                 <HomePageBlocks
                   className = 'inverse'
                   icon = 'pencil'
@@ -70,7 +70,7 @@ class Home extends Component {
                 </HomePageBlocks>
                 </ShowOnScreen>
 
-                <ShowOnScreen offset={50}>
+                <ShowOnScreen offset={300}>
                 <HomePageBlocks
                   className = 'default'
                   icon='user-circle-o'

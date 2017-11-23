@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Row, Col } from 'reactstrap';
 import FontAwesome from 'react-fontawesome';
+import ShowOnScreen from 'react-on-screen';
 
 import Navigation from '../../components/navigation';
 import UI from '../../components/ui';
@@ -19,6 +20,7 @@ class About extends Component {
             <section className="container about-me">
                 <Row>
                     <Col sm={12}>
+
                         <h3> About me</h3>
                         <p> I am self learner, passionate Full Stack Web Developer having 5 years of experience. Recently, I have been focusing on UX and front end development.
                             I develop with skills of minimal usability designs and using core XHTML/HTML, CSS and Javascript. My coding follows reusable
@@ -95,8 +97,9 @@ class About extends Component {
                     </Col>
                 </Row>
             </section>
-
-            <Contact/>
+            <ShowOnScreen offset={300}>
+              <Contact/>
+            </ShowOnScreen>
 
           </main>
 

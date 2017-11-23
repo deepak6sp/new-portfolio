@@ -60,7 +60,7 @@
   }
   .navbar-collapse {
     &.show {
-      @include fadeInRightBig();
+      @include fadeInRight();
       position: absolute;
       height: 100vh;
       top: 0px;
@@ -101,7 +101,7 @@
       -moz-transition : height 3s;
       -webkit-transition : height 3s;
       -o-transition : height 3s;
-      transition : height 2s ease-in;
+      transition : height 3s ease-in;
     }
   }
 }

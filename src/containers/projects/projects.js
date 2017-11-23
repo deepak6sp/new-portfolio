@@ -90,7 +90,7 @@ class Projects extends Component {
                   {this._displayProjectsList()}
                 </Row>
               </section>
-              <ShowOnScreen offset={50}>
+              <ShowOnScreen offset={300}>
               <HomePageBlocks
                 className = 'inverse-2'
                 icon='user-circle-o'

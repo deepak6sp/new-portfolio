@@ -60,7 +60,7 @@ class Navigation extends Component {
               </NavbarToggler>
 
               <Collapse isOpen={!this.state.collapsed} navbar>
-                <Nav navbar className='fadeInLeft'>
+                <Nav navbar >
                   <div className='nav-link' onClick={this._closeNav.bind(this)} >
                     x
                   </div>

@@ -9,7 +9,7 @@ import ShowOnScreen from 'react-on-screen';
 const Contact = () => (
     <Row className='contact-details'>
       <Col>
-        <ShowOnScreen offset={50}>
+        <ShowOnScreen offset={300}>
           <HomePageBlocks
             className = 'inverse-2 get-in-touch'
             icon='address-book-o'
