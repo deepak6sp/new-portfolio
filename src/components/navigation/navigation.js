@@ -53,7 +53,7 @@ class Navigation extends Component {
             <Navbar className='fixed-top'>
               <NavbarBrand href="/">
                 <figure>
-                  <img className='avatar' src='images/avatar.png' alt='deepak prakash profile'/>
+                  <img className='avatar' src='../images/avatar.png' alt='deepak prakash profile'/>
                 </figure>
               </NavbarBrand>
               <a target="_blank" href="http://www.webhyphen.com" className="nav-link blog-link">
