@@ -47,7 +47,7 @@
     }
     .profile-desc, .profile-location  {
 
-      h6 {
+      h2 {
         font-size: 3rem;
         @include media-breakpoint-down(xs) {
           font-size: 2rem;
@@ -55,7 +55,7 @@
           line-height: 3rem;
         }
       }
-      h6,p {
+      h2,p {
         @include fadeInUp();
       }
 

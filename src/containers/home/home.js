@@ -34,10 +34,10 @@ class Home extends Component {
             <section className='profile text-center'>
               <div className='overlay'></div>
               <Row className='justify-content-center profile-name'>
-                <span>HI, I'M </span> Deepak Prakash
+                <h1><span>HI, I'M </span> Deepak Prakash</h1>
               </Row>
               <Row className='justify-content-center profile-desc'>
-                <h6> UX <span>&</span> Full Stack Developer </h6>
+                <h2> UX <span>&</span> Full Stack Developer </h2>
               </Row>
               <SocialLinks/>
             </section>

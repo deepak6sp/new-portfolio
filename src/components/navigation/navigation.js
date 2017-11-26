@@ -52,7 +52,9 @@ class Navigation extends Component {
         return (
             <Navbar className='fixed-top'>
               <NavbarBrand href="/">
-                <div className='avatar'></div>
+                <figure>
+                  <img className='avatar' src='images/avatar.png' alt='deepak prakash profile'/>
+                </figure>
               </NavbarBrand>
               <a target="_blank" href="http://www.webhyphen.com" className="nav-link blog-link">
                 <FontAwesome name='external-link'/> Blog
