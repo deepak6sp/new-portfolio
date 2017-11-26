@@ -9,9 +9,6 @@ import UI from '../../components/ui';
 
 import {getProjects} from '../../actions/projects';
 
-import LazyLoad from 'react-lazyload';
-import HorizontalScroll from 'react-scroll-horizontal'
-
 import Navigation from '../../components/navigation';
 import Header from '../../components/header';
 import HomePageBlocks from  '../../components/homePageBlocks';

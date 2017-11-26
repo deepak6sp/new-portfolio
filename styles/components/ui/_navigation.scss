@@ -38,7 +38,17 @@
   .navbar-toggler {
     z-index: 1;
     padding: 0rem;
-    transition: all 0.2s ease-in;
+    width: 50px;
+    height: 50px;
+    &.opened {
+      transition-property: all;
+      transition-duration: 5s;
+      transition-delay: 2s;
+      .align-right-icon:before {
+          content: "\f00d";
+
+      }
+    }
     .align-right-icon {
       color: $white;
       &:before {
@@ -47,11 +57,11 @@
     }
     &:hover {
       cursor: pointer;
-      .align-right-icon {
-        &:before {
-          content: "\f039";
-        }
-      }
+      // .align-right-icon {
+      //   &:before {
+      //     content: "\f039";
+      //   }
+      // }
     }
     &:focus {
       transform: scale(0.9);
@@ -59,49 +69,39 @@
     }
   }
   .navbar-collapse {
-    &.show {
-      @include fadeInRight();
-      position: absolute;
-      height: 100vh;
-      top: 0px;
-      width: 100%;
-      left: 0px;
-      z-index: 999;
-      padding-top: 5rem;
-      background: linear-gradient( 180deg, $black-dark, lighten($black-dark, 10%) );
-      @include media-breakpoint-up(md) {
-        background: linear-gradient( to right, transparent 20%, $black-dark 80%);
-      }
-    }
-    .nav-link {
-      color: $primary_color;
-      padding: 2vh 10rem;
-      display: block;
-      font-size: 5rem;
-      text-align: center;
-      cursor: pointer;
-      font-family: $secondary_font;
-      transition-timing-function: ease-in-out;
-      transition-duration: 0.3s;
-      text-transform: capitalize;
-      @include media-breakpoint-up(md) {
-        text-align: right;
-      }
-      &:hover {
-        color: $secondary_color;
-      }
-    }
+    top: 0;
+    position: absolute;
+    background: $main_bg;
+    left: 0;
+    width: 100%;
+    color: red;
+    height: 100vh;
     ul {
-      width: 100%;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
       li {
-        width: 100%;
+        a {
+          color: $white;
+          font-size: 5rem;
+          margin: 3rem;
+          border-bottom: 0.1rem solid transparent;
+          width: 1%;
+          font-family: $secondary_font;
+          &:hover {
+            width: 40%;
+            border-bottom: 0.1rem solid $white;
+            transition: width 0.2s ease-in;
+          }
+        }
       }
     }
-    &.collapsing {
-      -moz-transition : height 3s;
-      -webkit-transition : height 3s;
-      -o-transition : height 3s;
-      transition : height 3s ease-in;
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      border-top: 0.1rem solid $white;
     }
   }
 }

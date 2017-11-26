@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Row, Col } from 'reactstrap';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import ShowOnScreen from 'react-on-screen';
 
 import UI from '../../components/ui';
 import Header from '../../components/header';
@@ -69,21 +70,23 @@ class IndividualProject extends Component {
 
               <Row className='container individual-projects-screenshots '>
                 <Col xs={12} className='image-container'>
-                    <div className='image-desktop' style={{backgroundImage: `url(../images/${this.props.slug}-desktop.png`}} > </div>
+                  <img className='image-desktop' src={`../images/${this.props.slug}-desktop.png`} />
                 </Col>
               </Row>
 
             </section>
-            <HomePageBlocks
-              className = 'inverse-2'
-              icon='user-circle-o'
-              heading = 'About'
-              buttonText = 'know me'
-              linkTo = '/about'>
-                <p>I am a Full Stack Web Developer having 5 years of experience. Recently, I have
-                been focusing on UX prototyping and front end development. I have designed this website using
-                sketch app and developed using Bootstrap 4, Reactjs and Node (Expressjs).</p>
-            </HomePageBlocks>
+            <ShowOnScreen offset={300}>
+              <HomePageBlocks
+                className = 'inverse-2'
+                icon='user-circle-o'
+                heading = 'About'
+                buttonText = 'know me'
+                linkTo = '/about'>
+                  <p>I am a Full Stack Web Developer having 5 years of experience. Recently, I have
+                  been focusing on UX prototyping and front end development. I have designed this website using
+                  sketch app and developed using Bootstrap 4, Reactjs and Node (Expressjs).</p>
+              </HomePageBlocks>
+            </ShowOnScreen>
           </section>
         )
   }

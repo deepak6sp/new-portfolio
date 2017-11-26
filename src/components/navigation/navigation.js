@@ -4,6 +4,7 @@ import { Jumbotron, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, 
 import FontAwesome from 'react-fontawesome';
 import navIcon from './images/nav-icon.svg';
 
+import Footer from '../../components/footer';
 
 class Navigation extends Component {
 
@@ -32,7 +33,8 @@ class Navigation extends Component {
       console.log('navbar un mounted');
     }
 
-    _toggleNavbar() {
+    _toggleNavbar(e) {
+      e.target.closest('button').classList.toggle('opened');
       this.setState({
         collapsed: !this.state.collapsed
       });
@@ -56,14 +58,11 @@ class Navigation extends Component {
               </a>
               {/*<NavLink href="http://www.webhyphen.com/">Blog</NavLink>*/}
               <NavbarToggler onClick={this._toggleNavbar.bind(this)} className="mr-5">
-                <FontAwesome name='none' size='3x' className='align-right-icon'/>
+                <FontAwesome name='none' size='4x' className='align-right-icon'/>
               </NavbarToggler>
 
               <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav navbar >
-                  <div className='nav-link' onClick={this._closeNav.bind(this)} >
-                    x
-                  </div>
                   <NavItem>
                     <Link to="/" className="nav-link" onClick={this._closeNav.bind(this)}>Home</Link>
                   </NavItem>
@@ -74,6 +73,7 @@ class Navigation extends Component {
                     <Link to="/about" className="nav-link" onClick={this._closeNav.bind(this)}>About</Link>
                   </NavItem>
                 </Nav>
+                <Footer/>
               </Collapse>
             </Navbar>
         );

@@ -1,6 +1,7 @@
 #individual-projects {
   .navbar {
       background: $main_bg;
+      opacity: 0.9;
   }
 
   .individual-projects {
@@ -78,12 +79,8 @@
       }
       text-align: right;
       .image-container {
+        text-align: center;
         .image-desktop {
-          height: 500px;
-          width: 100%;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
           @include media-breakpoint-up(sm) {
             margin: 10rem 0rem;
           }
@@ -93,77 +90,3 @@
   }
 
 }
-
-
-
-// #individual-projects {
-//   .individual-projects {
-//     transform-style: preserve-3d;
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     perspective: 1px;
-//     overflow-x: hidden;
-//     overflow-y: scroll;
-//   }
-//   .navbar {
-//     background: $main_bg;
-//   }
-//   .header-wrapper {
-//     margin-top: 11rem;
-//     @include fadeInDown();
-//     background: $white;
-//     padding: 5rem;
-//     width: 100%;
-//     .image-container {
-//       max-width: 60rem;
-//       margin: 0 auto;
-//       position: relative;
-//       text-align: center;
-//
-//       .image-mobile {
-//         position: absolute;
-//         max-width: 15rem;
-//         bottom: 0rem;
-//         border-radius: 4px;
-//         left: -5rem;
-//       }
-//       .image-pad {
-//         position: absolute;
-//         max-width: 30rem;
-//         bottom: 0rem;
-//         border-radius: 4px;
-//         right: -5rem;
-//       }
-//       .image-desktop {
-//         position: relative;
-//         width: 100%;
-//       }
-//     }
-//   }
-//   a.button {
-//     margin: 0 auto;
-//   }
-//
-//   .individual-project-description {
-//     transform: translateZ(-1px) scale(2);
-//     position: absolute;
-//     margin-top: 60vh;
-//     width: 100%;
-//     background: $main_bg;
-//     .heading {
-//       color: $white;
-//       padding-top: 5rem;
-//     }
-//     h5{
-//         margin: 2rem;
-//     }
-//     ul li {
-//       color: $secondary_color;
-//       font-size: 2.5rem;
-//       font-family: $secondary_font;
-//     }
-//   }
-// }
