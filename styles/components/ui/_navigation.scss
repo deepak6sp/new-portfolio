@@ -2,6 +2,7 @@
   background: transparent;
   height: 13rem;
   transition : height 0.2s ease-in-out;
+
   &.reduce-height {
     @include slideInDown();
     background: $main_bg;
@@ -64,7 +65,6 @@
       // }
     }
     &:focus {
-      transform: scale(0.9);
       outline: none;
     }
   }
@@ -88,7 +88,7 @@
           margin: 3rem;
           border-bottom: 0.1rem solid transparent;
           width: 1%;
-          font-family: $secondary_font;
+          font-family: $secondary_font_alternate;
           &:hover {
             width: 40%;
             border-bottom: 0.1rem solid $white;

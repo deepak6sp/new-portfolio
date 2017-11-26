@@ -42,6 +42,7 @@ class Navigation extends Component {
 
     _closeNav() {
       document.querySelector('.navbar-collapse').classList.remove('show');
+      document.querySelector('.navbar-toggler').classList.remove('opened');
       this.setState({
         collapsed: true
       });
@@ -58,7 +59,7 @@ class Navigation extends Component {
               </a>
               {/*<NavLink href="http://www.webhyphen.com/">Blog</NavLink>*/}
               <NavbarToggler onClick={this._toggleNavbar.bind(this)} className="mr-5">
-                <FontAwesome name='none' size='4x' className='align-right-icon'/>
+                <FontAwesome name='none' size='3x' className='align-right-icon'/>
               </NavbarToggler>
 
               <Collapse isOpen={!this.state.collapsed} navbar>
