@@ -39,7 +39,7 @@ module.exports = {
               ]
             }, {
               test: /\.(eot|woff|woff2|ttf)(\?\S*)?$/,
-              loader: 'url-loader?limit=100000&name=[name].[ext]'
+              loader: 'url-loader?limit=100000&name=fonts/[name].[ext]'
             }
         ]
     },

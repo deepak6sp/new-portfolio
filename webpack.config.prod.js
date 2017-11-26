@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: [
@@ -15,31 +16,26 @@ module.exports = {
         loaders: [
             {
               test: /\.scss$/,
-              use: [{
-                   loader: "style-loader"
-              }, {
-                   loader: "css-loader", options: {
-                       sourceMap: true
-                   }
-              }, {
-                   loader: "sass-loader", options: {
-                       sourceMap: true
-                   }
-              }]
+              test: /\.scss$/,
+              use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: ['css-loader', 'sass-loader']
+              })
             },
-            {test: /\.js$/,
+            {
+                test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 include: path.join(__dirname, 'src')
             },
             {
-              test: /\.(png|jpg|jpeg|svg)$/,
-              loader: [
-                'file-loader?name=images/[name].[ext]'
-              ]
+                test: /\.(png|jpg|jpeg|svg)$/,
+                loader: [
+                  'file-loader?name=images/[name].[ext]'
+                ]
             }, {
-              test: /\.(eot|woff|woff2|ttf)(\?\S*)?$/,
-              loader: 'url-loader?limit=100000&name=[name].[ext]'
+                test: /\.(eot|woff|woff2|ttf)(\?\S*)?$/,
+                loader: 'url-loader?limit=100000&name=fonts/[name].[ext]'
             }
         ]
     },
@@ -48,8 +44,9 @@ module.exports = {
       new CopyWebpackPlugin([
         { from: 'index.html', to: 'index.html' },
         { from: 'images', to: 'images'},
-        { from: 'server.js', to: 'server.js'}
-      ])
+        { from: 'server-prod.js', to: 'server-prod.js'}
+      ]),
+      new ExtractTextPlugin('style.css')
 
     ]
 };
