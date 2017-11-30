@@ -1,6 +1,7 @@
 #home {
   background-color: $grey-light;
   background-attachment: fixed;
+  
   .profile {
     height: 65rem;
     line-height: 5rem;
@@ -26,6 +27,13 @@
       height: 100%;
       background-color: $black-dark;
       opacity: 0.8;
+    }
+    .profile-avatar {
+      position: relative;
+      img {
+        width: 10rem;
+        height: 10rem;
+      }
     }
     .profile-name {
       @include fadeInDown();

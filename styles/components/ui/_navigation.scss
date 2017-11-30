@@ -18,6 +18,19 @@
   }
   .navbar-brand {
     padding: 2rem;
+    .brand-logo {
+      display: block;
+      text-decoration: none;
+      color: $primary_color;
+      font-family: $brand-logo;
+      font-size: 3rem;
+      background: $grey-light;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      line-height: 8rem;
+      text-align: center;
+    }
     .avatar {
         width: 8rem;
         &:hover {

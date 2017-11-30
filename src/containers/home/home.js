@@ -33,8 +33,13 @@ class Home extends Component {
             <Navigation />
             <section className='profile text-center'>
               <div className='overlay'></div>
+              <Row className='justify-content-center profile-avatar'>
+              <figure>
+                <img className='avatar' src='../images/avatar.png' alt='deepak prakash profile'/>
+              </figure>
+              </Row>
               <Row className='justify-content-center profile-name'>
-                <h1><span>HI, I'M </span> Deepak Prakash</h1>
+                <h1><span>HI, I'M</span>Deepak Prakash</h1>
               </Row>
               <Row className='justify-content-center profile-desc'>
                 <h2> UX <span>&</span> Full Stack Developer </h2>

@@ -29,3 +29,11 @@
           url("../fonts/raleway/Raleway-Thin.woff2") format("woff2"),
             url("../fonts/raleway/Raleway-Thin.eot") format("eot");
 }
+
+@font-face {
+ font-family: "Brand-Logo";
+ src: url("../fonts/ewert/Ewert-Regular.ttf") format("ttf"),
+        url("../fonts/ewert/Ewert-Regular.woff") format("woff"),
+          url("../fonts/ewert/Ewert-Regular.woff2") format("woff2"),
+            url("../fonts/ewert/Ewert-Regular.eot") format("eot");
+}
