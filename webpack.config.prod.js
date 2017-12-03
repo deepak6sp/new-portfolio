@@ -10,7 +10,7 @@ module.exports = {
     output: {
         path: path.join(__dirname)+'/dist',
         publicPath: '/',
-        filename: 'bundle.min.js'
+        filename: 'assets/bundle.min.js'
     },
     module: {
         loaders: [
@@ -34,20 +34,20 @@ module.exports = {
                 ]
             }, {
                 test: /\.(eot|woff|woff2|ttf)(\?\S*)?$/,
-                loader: 'url-loader?limit=100000&name=fonts/[name].[ext]'
+                loader: 'url-loader?limit=1000000&name=fonts/[name].[ext]'
             }
         ]
     },
     plugins: [
-      new webpack.optimize.OccurrenceOrderPlugin(),
+      new webpack.optimize.UglifyJsPlugin({minimize: true}),
       new CopyWebpackPlugin([
         { from: 'index-prod.html', to: 'index.html' },
         { from: 'images', to: 'images'},
         { from: 'server-prod.js', to: 'server.js'},
-        { from: 'analytics.min.js', to: 'analytics.min.js'},
+        { from: 'analytics.min.js', to: 'assets/analytics.min.js'},
         { from: 'package.json', to: 'package.json'}
       ]),
-      new ExtractTextPlugin('style.min.css')
+      new ExtractTextPlugin('assets/style.min.css')
 
     ]
 };

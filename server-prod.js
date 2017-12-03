@@ -13,7 +13,6 @@ app.get('/projects/:projectName', (req, res, next) => {
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
-app.use('/bundle.min.js', express.static(path.join(__dirname, 'bundle.min.js')));
-app.use('/style.min.css', express.static(path.join(__dirname, 'style.min.css')));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 app.listen('8080');
