@@ -97,9 +97,7 @@ class About extends Component {
                     </Col>
                 </Row>
             </section>
-            <ShowOnScreen offset={300}>
-              <Contact/>
-            </ShowOnScreen>
+            <Contact/>
 
           </main>
 

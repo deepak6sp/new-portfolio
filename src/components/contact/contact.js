@@ -9,14 +9,15 @@ import ShowOnScreen from 'react-on-screen';
 const Contact = () => (
     <Row className='contact-details'>
       <Col>
-        <ShowOnScreen offset={300}>
-          <HomePageBlocks
-            className = 'inverse-2 get-in-touch'
-            icon='address-book-o'
-            heading = 'Get in touch'
-            hideButton = {true}>
-              <p>If you like my work and have some cool project to talk about, you could reach me at,</p>
-          </HomePageBlocks>
+          <ShowOnScreen offset={300}>
+            <HomePageBlocks
+              className = 'inverse-2 get-in-touch'
+              icon='address-book-o'
+              heading = 'Get in touch'
+              hideButton = {true}>
+                <p>If you like my work and have some cool project to talk about, you could reach me at,</p>
+            </HomePageBlocks>
+          </ShowOnScreen>
           <Row>
             <Col className='email'>
               <article className='container'>
@@ -46,7 +47,7 @@ const Contact = () => (
               <SocialLinks />
             </Col>
           </Row>
-        </ShowOnScreen>
+
       </Col>
     </Row>
 );

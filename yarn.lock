@@ -2554,6 +2554,10 @@ html-entities@^1.2.0:
   version "1.2.1"
   resolved "https://registry.npmjs.org/html-entities/-/html-entities-1.2.1.tgz#0df29351f0721163515dfb9e5543e5f6eed5162f"
 
+html-string-replace-webpack-plugin@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/html-string-replace-webpack-plugin/-/html-string-replace-webpack-plugin-1.0.5.tgz#b893f7c5a5a34e8440492d96b28289d8b0defd2b"
+
 html@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/html/-/html-1.0.0.tgz#a544fa9ea5492bfb3a2cca8210a10be7b5af1f61"

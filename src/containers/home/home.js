@@ -49,44 +49,44 @@ class Home extends Component {
 
             <section className='home-page-body container'>
                 <ShowOnScreen offset={300}>
-                <HomePageBlocks
-                  className = 'default'
-                  icon = 'codepen'
-                  heading = 'Projects'
-                  buttonText = 'showcase'
-                  linkTo = '/projects'>
-                    <p>I am been fotunate enough to work at both service industries and agencies. While
-                    working on various projects, I have picked up UX, Front end, Back end and Devops
-                    skills.</p>
-                </HomePageBlocks>
-                </ShowOnScreen>
-
-                <ShowOnScreen offset={300}>
-                <HomePageBlocks
-                  className = 'inverse'
-                  icon = 'pencil'
-                  heading = 'Blog'
-                  buttonText = 'visit blog'
-                  externalLink = {true}
-                  linkTo = 'http://www.webhyphen.com'>
-                    <p>I have been writing articles @webhyphen. I am doing this blog to share my
-                    knowledge and expericence focusing on modern design trends and latest web
-                    development technologies.</p>
-                </HomePageBlocks>
-                </ShowOnScreen>
-
-                <ShowOnScreen offset={300}>
-                <HomePageBlocks
-                  className = 'default'
-                  icon='user-circle-o'
-                  heading = 'About'
-                  buttonText = 'know me'
-                  linkTo = '/about'>
-                    <p>I am a Full Stack Web Developer having 5 years of experience. Recently, I have
-                    been focusing on UX prototyping and front end development.</p>
-                    <p>I have designed this website using <strong>sketch app</strong> and developed using Bootstrap 4,
-                    Reactjs and Node (Expressjs).</p>
+                  <HomePageBlocks
+                    className = 'default'
+                    icon = 'codepen'
+                    heading = 'Projects'
+                    buttonText = 'showcase'
+                    linkTo = '/projects'>
+                      <p>I am been fotunate enough to work at both service industries and agencies. While
+                      working on various projects, I have picked up UX, Front end, Back end and Devops
+                      skills.</p>
                   </HomePageBlocks>
+                </ShowOnScreen>
+
+                <ShowOnScreen offset={300}>
+                  <HomePageBlocks
+                    className = 'inverse'
+                    icon = 'pencil'
+                    heading = 'Blog'
+                    buttonText = 'visit blog'
+                    externalLink = {true}
+                    linkTo = 'http://www.webhyphen.com'>
+                      <p>I have been writing articles @webhyphen. I am doing this blog to share my
+                      knowledge and expericence focusing on modern design trends and latest web
+                      development technologies.</p>
+                  </HomePageBlocks>
+                </ShowOnScreen>
+
+                <ShowOnScreen offset={300}>
+                  <HomePageBlocks
+                    className = 'default'
+                    icon='user-circle-o'
+                    heading = 'About'
+                    buttonText = 'know me'
+                    linkTo = '/about'>
+                      <p>I am a Full Stack Web Developer having 5 years of experience. Recently, I have
+                      been focusing on UX prototyping and front end development.</p>
+                      <p>I have designed this website using <strong>sketch app</strong> and developed using Bootstrap 4,
+                      Reactjs and Node (Expressjs).</p>
+                    </HomePageBlocks>
                   </ShowOnScreen>
 
                   <Contact />

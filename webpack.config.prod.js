@@ -10,12 +10,11 @@ module.exports = {
     output: {
         path: path.join(__dirname)+'/dist',
         publicPath: '/',
-        filename: 'bundle.js'
+        filename: 'bundle.min.js'
     },
     module: {
         loaders: [
             {
-              test: /\.scss$/,
               test: /\.scss$/,
               use: ExtractTextPlugin.extract({
                 fallback: 'style-loader',
@@ -42,11 +41,13 @@ module.exports = {
     plugins: [
       new webpack.optimize.OccurrenceOrderPlugin(),
       new CopyWebpackPlugin([
-        { from: 'index.html', to: 'index.html' },
+        { from: 'index-prod.html', to: 'index.html' },
         { from: 'images', to: 'images'},
-        { from: 'server-prod.js', to: 'server-prod.js'}
+        { from: 'server-prod.js', to: 'server.js'},
+        { from: 'analytics.min.js', to: 'analytics.min.js'},
+        { from: 'package.json', to: 'package.json'}
       ]),
-      new ExtractTextPlugin('style.css')
+      new ExtractTextPlugin('style.min.css')
 
     ]
 };

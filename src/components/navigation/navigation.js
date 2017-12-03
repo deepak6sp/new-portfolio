@@ -51,9 +51,9 @@ class Navigation extends Component {
     render() {
         return (
             <Navbar className='fixed-top'>
-              <NavbarBrand>
+              <div className="navbar-brand">
                   <Link to="/" className='brand-logo'>dp</Link>
-              </NavbarBrand>
+              </div>
               <a target="_blank" href="http://www.webhyphen.com" className="nav-link blog-link">
                 <FontAwesome name='external-link'/> Blog
               </a>

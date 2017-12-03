@@ -6,7 +6,6 @@ import Home from '../containers/home';
 import Projects from '../containers/projects';
 import IndividualProject from '../containers/individualProject';
 import About from '../containers/about';
-import Contact from '../containers/contact';
 import Footer from '../components/footer';
 
 
@@ -17,7 +16,6 @@ const Router = () =>
             <Route exact path="/projects" component={ () => <Projects/> }/>
             <Route path="/projects/:projectName" component={ ({match}) => <IndividualProject slug={match.params.projectName}/> }/>
             <Route path="/about" component={About}/>
-            <Route path="/contact" component={Contact}/>
             <Footer />
        </div>
     </BrowserRouter>;
