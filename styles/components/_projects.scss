@@ -79,4 +79,10 @@
        }
     }
   }
+  .note {
+    color: $primary_color;
+    span {
+      font-weight: bold;
+    }
+  }
 }

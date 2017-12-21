@@ -44,7 +44,6 @@ module.exports = {
         { from: 'index-prod.html', to: 'index.html' },
         { from: 'images', to: 'images'},
         { from: 'server-prod.js', to: 'server.js'},
-        { from: 'analytics.min.js', to: 'assets/analytics.min.js'},
         { from: 'package.json', to: 'package.json'}
       ]),
       new ExtractTextPlugin('assets/style.min.css')

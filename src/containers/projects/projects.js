@@ -84,6 +84,12 @@ class Projects extends Component {
               <Navigation />
               <section className='project-container container'>
                 <Row>
+                  <Col xs={12}>
+                    <p className='note'>Please note, these are not my designs but only the <span>CODE</span>.
+                     However, I have contributed to bring in the best practices of UX/UI during development.</p><br></br>
+                  </Col>
+                </Row>
+                <Row>
                   {this._displayProjectsList()}
                 </Row>
               </section>

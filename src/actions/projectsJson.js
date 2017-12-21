@@ -1,4 +1,18 @@
 const projects = {
+  "tac": {
+    "name": "Threes A crowd",
+    "technologies":
+      ["SCSS", "Drupal 8", "Gulp"],
+    "description": "Website under development for threesacrowd",
+    "weblink": "https://3ac.agency/"
+  },
+  "dhhs": {
+    "name": "Child Protection Jobs",
+    "technologies":
+      ["SCSS", "Drupal 8", "Gulp"],
+    "description": "Website under development for DHHS Australia",
+    "weblink": "https://childprotectionjobs.dhs.vic.gov.au/"
+  },
   "vicpolice": {
 		"name": "Victoria Police",
     "technologies":
@@ -25,6 +39,13 @@ const projects = {
     "name": "Reception App",
     "technologies":
       ["SCSS", "React/Redux", "Webpack"],
+    "description": "A google chrome app developed at AOPEN to exhibit chromebox and chromebase capabilities.",
+    "weblink": false
+  },
+  "coffeeapp": {
+    "name": "Coffee Ordering App",
+    "technologies":
+      ["SCSS", "Angular JS", "Gulp"],
     "description": "A google chrome app developed at AOPEN to exhibit chromebox and chromebase capabilities.",
     "weblink": false
   }

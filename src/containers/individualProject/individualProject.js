@@ -53,7 +53,7 @@ class IndividualProject extends Component {
                      <Row>
                       <Col>
                         <UI.Button className='go-next' linkTo={`${this.state.pd.weblink}`} externalLink={true}>
-                          {this.props.slug}
+                          Visit site
                         </UI.Button>
                       </Col>
                     </Row>
