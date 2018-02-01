@@ -1,17 +1,17 @@
 const projects = {
-  "tac": {
-    "name": "Threes A crowd",
-    "technologies":
-      ["SCSS", "Drupal 8", "Gulp"],
-    "description": "Website under development for threesacrowd",
-    "weblink": "https://3ac.agency/"
-  },
   "dhhs": {
     "name": "Child Protection Jobs",
     "technologies":
-      ["SCSS", "Drupal 8", "Gulp"],
-    "description": "Website under development for DHHS Australia",
-    "weblink": "https://childprotectionjobs.dhs.vic.gov.au/"
+      ["Bootstrap 4 & SCSS", "PHP - Drupal 8", "Gulp"],
+    "description": "Developed website for Department of Health and Human Services - Child Protection Jobs, released on FEB 2018",
+    "weblink": "https://childprotectionjobs.dhhs.vic.gov.au/"
+  },
+  "tac": {
+    "name": "Threes A crowd",
+    "technologies":
+      ["Bootstrap 3 & SCSS", "PHP - Drupal 7", "Gulp"],
+    "description": "Developed website for ThreesACrowd Company, released on DEC 2017",
+    "weblink": "https://3ac.agency/"
   },
   "vicpolice": {
 		"name": "Victoria Police",
