@@ -1,10 +1,12 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path'),
+      webpack = require('webpack'),
+      ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: [
         'webpack-hot-middleware/client',
-        './src/index.js'
+        './src/index.js',
+        './styles/main.scss'
     ],
     output: {
         path: path.join(__dirname+'/public'),
@@ -15,17 +17,22 @@ module.exports = {
         loaders: [
             {
               test: /\.scss$/,
-              use: [{
-                   loader: "style-loader"
-              }, {
-                   loader: "css-loader", options: {
-                       sourceMap: true
-                   }
-              }, {
-                   loader: "sass-loader", options: {
-                       sourceMap: true
-                   }
-              }]
+              exclude: /node_modules/,
+              loader: ExtractTextPlugin.extract({
+                fallback: "style-loader",
+                use: "css-loader!sass-loader"
+              })
+              // use: [{
+              //      loader: "style-loader"
+              // }, {
+              //      loader: "css-loader", options: {
+              //          sourceMap: true
+              //      }
+              // }, {
+              //      loader: "sass-loader", options: {
+              //          sourceMap: true
+              //      }
+              // }]
             },
             {test: /\.js$/,
                 loader: 'babel-loader',
@@ -45,6 +52,9 @@ module.exports = {
     },
     devtool: 'cheap-module-eval-source-map',
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new ExtractTextPlugin("style.css", {
+           allChunks: true
+       })
     ]
 };

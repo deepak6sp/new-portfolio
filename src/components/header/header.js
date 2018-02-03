@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import profilePic from './images/profile_pic.png';
 
 const Header = (props) => (
       <header className='header container'>

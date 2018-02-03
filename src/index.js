@@ -9,7 +9,7 @@ import Router from './routes/router.js';
 import MainReducer from './reducers';
 
 
-import '../styles/main.scss';
+// import '../styles/main.scss';
 
 
 
@@ -17,12 +17,25 @@ const createStoreWithMiddleware = compose(applyMiddleware(ReduxPromise)(createSt
 const store = createStoreWithMiddleware(MainReducer);
 
 
-ReactDOM.render(
-    <Provider store={store}>
-        <Router />
-    </Provider>,
-  document.getElementById('main')
-);
+if(typeof window !== 'undefined') {
+  ReactDOM.render(
+      <Provider store={store}>
+          <Router />
+      </Provider>,
+    document.getElementById('main')
+  );
+}
+
+// const App = () => {
+//     return (
+//             <Provider store={store}>
+//                 <Router />
+//             </Provider>
+//     );
+// }
+//
+// export default App
+
 
 /**
  * This is required for webpack hot reloading

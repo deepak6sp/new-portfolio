@@ -2,6 +2,11 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import App from './src/index.js';
+import Html from './src/html.js';
+
 if(process.argv[2] == 'dev') {
   const webpack = require('webpack');
   const config = require('./webpack.config.dev');
@@ -10,14 +15,19 @@ if(process.argv[2] == 'dev') {
   app.use(require('webpack-hot-middleware')(compiler));
 }
 
-app.get(['/', '/projects', '/about'], function (req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
+app.get(['/', '/projects', '/about', '/projects/:projectName'], function (req, res) {
+    // res.sendFile(path.join(__dirname, 'index.html'));
+    const body = JSON.stringify(<App/>);
+    console.log(body);
+    res.send(
+      Html({ body })
+    );
 });
 
-app.get('/projects/:projectName', (req, res, next) => {
-    res.redirect("/projects")
-    next
-});
+// app.get('/projects/:projectName', (req, res, next) => {
+//     res.redirect("/projects")
+//     next
+// });
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
 

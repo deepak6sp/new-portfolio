@@ -4,7 +4,7 @@
  * application code into before sending it to the client as regular HTML.
  * Note we're returning a template string from this function.
  */
-const Html = ({ body, title }) => `
+const Html = ({ body }) => `
   <!doctype html>
   <html>
   <head>
@@ -18,7 +18,7 @@ const Html = ({ body, title }) => `
       <meta name="keywords" content="ux wireframe and prototying, front-end developer, full Stack developer,
       web developer, melbourne front end developer, portfolio, front-end developer portfolio, full Stack developer portfolio">
       <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-      <!-- <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Montserrat|Raleway" rel="stylesheet"> -->
+      <link rel="stylesheet" type="text/css" href="/style.css"/>
   </head>
   <body>
       <div id="main">${body} </div>

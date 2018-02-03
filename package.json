@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack -p --progress --colors --config webpack.config.prod.js",
     "start": "webpack-dev-server --hot --inline --config webpack.config.dev.js  --content-base ./ ",
-    "server": "nodemon server.js dev",
+    "server": "nodemon server.js dev --exec babel-node",
     "test": "mocha --require test_helper.js --compilers js:babel-register --recursive ./src/**/*-spec.js",
     "test:watch": "npm test -- --watch",
     "test-coverage": "istanbul cover _mocha -- --require test_helper.js --compilers js:babel-register --recursive ./src/**/*-spec.js",
@@ -37,6 +37,7 @@
     "shufflejs": "^5.0.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
