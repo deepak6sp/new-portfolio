@@ -10,13 +10,8 @@ if(process.argv[2] == 'dev') {
   app.use(require('webpack-hot-middleware')(compiler));
 }
 
-app.get(['/', '/projects', '/about'], function (req, res) {
+app.get(['/', '/projects', '/about', '/projects/:projectName'], function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-app.get('/projects/:projectName', (req, res, next) => {
-    res.redirect("/projects")
-    next
 });
 
 app.use('/images', express.static(path.join(__dirname, 'images')));

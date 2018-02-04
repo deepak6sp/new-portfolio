@@ -45,6 +45,7 @@ class IndividualProject extends Component {
               <Row className='individual-projects-about container'>
                 <Col xs={12} md={6} className='about-container'>
                     <p>{this.state.pd.description}</p>
+                    {this.state.pd.released && <h6>Released : {this.state.pd.released}</h6>}
                     <h5> Technologies used </h5>
                     <ul>
                       {this._displayTechnologies()}
@@ -74,7 +75,14 @@ class IndividualProject extends Component {
                 </Col>
               </Row>
 
+              <UI.Button
+                className='go-next'
+                linkTo='/projects'>
+                   Back
+              </UI.Button>
+
             </section>
+
             <ShowOnScreen offset={300}>
               <HomePageBlocks
                 className = 'inverse-2'
@@ -87,6 +95,7 @@ class IndividualProject extends Component {
                   sketch app and developed using Bootstrap 4, Reactjs and Node (Expressjs).</p>
               </HomePageBlocks>
             </ShowOnScreen>
+
           </section>
         )
   }
