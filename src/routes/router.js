@@ -10,7 +10,7 @@ import Footer from '../components/footer';
 
 
 const Router = () =>
-    <BrowserRouter>
+    <Switch>
        <div id='portfolio'>
             <Route exact path="/" component={ () => <Home/> }/>
             <Route exact path="/projects" component={ () => <Projects/> }/>
@@ -18,6 +18,6 @@ const Router = () =>
             <Route path="/about" component={About}/>
             <Footer />
        </div>
-    </BrowserRouter>;
+    </Switch>;
 
 export default Router;

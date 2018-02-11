@@ -17,24 +17,22 @@ const createStoreWithMiddleware = compose(applyMiddleware(ReduxPromise)(createSt
 const store = createStoreWithMiddleware(MainReducer);
 
 
-if(typeof window !== 'undefined') {
-  ReactDOM.render(
-      <Provider store={store}>
-          <Router />
-      </Provider>,
-    document.getElementById('main')
-  );
+// ReactDOM.render(
+//     <Provider store={store}>
+//         <Router />
+//     </Provider>,
+// document.getElementById('main')
+// );
+
+const App = () => {
+    return (
+            <Provider store={store}>
+                <Router />
+            </Provider>
+    );
 }
 
-// const App = () => {
-//     return (
-//             <Provider store={store}>
-//                 <Router />
-//             </Provider>
-//     );
-// }
-//
-// export default App
+export default App
 
 
 /**

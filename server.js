@@ -4,6 +4,7 @@ const app = express();
 
 import React from 'react';
 import { renderToString } from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom';
 import App from './src/index.js';
 import Html from './src/html.js';
 
@@ -17,8 +18,10 @@ if(process.argv[2] == 'dev') {
 
 app.get(['/', '/projects', '/about', '/projects/:projectName'], function (req, res) {
     // res.sendFile(path.join(__dirname, 'index.html'));
-    const body = JSON.stringify(<App/>);
-    console.log(body);
+    const initialData = {};
+    console.log(req.url);
+    const body = renderToString(
+    <StaticRouter location={req.url} context={initialData}><App/></StaticRouter>);
     res.send(
       Html({ body })
     );
