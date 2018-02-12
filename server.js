@@ -22,7 +22,6 @@ if(process.argv[2] == 'dev') {
 }
 
 app.get(['/', '/projects', '/about', '/projects/:projectName'], function (req, res) {
-    // res.sendFile(path.join(__dirname, 'index.html'));
     const initialData = {};
 
     const Store = createStore(MainReducer);
@@ -38,13 +37,6 @@ app.get(['/', '/projects', '/about', '/projects/:projectName'], function (req, r
     );
 });
 
-// app.get('/projects/:projectName', (req, res, next) => {
-//     res.redirect("/projects")
-//     next
-// });
-
 app.use('/images', express.static(path.join(__dirname, 'images')));
-
-app.use('/bundle.js', express.static(path.join(__dirname, 'bundle.js')));
 
 app.listen('8080');
