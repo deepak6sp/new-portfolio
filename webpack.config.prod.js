@@ -5,7 +5,8 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: [
-        './src/index.js'
+        './src/index.js',
+        './styles/main.scss'
     ],
     output: {
         path: path.join(__dirname)+'/dist',
@@ -41,8 +42,8 @@ module.exports = {
     plugins: [
       new webpack.optimize.UglifyJsPlugin({minimize: true}),
       new CopyWebpackPlugin([
-        { from: 'index-prod.html', to: 'index.html' },
         { from: 'images', to: 'images'},
+        { from: 'src', to: 'src'},
         { from: 'server-prod.js', to: 'server.js'},
         { from: 'package.json', to: 'package.json'}
       ]),

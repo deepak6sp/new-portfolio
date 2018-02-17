@@ -8,11 +8,6 @@ import ReduxPromise from 'redux-promise';
 import Router from './routes/router.js';
 import MainReducer from './reducers';
 
-
-// import '../styles/main.scss';
-
-
-
 const createStoreWithMiddleware = compose(applyMiddleware(ReduxPromise)(createStore));
 const store = createStoreWithMiddleware(MainReducer);
 

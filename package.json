@@ -10,7 +10,8 @@
     "test": "mocha --require test_helper.js --compilers js:babel-register --recursive ./src/**/*-spec.js",
     "test:watch": "npm test -- --watch",
     "test-coverage": "istanbul cover _mocha -- --require test_helper.js --compilers js:babel-register --recursive ./src/**/*-spec.js",
-    "e2e": "nightwatch -t ./e2e/index.js"
+    "e2e": "nightwatch -t ./e2e/index.js",
+    "server-prod": "npm install --production && babel-node server.js"
   },
   "dependencies": {
     "bootstrap": "4.0.0-beta",
