@@ -84,14 +84,14 @@ class About extends Component {
                 <Row>
                     <Col sm={12}>
                         <h3> My blog</h3>
-                        <p> I have been writing articles at webhyphen.
+                        <p> I have been writing articles at deepakpixel.
                         I am doing this blog to share my knowledge and expericence
                         focusing on modern design trends and latest web development technologies.</p>
                     </Col>
                 </Row>
                 <Row>
                     <Col sm={12}>
-                      <UI.Button className='go-next' linkTo="http://www.webhyphen.com" externalLink={true}>
+                      <UI.Button className='go-next' linkTo="http://deepakpixel.com/" externalLink={true}>
                           Visit Blog
                       </UI.Button>
                     </Col>

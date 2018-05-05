@@ -68,8 +68,8 @@ class Home extends Component {
                     heading = 'Blog'
                     buttonText = 'visit blog'
                     externalLink = {true}
-                    linkTo = 'http://www.webhyphen.com'>
-                      <p>I have been writing articles @webhyphen. I am doing this blog to share my
+                    linkTo = 'http://deepakpixel.com/'>
+                      <p>I have been writing articles @deepakpixel. I am doing this blog to share my
                       knowledge and expericence focusing on modern design trends and latest web
                       development technologies.</p>
                   </HomePageBlocks>

@@ -53,10 +53,10 @@ class Navigation extends Component {
               <div className="navbar-brand">
                   <Link to="/" className='brand-logo'>dp</Link>
               </div>
-              <a target="_blank" href="http://www.webhyphen.com" className="nav-link blog-link">
+              <a target="_blank" href="http://deepakpixel.com/" className="nav-link blog-link">
                 <FontAwesome name='external-link'/> Blog
               </a>
-              {/*<NavLink href="http://www.webhyphen.com/">Blog</NavLink>*/}
+              {/*<NavLink href="http://deepakpixel.com//">Blog</NavLink>*/}
               <NavbarToggler onClick={this._toggleNavbar.bind(this)} className="mr-5">
                 <FontAwesome name='none' size='3x' className='align-right-icon'/>
               </NavbarToggler>
